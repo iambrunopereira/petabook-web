@@ -1,0 +1,22 @@
+{
+	"dependencies": {
+		"@lemonsqueezy/lemonsqueezy.js": "^4.0.0",
+		"@repo/config": "workspace:*",
+		"@repo/database": "workspace:*",
+		"@repo/logs": "workspace:*",
+		"chargebee-typescript": "^2.44.0",
+		"stripe": "^17.5.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@repo/tsconfig": "workspace:*",
+		"@types/node": "^22.10.2"
+	},
+	"main": "./index.ts",
+	"name": "@repo/payments",
+	"scripts": {
+		"type-check": "tsc --noEmit"
+	},
+	"types": "./**/.ts",
+	"version": "0.0.0"
+}

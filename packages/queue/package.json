@@ -1,0 +1,19 @@
+{
+	"dependencies": {
+		"@aws-sdk/client-sqs": "^3.716.0",
+		"@repo/logs": "workspace:*",
+		"@repo/utils": "workspace:*"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/node": "^22.10.2",
+		"@repo/tsconfig": "workspace:*"
+	},
+	"main": "./index.ts",
+	"name": "@repo/queue",
+	"scripts": {
+		"type-check": "tsc --noEmit"
+	},
+	"types": "./**/.ts",
+	"version": "0.0.0"
+}

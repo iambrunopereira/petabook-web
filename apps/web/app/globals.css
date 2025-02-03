@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --fd-banner-height: 4.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+pre.shiki {
+  @apply mb-4 rounded-lg p-6;
+}
+
+#nd-sidebar {
+  @apply !bg-card top-[4.5rem] md:!h-[calc(100dvh-4.5rem)];
+
+  button[data-search-full] {
+    @apply bg-transparent;
+  }
+}
+
+#nd-page .prose {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    a {
+      @apply !no-underline;
+    }
+  }
+}
+
+div[role='tablist'].bg-secondary {
+  @apply !bg-muted;
+}
+
+input[cmdk-input] {
+  @apply border-none focus-visible:ring-0;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #999 transparent; /* ✅ Removes track background */
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px; /* Adjust scrollbar thickness */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* ✅ Removes scrollbar track */
+  border: none; /* ✅ Ensures no border appears */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 5px;
+  border-right: none; /* ✅ Removes any right border */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+.custom-cluster {
+  width: 40px;
+  height: 40px;
+  background-color: #2563eb; /* Blue */
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.custom-cluster:hover {
+  transform: scale(1.2);
+}

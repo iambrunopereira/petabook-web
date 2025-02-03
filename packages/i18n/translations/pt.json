@@ -1,0 +1,798 @@
+{
+  "admin": {
+    "menu": {
+      "organizations": "Organizações",
+      "users": "Utilizadores"
+    },
+    "organizations": {
+      "backToList": "Voltar para organizações",
+      "confirmDelete": {
+        "confirm": "Eliminar",
+        "message": "Tem a certeza de que pretende eliminar esta organização? Esta ação não pode ser desfeita.",
+        "title": "Eliminar organização"
+      },
+      "create": "Criar",
+      "delete": "Eliminar",
+      "deleteOrganization": {
+        "deleted": "Organização eliminada com sucesso!",
+        "deleting": "A eliminar organização...",
+        "notDeleted": "Não foi possível eliminar a organização. Por favor, tente novamente."
+      },
+      "edit": "Editar",
+      "form": {
+        "createTitle": "Criar uma organização",
+        "name": "Nome da organização",
+        "notifications": {
+          "error": "Não foi possível guardar a organização. Por favor, tente novamente mais tarde.",
+          "success": "Organização guardada com sucesso."
+        },
+        "save": "Guardar",
+        "updateTitle": "Editar organização"
+      },
+      "loading": "A carregar organizações...",
+      "membersCount": "{count} {count, plural, one {membro} other {membros}}",
+      "search": "Pesquisar por uma organização...",
+      "title": "Gerir organizações"
+    },
+    "title": "Administração",
+    "users": {
+      "confirmDelete": {
+        "confirm": "Eliminar",
+        "message": "Tem a certeza de que pretende eliminar este utilizador? Esta ação não pode ser desfeita.",
+        "title": "Eliminar utilizador"
+      },
+      "delete": "Eliminar",
+      "deleteUser": {
+        "deleted": "Utilizador eliminado com sucesso!",
+        "deleting": "A eliminar utilizador...",
+        "notDeleted": "Não foi possível eliminar o utilizador. Por favor, tente novamente."
+      },
+      "emailVerified": {
+        "verified": "Email verificado",
+        "waiting": "Email a aguardar verificação"
+      },
+      "impersonate": "Assumir identidade",
+      "impersonation": {
+        "impersonating": "A assumir identidade como {name}..."
+      },
+      "loading": "A carregar utilizadores...",
+      "resendVerificationMail": {
+        "error": "Não foi possível reenviar o email de verificação. Por favor, tente novamente.",
+        "submitting": "A reenviar email de verificação...",
+        "success": "Email de verificação enviado com sucesso.",
+        "title": "Reenviar email de verificação"
+      },
+      "search": "Pesquisar por nome ou email...",
+      "title": "Gerir utilizadores",
+      "assignAdminRole": "Atribuir função de administrador",
+      "removeAdminRole": "Remover função de administrador"
+    },
+    "description": "Gerir a sua aplicação."
+  },
+  "app": {
+    "menu": {
+      "accountSettings": "Configurações da conta",
+      "admin": "Administração",
+      "aiDemo": "Demonstração de IA",
+      "organizationSettings": "Configurações da organização",
+      "start": "Início"
+    },
+    "userMenu": {
+      "accountSettings": "Configurações da conta",
+      "colorMode": "Modo de cor",
+      "documentation": "Documentação",
+      "home": "Página inicial",
+      "logout": "Terminar sessão"
+    }
+  },
+  "auth": {
+    "errors": {
+      "invalidEmailOrPassword": "As credenciais que introduziu são inválidas. Verifique e tente novamente.",
+      "unknown": "Ocorreu um erro. Por favor, tente novamente.",
+      "userNotFound": "Este utilizador não existe.",
+      "failedToCreateUser": "Não foi possível criar o utilizador. Por favor, tente novamente.",
+      "failedToCreateSession": "Não foi possível criar a sessão. Por favor, tente novamente.",
+      "failedToUpdateUser": "Não foi possível atualizar o utilizador. Por favor, tente novamente.",
+      "failedToGetSession": "Não foi possível obter a sessão.",
+      "invalidPassword": "A palavra-passe introduzida está incorreta.",
+      "invalidEmail": "O email introduzido é inválido.",
+      "invalidToken": "O token introduzido é inválido ou expirou.",
+      "credentialAccountNotFound": "Conta não encontrada.",
+      "emailCanNotBeUpdated": "Não foi possível atualizar o email. Por favor, tente novamente.",
+      "emailNotVerified": "Por favor, verifique o seu email antes de iniciar sessão.",
+      "failedToGetUserInfo": "Não foi possível carregar as informações do utilizador.",
+      "idTokenNotSupported": "O token de identificação não é suportado.",
+      "passwordTooLong": "A palavra-passe é demasiado longa.",
+      "passwordTooShort": "A palavra-passe é demasiado curta.",
+      "providerNotFound": "Este fornecedor não é suportado.",
+      "socialAccountAlreadyLinked": "Esta conta já está associada a um utilizador.",
+      "userEmailNotFound": "Email não encontrado.",
+      "userAlreadyExists": "Este utilizador já existe.",
+      "invalidInvitation": "O convite é inválido ou expirou.",
+      "sessionExpired": "A sessão expirou."
+    },
+
+    "forgotPassword": {
+      "backToSignin": "Voltar para iniciar sessão",
+      "email": "Email",
+      "hints": {
+        "linkNotSent": {
+          "message": "Lamentamos, mas não conseguimos enviar-lhe um link para redefinir a sua palavra-passe. Por favor, tente novamente mais tarde.",
+          "title": "Link não enviado"
+        },
+        "linkSent": {
+          "message": "Enviámos-lhe um link para continuar. Por favor, verifique a sua caixa de entrada.",
+          "title": "Link enviado"
+        }
+      },
+      "message": "Por favor, insira o seu endereço de email e enviaremos um link para redefinir a sua palavra-passe.",
+      "submit": "Enviar link",
+      "title": "Esqueceu-se da palavra-passe?"
+    },
+    "login": {
+      "continueWith": "Ou continuar com",
+      "createAnAccount": "Criar uma conta",
+      "dontHaveAnAccount": "Ainda não tem uma conta?",
+      "forgotPassword": "Esqueceu-se da palavra-passe?",
+      "hints": {
+        "invalidCredentials": "O email ou a palavra-passe que introduziu são inválidos. Por favor, tente novamente.",
+        "linkSent": {
+          "message": "Enviámos-lhe um link para continuar. Por favor, verifique a sua caixa de entrada.",
+          "title": "Link enviado"
+        }
+      },
+      "loginWithPasskey": "Iniciar sessão com passkey",
+      "modes": {
+        "magicLink": "Link mágico",
+        "password": "Palavra-passe"
+      },
+      "submit": "Iniciar sessão",
+      "subtitle": "Por favor, insira as suas credenciais para iniciar sessão.",
+      "title": "Bem-vindo de volta",
+      "sendMagicLink": "Enviar link mágico"
+    },
+    "resetPassword": {
+      "backToSignin": "Voltar para iniciar sessão",
+      "hints": {
+        "error": "Lamentamos, mas não conseguimos redefinir a sua palavra-passe. Por favor, tente novamente.",
+        "success": "A sua palavra-passe foi redefinida com sucesso."
+      },
+      "message": "Por favor, insira uma nova palavra-passe.",
+      "newPassword": "Nova palavra-passe",
+      "submit": "Redefinir palavra-passe",
+      "title": "Redefinir a sua palavra-passe"
+    },
+    "signup": {
+      "alreadyHaveAccount": "Já tem uma conta?",
+      "email": "Email",
+      "hints": {
+        "signupFailed": "Lamentamos, mas não conseguimos criar a sua conta. Por favor, tente novamente mais tarde.",
+        "verifyEmail": "Enviámos-lhe um link para verificar o seu email. Por favor, verifique a sua caixa de entrada."
+      },
+      "message": "Estamos felizes por querer juntar-se a nós. Por favor, preencha o formulário abaixo para criar a sua conta.",
+      "name": "Nome",
+      "password": "Palavra-passe",
+      "signIn": "Iniciar sessão",
+      "submit": "Criar conta",
+      "title": "Criar uma conta"
+    }
+  },
+  "blog": {
+    "description": "Guias, artigos e dicas sobre o mundo canino",
+    "title": "Guias e Artigos"
+  },
+  "changelog": {
+    "description": "Mantenha-se atualizado com as últimas alterações no nosso produto.",
+    "title": "Registo de alterações"
+  },
+  "common": {
+    "confirmation": {
+      "cancel": "Cancelar",
+      "confirm": "Confirmar"
+    },
+    "menu": {
+      "blog": "Blog",
+      "changelog": "Registo de alterações",
+      "contact": "Contacto",
+      "dashboard": "Painel de controlo",
+      "docs": "Documentação",
+      "faq": "Perguntas frequentes",
+      "login": "Iniciar sessão",
+      "pricing": "Preços"
+    },
+    "tableOfContents": {
+      "title": "Nesta página"
+    }
+  },
+  "contact": {
+    "description": "Estamos aqui para ajudar. Por favor, utilize o formulário abaixo para entrar em contacto connosco.",
+    "form": {
+      "email": "Email",
+      "message": "Mensagem",
+      "name": "Nome",
+      "notifications": {
+        "error": "Lamentamos, mas não conseguimos enviar a sua mensagem. Por favor, tente novamente mais tarde.",
+        "success": "A sua mensagem foi enviada com sucesso. Entraremos em contacto consigo o mais breve possível."
+      },
+      "submit": "Enviar mensagem"
+    },
+    "title": "Contacte-nos"
+  },
+  "documentation": {
+    "title": "Documentação"
+  },
+  "faq": {
+    "description": "Tem alguma dúvida? Temos as respostas.",
+    "title": "Perguntas frequentes"
+  },
+  "mail": {
+    "common": {
+      "openLinkInBrowser": "Se pretende abrir o link num navegador diferente do seu padrão, copie e cole este link:",
+      "otp": "Palavra-passe única",
+      "useLink": "ou utilize o seguinte link:"
+    },
+    "emailVerification": {
+      "body": "Olá,\npor favor, clique no link abaixo para verificar este novo endereço de email.",
+      "confirmEmail": "Verificar email",
+      "subject": "Verificar o seu email"
+    },
+    "forgotPassword": {
+      "body": "Olá,\nsolicitou uma redefinição de palavra-passe.\n\nClique no botão abaixo para redefinir a sua palavra-passe.",
+      "resetPassword": "Redefinir palavra-passe",
+      "subject": "Redefinir a sua palavra-passe"
+    },
+    "magicLink": {
+      "body": "Olá,\nsolicitou um email de login do Petabook.\n\nClique no link abaixo para iniciar sessão.",
+      "login": "Iniciar sessão",
+      "subject": "Iniciar sessão no Petabook"
+    },
+    "newUser": {
+      "body": "Olá,\nobrigado por se registar no Petabook.\n\nPara começar a usar a nossa aplicação, por favor, confirme o seu endereço de email clicando no link abaixo.",
+      "confirmEmail": "Confirmar email",
+      "subject": "Confirme o seu email"
+    },
+    "newsletterSignup": {
+      "body": "Obrigado por se inscrever na newsletter do Petabook. Vamos mantê-lo atualizado com as últimas novidades e atualizações.",
+      "subject": "Bem-vindo à nossa newsletter"
+    },
+    "organizationInvitation": {
+      "body": "Foi convidado a juntar-se à organização {organizationName}. Clique no botão abaixo ou copie e cole o link no seu navegador preferido para aceitar o convite e juntar-se à organização.",
+      "headline": "Junte-se à organização {organizationName}",
+      "join": "Juntar-se à organização",
+      "subject": "Foi convidado a juntar-se a uma organização"
+    }
+  },
+  "newsletter": {
+    "email": "Email",
+    "hints": {
+      "error": {
+        "message": "Não foi possível subscrever à newsletter. Por favor, tente novamente mais tarde."
+      },
+      "success": {
+        "message": "Obrigado por subscrever à nossa newsletter. Vamos mantê-lo informado.",
+        "title": "Subscreveu"
+      }
+    },
+    "submit": "Subscrever",
+    "subtitle": "Assine a newsletter da Petabook e receba semanalmente dicas exclusivas e guias essenciais para o bem-estar do seu cão!",
+    "title": "Petabook.com - Newsletter"
+  },
+  "onboarding": {
+    "account": {
+      "avatar": "Avatar",
+      "avatarDescription": "Clique no círculo ou arraste uma imagem para o carregar como avatar.",
+      "name": "Nome"
+    },
+    "continue": "Continuar",
+    "message": "Apenas alguns passos rápidos para começar.",
+    "notifications": {
+      "accountSetupFailed": "Lamentamos, mas não conseguimos configurar a sua conta. Por favor, tente novamente mais tarde."
+    },
+    "step": "Passo {step} / {total}",
+    "title": "Configure a sua conta"
+  },
+  "organizations": {
+    "createForm": {
+      "name": "Nome da organização",
+      "notifications": {
+        "error": "Lamentamos, mas não conseguimos criar a sua organização. Por favor, tente novamente mais tarde.",
+        "success": "A sua organização foi criada. Pode agora convidar membros."
+      },
+      "submit": "Criar organização",
+      "subtitle": "Insira um nome para a sua organização para começar. Pode alterar o nome mais tarde nas configurações da organização.",
+      "title": "Criar uma organização"
+    },
+    "invitationAlert": {
+      "description": "Precisa de iniciar sessão ou criar uma conta para juntar-se à organização.",
+      "title": "Foi convidado para se juntar a uma organização."
+    },
+    "invitationModal": {
+      "accept": "Aceitar",
+      "decline": "Recusar",
+      "description": "Foi convidado para se juntar à organização {organizationName}. Deseja aceitar o convite e juntar-se à organização?",
+      "title": "Juntar-se à organização"
+    },
+    "organizationSelect": {
+      "createNewOrganization": "Criar nova organização",
+      "organizations": "Organizações",
+      "personalAccount": "Conta pessoal"
+    },
+    "organizationsGrid": {
+      "createNewOrganization": "Criar nova organização",
+      "title": "As suas organizações"
+    },
+    "roles": {
+      "admin": "Administrador",
+      "member": "Membro",
+      "owner": "Proprietário"
+    },
+    "settings": {
+      "changeName": {
+        "title": "Nome da organização"
+      },
+      "deleteOrganization": {
+        "confirmation": "Tem a certeza de que deseja eliminar a sua organização?",
+        "description": "Eliminar permanentemente a sua organização. Uma vez eliminada, não há volta atrás. Para confirmar, insira a sua palavra-passe abaixo:",
+        "submit": "Eliminar organização",
+        "title": "Eliminar organização"
+      },
+      "logo": {
+        "description": "Carregue um logótipo para a sua organização.",
+        "title": "Logótipo da organização"
+      },
+      "members": {
+        "activeMembers": "Membros ativos",
+        "description": "Veja todos os membros ativos e os convites pendentes da sua organização.",
+        "invitations": {
+          "empty": "Ainda não convidou nenhum membro.",
+          "expiresAt": "Expira a {date}",
+          "invitationStatus": {
+            "accepted": "Aceite",
+            "canceled": "Cancelado",
+            "pending": "Pendente",
+            "rejected": "Rejeitado"
+          },
+          "revoke": "Revogar convite",
+          "resend": "Reenviar convite"
+        },
+        "inviteMember": {
+          "description": "Para convidar um novo membro, envie-lhe um convite.",
+          "email": "Email",
+          "notifications": {
+            "error": {
+              "description": "Não foi possível convidar o membro. Por favor, tente novamente mais tarde.",
+              "title": "Não foi possível convidar o membro"
+            },
+            "success": {
+              "description": "O membro foi convidado com sucesso.",
+              "title": "Membro convidado"
+            }
+          },
+          "role": "Função",
+          "submit": "Convidar",
+          "title": "Convidar membro"
+        },
+        "leaveOrganization": "Sair da organização",
+        "notifications": {
+          "removeMember": {
+            "error": {
+              "description": "Não foi possível remover o membro da sua organização. Por favor, tente novamente."
+            },
+            "loading": {
+              "description": "A remover membro da organização..."
+            },
+            "success": {
+              "description": "O membro foi removido com sucesso da sua organização."
+            }
+          },
+          "revokeInvitation": {
+            "error": {
+              "description": "Não foi possível revogar o convite. Por favor, tente novamente mais tarde."
+            },
+            "loading": {
+              "description": "A revogar convite..."
+            },
+            "success": {
+              "description": "O convite foi revogado."
+            }
+          },
+          "updateMembership": {
+            "error": {
+              "description": "Não foi possível atualizar a afiliação na organização. Por favor, tente novamente."
+            },
+            "loading": {
+              "description": "A atualizar afiliação..."
+            },
+            "success": {
+              "description": "A afiliação foi atualizada com sucesso."
+            }
+          },
+          "resendInvitation": {
+            "loading": {
+              "description": "A reenviar convite..."
+            },
+            "success": {
+              "description": "Convite enviado."
+            },
+            "error": {
+              "description": "Não foi possível enviar o convite. Por favor, tente novamente."
+            }
+          }
+        },
+        "pendingInvitations": "Convites pendentes",
+        "removeMember": "Remover membro",
+        "title": "Membros"
+      },
+      "notifications": {
+        "organizationDeleted": "A sua organização foi eliminada.",
+        "organizationNameNotUpdated": "Não foi possível atualizar o nome da sua organização. Por favor, tente novamente mais tarde.",
+        "organizationNameUpdated": "O nome da sua organização foi atualizado.",
+        "organizationNotDeleted": "Não foi possível eliminar a sua organização. Por favor, tente novamente mais tarde."
+      },
+      "subtitle": "Gerir as configurações da organização.",
+      "title": "Organização"
+    },
+    "start": {
+      "subtitle": "Bem-vindo à página inicial desta organização!"
+    }
+  },
+  "pricing": {
+    "choosePlan": "Escolher plano",
+    "contactSales": "Contactar vendas",
+    "description": "Escolha o plano que melhor se adequa às suas necessidades.",
+    "getStarted": "Começar",
+    "month": "{count, plural, one {mês} other {{count} meses}}",
+    "monthly": "Mensal",
+    "products": {
+      "basic": {
+        "description": "Ideal para equipas pequenas.",
+        "features": {
+          "anotherFeature": "Outro recurso incrível",
+          "limitedSupport": "Suporte limitado",
+          "oneMember": "1 membro"
+        },
+        "title": "Básico"
+      },
+      "enterprise": {
+        "description": "Plano personalizado para as suas necessidades",
+        "features": {
+          "enterpriseSupport": "Suporte empresarial",
+          "unlimitedMembers": "Membros ilimitados",
+          "unlimitedProjects": "Projetos ilimitados"
+        },
+        "title": "Empresarial"
+      },
+      "free": {
+        "description": "Comece gratuitamente",
+        "features": {
+          "anotherFeature": "Outro recurso incrível",
+          "limitedSupport": "Suporte limitado",
+          "oneMember": "1 membro"
+        },
+        "title": "Grátis"
+      },
+      "lifetime": {
+        "description": "Pague uma vez. Use para sempre.",
+        "features": {
+          "extendSupport": "Suporte prolongado",
+          "noRecurringCosts": "Sem custos recorrentes",
+          "unlimitedMembers": "Membros ilimitados"
+        },
+        "title": "Vitalício"
+      },
+      "pro": {
+        "description": "Melhor para equipas",
+        "features": {
+          "anotherFeature": "Outro recurso incrível",
+          "fiveMembers": "Até 5 membros",
+          "fullSupport": "Suporte completo"
+        },
+        "title": "Pro"
+      }
+    },
+    "purchase": "Comprar",
+    "recommended": "Recomendado",
+    "subscribe": "Subscrever",
+    "title": "Preços",
+    "trialPeriod": "{days} {days, plural, one {dia} other {dias}} de avaliação gratuita",
+    "year": "{count, plural, one {ano} other {{count} anos}}",
+    "yearly": "Anual"
+  },
+  "settings": {
+    "account": {
+      "avatar": {
+        "description": "Para alterar o seu avatar, clique na imagem deste bloco e selecione um ficheiro no seu computador para carregar.",
+        "notifications": {
+          "error": "Não foi possível atualizar o avatar.",
+          "success": "O avatar foi atualizado com sucesso."
+        },
+        "title": "O seu avatar"
+      },
+      "changeEmail": {
+        "description": "Para alterar o seu email, insira o novo email e clique em guardar. Terá de confirmar o novo email antes que se torne ativo.",
+        "notifications": {
+          "error": "Não foi possível atualizar o email.",
+          "success": "O email foi atualizado com sucesso."
+        },
+        "title": "O seu email"
+      },
+      "changeName": {
+        "notifications": {
+          "error": "Não foi possível atualizar o nome.",
+          "success": "O nome foi atualizado com sucesso."
+        },
+        "title": "O seu nome"
+      },
+      "deleteAccount": {
+        "confirmation": "Tem a certeza de que deseja eliminar a sua conta?",
+        "description": "Eliminar permanentemente a sua conta. Após eliminar a sua conta, não será possível recuperá-la. Para confirmar, insira a sua palavra-passe abaixo:",
+        "notifications": {
+          "error": "Não foi possível eliminar a conta.",
+          "success": "A conta foi eliminada com sucesso."
+        },
+        "submit": "Eliminar conta",
+        "title": "Eliminar conta"
+      },
+      "language": {
+        "description": "Para alterar o idioma da aplicação para a sua conta, selecione um idioma da lista e clique em guardar.",
+        "notifications": {
+          "error": "Não foi possível atualizar o idioma.",
+          "success": "O idioma foi atualizado com sucesso."
+        },
+        "title": "O seu idioma"
+      },
+      "security": {
+        "activeSessions": {
+          "description": "Estas são todas as sessões ativas da sua conta. Clique no X para encerrar uma sessão específica.",
+          "title": "Sessões ativas"
+        },
+        "changePassword": {
+          "currentPassword": "Palavra-passe atual",
+          "newPassword": "Nova palavra-passe",
+          "notifications": {
+            "error": "Não foi possível atualizar a palavra-passe.",
+            "success": "A palavra-passe foi atualizada com sucesso."
+          },
+          "title": "A sua palavra-passe"
+        },
+        "connectedAccounts": {
+          "connect": "Ligar",
+          "disconnect": "Desligar",
+          "title": "Contas conectadas"
+        },
+        "passkeys": {
+          "description": "Use passkeys como uma alternativa segura às palavras-passe.",
+          "notifications": {
+            "addPasskey": {
+              "error": {
+                "title": "Não foi possível adicionar a passkey."
+              },
+              "success": {
+                "title": "Passkey adicionada com sucesso."
+              }
+            },
+            "deletePasskey": {
+              "error": {
+                "title": "Não foi possível eliminar a passkey."
+              },
+              "loading": {
+                "title": "A eliminar passkey..."
+              },
+              "success": {
+                "title": "Passkey eliminada com sucesso."
+              }
+            }
+          },
+          "title": "Passkeys"
+        },
+        "setPassword": {
+          "description": "Ainda não definiu uma palavra-passe. Para definir uma, precisa de passar pelo fluxo de redefinição de palavra-passe. Clique no botão abaixo para enviar um email para redefinir a sua palavra-passe e siga as instruções no email.",
+          "notifications": {
+            "error": "Não foi possível definir a palavra-passe.",
+            "success": "A palavra-passe foi definida com sucesso."
+          },
+          "submit": "Definir palavra-passe",
+          "title": "A sua palavra-passe"
+        },
+        "title": "Segurança"
+      },
+      "subtitle": "Gerir as configurações da sua conta pessoal.",
+      "title": "Configurações da conta"
+    },
+  "billing": {
+			"cancelSubscription": {
+				"notifications": {
+					"error": {
+						"title": "Não foi possível cancelar a subscrição."
+					},
+					"success": {
+						"title": "A subscrição foi cancelada."
+					}
+				}
+			},
+			"createCustomerPortal": {
+				"label": "Gerir detalhes de faturação",
+				"notifications": {
+					"error": {
+						"title": "Não foi possível criar uma sessão no portal do cliente. Por favor, tente novamente."
+					}
+				}
+			},
+			"pauseSubscription": {
+				"label": "Pausar subscrição",
+				"notifications": {
+					"error": {
+						"title": "Não foi possível pausar a subscrição. Por favor, tente novamente."
+					},
+					"success": {
+						"title": "A subscrição foi pausada."
+					}
+				}
+			},
+			"resumeSubscription": {
+				"notifications": {
+					"error": {
+						"title": "Não foi possível retomar a subscrição."
+					},
+					"success": {
+						"title": "A subscrição foi retomada."
+					}
+				}
+			},
+			"subscription": {
+				"cancel": "Cancelar a sua subscrição",
+				"changePlan": {
+					"description": "Escolha um plano para subscrever.",
+					"title": "Alterar o seu plano"
+				},
+				"status": {
+					"active": "Ativa",
+					"canceled": "Cancelada",
+					"expired": "Expirada",
+					"incomplete": "Incompleta",
+					"past_due": "Em atraso",
+					"paused": "Pausada",
+					"trialing": "Em período de avaliação",
+					"unpaid": "Não paga"
+				},
+				"title": "A sua subscrição"
+			},
+			"title": "Faturação"
+		},
+		"menu": {
+			"account": {
+				"billing": "Faturação",
+				"dangerZone": "Zona de perigo",
+				"general": "Geral",
+				"security": "Segurança",
+				"title": "Conta"
+			},
+			"organization": {
+				"billing": "Faturação",
+				"general": "Geral",
+				"members": "Membros",
+				"title": "Organização"
+			}
+		},
+		"save": "Guardar"
+	},
+	"start": {
+		"subtitle": "Veja as últimas estatísticas do seu incrível negócio.",
+		"welcome": "Bem-vindo(a), {name}!"
+	},
+	"zod": {
+		"errors": {
+			"invalid_arguments": "Argumentos de função inválidos",
+			"invalid_date": "Data inválida",
+			"invalid_enum_value": "Valor do enum inválido. Esperado: {- options}, recebido: '{received}'",
+			"invalid_intersection_types": "Os resultados da interseção não puderam ser mesclados",
+			"invalid_literal": "Valor literal inválido, esperado: {expected}",
+			"invalid_return_type": "Tipo de retorno da função inválido",
+			"invalid_string": {
+				"cuid": "{validation} inválido",
+				"datetime": "{validation} inválido",
+				"email": "{validation} inválido",
+				"endsWith": "Entrada inválida: deve terminar com \"{endsWith}\"",
+				"regex": "Inválido",
+				"startsWith": "Entrada inválida: deve começar com \"{startsWith}\"",
+				"url": "{validation} inválido",
+				"uuid": "{validation} inválido"
+			},
+			"invalid_type": "Esperado {expected}, recebido {received}",
+			"invalid_type_received_undefined": "Obrigatório",
+			"invalid_union": "Entrada inválida",
+			"invalid_union_discriminator": "Valor do discriminador inválido. Esperado: {- options}",
+			"not_finite": "O número deve ser finito",
+			"not_multiple_of": "O número deve ser um múltiplo de {multipleOf}",
+			"too_big": {
+				"array": {
+					"exact": "A lista deve conter exatamente {maximum} elemento(s)",
+					"inclusive": "A lista deve conter no máximo {maximum} elemento(s)",
+					"not_inclusive": "A lista deve conter menos de {maximum} elemento(s)"
+				},
+				"date": {
+					"exact": "A data deve ser exatamente {- maximum, datetime}",
+					"inclusive": "A data deve ser menor ou igual a {- maximum, datetime}",
+					"not_inclusive": "A data deve ser menor que {- maximum, datetime}"
+				},
+				"number": {
+					"exact": "O número deve ser exatamente {maximum}",
+					"inclusive": "O número deve ser menor ou igual a {maximum}",
+					"not_inclusive": "O número deve ser menor que {maximum}"
+				},
+				"set": {
+					"exact": "Entrada inválida",
+					"inclusive": "Entrada inválida",
+					"not_inclusive": "Entrada inválida"
+				},
+				"string": {
+					"exact": "O texto deve conter exatamente {maximum} caractere(s)",
+					"inclusive": "O texto deve conter no máximo {maximum} caractere(s)",
+					"not_inclusive": "O texto deve conter menos de {maximum} caractere(s)"
+				}
+			},
+			"too_small": {
+				"array": {
+					"exact": "A lista deve conter exatamente {minimum} elemento(s)",
+					"inclusive": "A lista deve conter pelo menos {minimum} elemento(s)",
+					"not_inclusive": "A lista deve conter mais de {minimum} elemento(s)"
+				},
+				"date": {
+					"exact": "A data deve ser exatamente {- minimum, datetime}",
+					"inclusive": "A data deve ser maior ou igual a {- minimum, datetime}",
+					"not_inclusive": "A data deve ser maior que {- minimum, datetime}"
+				},
+				"number": {
+					"exact": "O número deve ser exatamente {minimum}",
+					"inclusive": "O número deve ser maior ou igual a {minimum}",
+					"not_inclusive": "O número deve ser maior que {minimum}"
+				},
+				"set": {
+					"exact": "Entrada inválida",
+					"inclusive": "Entrada inválida",
+					"not_inclusive": "Entrada inválida"
+				},
+				"string": {
+					"exact": "O texto deve conter exatamente {minimum} caractere(s)",
+					"inclusive": "O texto deve conter pelo menos {minimum} caractere(s)",
+					"not_inclusive": "O texto deve conter mais de {minimum} caractere(s)"
+				}
+			},
+			"unrecognized_keys": "Chave(s) não reconhecida(s) no objeto: {- keys}"
+		},
+		"types": {
+			"array": "array",
+			"bigint": "bigint",
+			"boolean": "boolean",
+			"date": "date",
+			"float": "float",
+			"function": "function",
+			"integer": "integer",
+			"map": "map",
+			"nan": "nan",
+			"never": "never",
+			"null": "null",
+			"number": "number",
+			"object": "object",
+			"promise": "promise",
+			"set": "set",
+			"string": "string",
+			"symbol": "symbol",
+			"undefined": "undefined",
+			"unknown": "unknown",
+			"void": "void"
+		},
+		"validations": {
+			"cuid": "cuid",
+			"cuid2": "cuid2",
+			"datetime": "datetime",
+			"email": "email",
+			"emoji": "emoji",
+			"ip": "ip",
+			"regex": "regex",
+			"ulid": "ulid",
+			"url": "url",
+			"uuid": "uuid"
+		}
+	}
+}

@@ -1,0 +1,49 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"formatter": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"suspicious": {
+				"noExplicitAny": "off",
+				"noArrayIndexKey": "off"
+			},
+			"complexity": {
+				"noForEach": "off"
+			},
+			"correctness": {
+				"useExhaustiveDependencies": "off",
+				"noUnusedImports": "error"
+			},
+			"nursery": {
+				"useSortedClasses": {
+					"level": "error",
+					"fix": "safe"
+				}
+			},
+			"style": {
+				"noUnusedTemplateLiteral": {
+					"level": "error",
+					"fix": "safe"
+				},
+				"noNonNullAssertion": "warn"
+			}
+		}
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"files": {
+		"ignore": [
+			".react-email",
+			".next",
+			".turbo",
+			"node_modules/*",
+			".content-collections",
+			"./packages/database/src/zod/index.ts"
+		]
+	}
+}

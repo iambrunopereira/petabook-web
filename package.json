@@ -1,0 +1,30 @@
+{
+	"name": "petabook-web",
+	"private": true,
+	"scripts": {
+		"build": "dotenv -c -- turbo build",
+		"dev": "dotenv -c -- turbo dev --concurrency 15",
+		"lint": "biome lint .",
+		"clean": "turbo clean",
+		"format": "biome format . --write",
+		"e2e": "pnpm --filter web e2e"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"packageManager": "pnpm@9.3.0",
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@repo/tsconfig": "workspace:*",
+		"@types/node": "^22.10.2",
+		"dotenv-cli": "^8.0.0",
+		"turbo": "^2.3.3",
+		"typescript": "5.7.2"
+	},
+	"pnpm": {
+		"overrides": {
+			"@types/react": "19.0.0",
+			"@types/react-dom": "19.0.0"
+		}
+	}
+}
