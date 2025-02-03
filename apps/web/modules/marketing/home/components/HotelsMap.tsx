@@ -1,5 +1,5 @@
 'use client';
-
+//@ts-ignore
 import { useEffect, useState, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -26,7 +26,7 @@ const Marker = dynamic(
 const MarkerClusterGroup = dynamic(
   () => import('react-leaflet-markercluster'),
   { ssr: false }
-);
+) as any;
 
 // Prevent SSR for Leaflet by conditionally requiring it
 const L = typeof window !== 'undefined' ? require('leaflet') : null;
@@ -44,7 +44,7 @@ interface Hotel {
 
 interface HotelsMapProps {
   hotels: Hotel[];
-  setVisibleHotels: (hotels: Hotel[]) => void;
+  setVisibleHotels: any;
 }
 function SmallHotelCard({
   hotel,
@@ -72,7 +72,15 @@ function SmallHotelCard({
 
         <div className="flex items-center my-2">
           {Array.from({ length: 5 }, (_, index) => (
-            <Star key={index} size={16} className={index < hotel.rating ? "text-yellow-500" : "text-gray-300"} />
+            <Star
+              key={index}
+              size={16}
+              className={
+                index < hotel.rating
+                  ? 'text-yellow-500'
+                  : 'text-gray-300'
+              }
+            />
           ))}
         </div>
         {/* A placeholder description. Replace with hotel.description if available */}
@@ -82,12 +90,12 @@ function SmallHotelCard({
       </div>
       {/* "See Details" button */}
       <div className="h-20 flex justify-around flex-col items-start max-sm:w-full">
-            <button
-              onClick={() => closeHandler(null)}
-              className="absolute right-2 top-0 text-2xl text-gray-600 hover:text-gray-800"
-            >
-              &times;
-            </button>
+        <button
+          onClick={() => closeHandler(null)}
+          className="absolute right-2 top-0 text-2xl text-gray-600 hover:text-gray-800"
+        >
+          &times;
+        </button>
         <p className="text-sm text-blue-600 font-bold mt-1">
           €{hotel.price}/noite
         </p>
@@ -95,7 +103,7 @@ function SmallHotelCard({
           onClick={() => router.push(`/hotels/${hotel.id}`)}
           className="bg-blue-600 -mb-1 hover:bg-blue-700 text-white text-sm px-3 py-2 rounded-md max-sm:w-full"
         >
-         Ver details
+          Ver details
         </button>
       </div>
     </div>
@@ -199,11 +207,6 @@ export default function HotelsMap({
           center={initialCenter}
           zoom={initialZoom}
           className="h-full w-full rounded-lg"
-          whenCreated={handleMapCreated}
-          onMoveEnd={() => {
-            console.log('onMoveEnd prop fired');
-            updateVisibleHotels();
-          }}
         >
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

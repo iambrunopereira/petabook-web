@@ -1,20 +1,21 @@
-"use client";
+'use client';
 
-import { useRef } from "react";
-import HotelCard from "./HotelCard";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-
+import { useRef } from 'react';
+import HotelCard from './HotelCard';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function HotelList(props: any) {
   const swiperRef = useRef<any>(null);
 
   return (
     <div className="container max-w-6xl mx-auto py-12 relative">
-      <h2 className="text-2xl font-semibold text-gray-800 mb-6">{ props.title }</h2>
+      <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+        {props.title}
+      </h2>
 
       {/* Navigation Buttons with Hover Effect */}
       <button
@@ -45,7 +46,7 @@ export default function HotelList(props: any) {
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         className="pb-8"
       >
-        {props.hotels.map((hotel) => (
+        {props.hotels.map((hotel: any) => (
           <SwiperSlide key={hotel.id}>
             <HotelCard {...hotel} />
           </SwiperSlide>
