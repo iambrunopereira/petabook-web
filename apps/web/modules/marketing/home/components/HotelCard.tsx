@@ -32,8 +32,13 @@ export default function HotelCard({
 						<BadgeCheck size={14} className="mr-1" /> Hotel Parceiro
 					</div>
 				)}
-				{images?.length > 0 && (
-					<Image src={images[0]!} alt={name} fill className="rounded-t-lg" />
+				{images && (
+					<Image
+						src={images[0]!}
+						alt={name ?? ""}
+						fill
+						className="rounded-t-lg"
+					/>
 				)}
 			</div>
 
@@ -51,7 +56,9 @@ export default function HotelCard({
 						<Star
 							key={index}
 							size={16}
-							className={index < rating ? "text-yellow-500" : "text-gray-300"}
+							className={
+								index < (rating ?? 0) ? "text-yellow-500" : "text-gray-300"
+							}
 						/>
 					))}
 				</div>

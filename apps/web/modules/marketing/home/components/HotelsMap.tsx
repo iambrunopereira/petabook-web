@@ -9,6 +9,7 @@ import HotelMarkerSVG from "@marketing/home/components/HotelMarkerSVG";
 import PetClusterIcon from "@marketing/home/components/PetClusterIcon";
 import { regionList } from "@marketing/db/regions";
 import { Star } from "lucide-react";
+import { Hotel } from "@marketing/db/hotels";
 
 // Dynamically import react-leaflet components (prevents SSR issues)
 const MapContainer = dynamic(
@@ -30,17 +31,6 @@ const MarkerClusterGroup = dynamic(
 // Prevent SSR for Leaflet by conditionally requiring it
 const L = typeof window !== "undefined" ? require("leaflet") : null;
 
-interface Hotel {
-	id: number;
-	name: string;
-	location: string;
-	lat: number;
-	lng: number;
-	price: number;
-	rating: number;
-	image: string;
-}
-
 interface HotelsMapProps {
 	hotels: Hotel[];
 	setVisibleHotels: any;
@@ -59,8 +49,8 @@ function SmallHotelCard({
 			{/* Image container */}
 			<div className="w-20 h-20 flex-shrink-0">
 				<img
-					src={hotel.images[0]}
-					alt={hotel.name}
+					src={hotel.images ? hotel?.images[0] : ""}
+					alt={hotel.name ?? ""}
 					className="object-cover rounded-md w-full h-full"
 				/>
 			</div>
@@ -75,7 +65,9 @@ function SmallHotelCard({
 							key={index}
 							size={16}
 							className={
-								index < hotel.rating ? "text-yellow-500" : "text-gray-300"
+								index < (hotel.rating ?? 0)
+									? "text-yellow-500"
+									: "text-gray-300"
 							}
 						/>
 					))}
@@ -184,7 +176,7 @@ export default function HotelsMap({
 	}
 
 	// Helper function to create a custom marker icon.
-	const createHotelIcon = (hotelId: number) =>
+	const createHotelIcon = (hotelId: string) =>
 		L.divIcon({
 			className: "custom-marker",
 			html: HotelMarkerSVG({ hover: true }),
@@ -209,9 +201,9 @@ export default function HotelsMap({
 
 					{hotels.map((hotel) => (
 						<Marker
-							key={hotel.id}
-							position={[hotel.lat, hotel.lng]}
-							icon={createHotelIcon(hotel.id)}
+							key={hotel.uuid}
+							position={[hotel.lat ?? 0, hotel.lng ?? 0]}
+							icon={createHotelIcon(hotel.uuid)}
 							eventHandlers={{
 								// When a marker is clicked, show the bottom overlay with the hotel card.
 								click: () => {
