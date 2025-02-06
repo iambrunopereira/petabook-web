@@ -1,57 +1,57 @@
-'use client';
+"use client";
 
-import { useRef } from 'react';
-import HotelCard from './HotelCard';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useRef } from "react";
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import HotelCard from "./HotelCard";
+import "swiper/css";
+import "swiper/css/navigation";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function HotelList(props: any) {
-  const swiperRef = useRef<any>(null);
+	const swiperRef = useRef<any>(null);
 
-  return (
-    <div className="container max-w-6xl mx-auto py-12 relative">
-      <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-        {props.title}
-      </h2>
+	return (
+		<div className="container relative mx-auto max-w-6xl py-12">
+			<h2 className="mb-6 font-semibold text-2xl text-gray-800">
+				{props.title}
+			</h2>
 
-      {/* Navigation Buttons with Hover Effect */}
-      <button
-        onClick={() => swiperRef.current?.slidePrev()}
-        className="absolute -left-3 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-3 rounded-full z-10 hidden md:block transition-transform duration-300 hover:scale-110 hover:bg-gray-100"
-      >
-        <ChevronLeft size={24} className="text-gray-700" />
-      </button>
+			{/* Navigation Buttons with Hover Effect */}
+			<button
+				onClick={() => swiperRef.current?.slidePrev()}
+				className="-left-3 -translate-y-1/2 absolute top-1/2 z-10 hidden transform rounded-full bg-white p-3 shadow-md transition-transform duration-300 hover:scale-110 hover:bg-gray-100 md:block"
+			>
+				<ChevronLeft size={24} className="text-gray-700" />
+			</button>
 
-      <button
-        onClick={() => swiperRef.current?.slideNext()}
-        className="absolute -right-3 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-3 rounded-full z-10 hidden md:block transition-transform duration-300 hover:scale-110 hover:bg-gray-100"
-      >
-        <ChevronRight size={24} className="text-gray-700" />
-      </button>
+			<button
+				onClick={() => swiperRef.current?.slideNext()}
+				className="-right-3 -translate-y-1/2 absolute top-1/2 z-10 hidden transform rounded-full bg-white p-3 shadow-md transition-transform duration-300 hover:scale-110 hover:bg-gray-100 md:block"
+			>
+				<ChevronRight size={24} className="text-gray-700" />
+			</button>
 
-      {/* Swiper Carousel with Infinite Looping */}
-      <Swiper
-        modules={[Navigation]}
-        spaceBetween={16}
-        slidesPerView={1}
-        loop={true} // ✅ Enables infinite looping
-        breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1280: { slidesPerView: 4 },
-        }}
-        onSwiper={(swiper) => (swiperRef.current = swiper)}
-        className="pb-8"
-      >
-        {props.hotels.map((hotel: any) => (
-          <SwiperSlide key={hotel.id}>
-            <HotelCard {...hotel} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
-  );
+			{/* Swiper Carousel with Infinite Looping */}
+			<Swiper
+				modules={[Navigation]}
+				spaceBetween={16}
+				slidesPerView={1}
+				loop={true} // ✅ Enables infinite looping
+				breakpoints={{
+					640: { slidesPerView: 2 },
+					1024: { slidesPerView: 3 },
+					1280: { slidesPerView: 4 },
+				}}
+				onSwiper={(swiper) => (swiperRef.current = swiper)}
+				className="pb-8"
+			>
+				{props.hotels.map((hotel: any) => (
+					<SwiperSlide key={`list_${hotel.uuid}`}>
+						<HotelCard {...hotel} />
+					</SwiperSlide>
+				))}
+			</Swiper>
+		</div>
+	);
 }
