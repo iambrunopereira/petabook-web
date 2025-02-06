@@ -58,9 +58,11 @@ export default function HotelCard({
 
 				{/* Price & Booking Button */}
 				<div className="mt-4 flex items-center justify-between">
-					<span className="font-semibold text-blue-600 text-lg">
-						€{prices}/noite
-					</span>
+					{prices != 0 && (
+						<span className="font-semibold text-blue-600 text-lg">
+							€{prices}/noite
+						</span>
+					)}
 					<button
 						onClick={() => router.push(`/hotels/${uuid}`)}
 						className="rounded-lg bg-blue-600 px-4 py-2 text-sm text-white transition hover:bg-blue-700"

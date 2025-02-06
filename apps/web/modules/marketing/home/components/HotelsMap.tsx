@@ -59,7 +59,7 @@ function SmallHotelCard({
 			{/* Image container */}
 			<div className="w-20 h-20 flex-shrink-0">
 				<img
-					src={hotel.image}
+					src={hotel.images[0]}
 					alt={hotel.name}
 					className="object-cover rounded-md w-full h-full"
 				/>
@@ -81,9 +81,7 @@ function SmallHotelCard({
 					))}
 				</div>
 				{/* A placeholder description. Replace with hotel.description if available */}
-				<p className="text-xs text-gray-500">
-					Enjoy a luxurious stay with top-notch amenities.
-				</p>
+				<p className="text-xs text-gray-500">{hotel.shortDescription}</p>
 			</div>
 			{/* "See Details" button */}
 			<div className="h-20 flex justify-around flex-col items-start max-sm:w-full">
@@ -93,9 +91,11 @@ function SmallHotelCard({
 				>
 					&times;
 				</button>
-				<p className="text-sm text-blue-600 font-bold mt-1">
-					€{hotel.price}/noite
-				</p>
+				{hotel.prices != 0 && (
+					<span className="font-semibold text-blue-600 text-lg">
+						€{hotel.prices}/noite
+					</span>
+				)}
 				<button
 					onClick={() => router.push(`/hotels/${hotel.uuid}`)}
 					className="bg-blue-600 -mb-1 hover:bg-blue-700 text-white text-sm px-3 py-2 rounded-md max-sm:w-full"

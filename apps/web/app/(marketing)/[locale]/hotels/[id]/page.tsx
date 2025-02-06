@@ -98,9 +98,7 @@ export default function HotelDetailsPage({
 			router.push("/404");
 		} else {
 			setHotel(hotelData);
-			setSelectedImage(
-				hotelData.images?.length > 0 ? hotelData.images[0] : null,
-			);
+			setSelectedImage(hotelData.images ? hotelData.images[0] : null);
 		}
 		setIsClient(true);
 	}, [id, router]);
