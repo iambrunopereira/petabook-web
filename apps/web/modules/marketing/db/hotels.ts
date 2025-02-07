@@ -777,7 +777,7 @@ export const hotelList: Hotel[] = [
 		rating: 4.7,
 		contact: "933925808",
 		email: "centrocaninoalgarve@gmail.com",
-		website: null,
+		website: "https://www.facebook.com/CCAlgarve/?locale=pt_BR",
 		facebook: "https://www.facebook.com/CCAlgarve/?locale=pt_BR",
 		instagram: null,
 		petabookPartner: false,

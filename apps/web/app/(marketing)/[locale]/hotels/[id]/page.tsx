@@ -188,7 +188,9 @@ export default function HotelDetailsPage({
 					<button
 						onClick={() =>
 							window.open(
-								"https://docs.google.com/forms/d/e/1FAIpQLSeNl5op-mb7ZwdUErOMjBcWhgN6tDY442MHzxuyaBOPS8iW4Q/viewform",
+								hotel.petabookPartner
+									? "https://docs.google.com/forms/d/e/1FAIpQLSeCuuQ0KpYH11GRNZF9yvGRsrj9rc8Px9x9FIycHjmBNiEUhA/viewform?usp=header"
+									: hotel.website,
 								"_blank",
 							)
 						}

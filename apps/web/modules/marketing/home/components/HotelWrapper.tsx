@@ -13,24 +13,23 @@ export default function HotelsMapPage() {
 	}, [visibleHotels]);
 	return (
 		<div className="container mt-20 mb-5 flex h-[90vh] flex-col md:flex-row">
-			{/* Mobile: Show toggle button */}
 			<button
 				className="m-2 rounded-lg bg-blue-600 p-3 text-white md:hidden"
 				onClick={() => setShowList(!showList)}
 			>
-				{showList ? "Show Map" : "Show Hotels"}
+				{showList ? "Ver mapa" : "Ver hoteis"}
 			</button>
 
-			{/* Left: Hotel List (Sidebar) */}
 			<div
 				className={`custom-scrollbar absolute z-10 w-full overflow-y-auto border-gray-200 border-r p-4 transition-transform md:relative md:w-1/3 ${
 					showList ? "translate-x-0" : "-translate-x-full"
 				} md:translate-x-0`}
 			>
-				<h2 className="mb-4 font-semibold text-lg">Available Hotels</h2>
+				<h2 className="mb-4 font-semibold text-lg">Hoteis disponiveis</h2>
+
 				<div className="space-y-4">
 					{visibleHotels.length === 0 ? (
-						<p className="text-gray-500">No hotels in this area.</p>
+						<p className="text-gray-500">Não temos hoteis disponiveis.</p>
 					) : (
 						visibleHotels.map((hotel) => (
 							<HotelCard key={`hotel_${hotel.uuid}`} {...hotel} />
