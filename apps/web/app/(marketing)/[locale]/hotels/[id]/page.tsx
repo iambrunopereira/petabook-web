@@ -189,7 +189,7 @@ export default function HotelDetailsPage({
 						onClick={() =>
 							window.open(
 								hotel.petabookPartner
-									? "https://docs.google.com/forms/d/e/1FAIpQLSeCuuQ0KpYH11GRNZF9yvGRsrj9rc8Px9x9FIycHjmBNiEUhA/viewform?usp=header"
+									? `https://docs.google.com/forms/d/e/1FAIpQLSeCuuQ0KpYH11GRNZF9yvGRsrj9rc8Px9x9FIycHjmBNiEUhA/viewform?entry.555514883=${hotel.name}`
 									: hotel.website,
 								"_blank",
 							)
