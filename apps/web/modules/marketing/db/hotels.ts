@@ -81,7 +81,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"A Quinta da Patada, em Loures, é um hotel para cães com hospedagem, creche e banhos, oferecendo supervisão 24 horas.",
 		longDescription:
-			"A Quinta da Patada, localizada em Santo Antão do Tojal, Loures, oferece hospedagem, creche, banhos e tosquias, com 25 boxes individuais e atividades ao ar livre, garantindo conforto e segurança aos hóspedes.",
+			"A Quinta da Patada, localizada em Santo Antão do Tojal, Loures, é um hotel para cães que oferece hospedagem, creche, banhos e tosquias, assegurando supervisão 24 horas por dia. Com uma área de 8000 m², proporciona atividades ao ar livre e cuidados personalizados em 25 boxes individuais, com áreas entre 10m² e 60m², incluindo zonas cobertas, descobertas e com sombra. A alimentação é premium, sem glúten e com condroprotetores, adaptada às necessidades energéticas de cada cão. Os visitantes podem agendar visitas para familiarizar os seus cães com o espaço e os tratadores. O hotel aposta em técnicas especializadas para minimizar a ansiedade e promove o bem-estar físico e emocional dos animais, mantendo os donos atualizados com fotos e vídeos através do WhatsApp.A Quinta da Patada garante, no mínimo, dois passeios diários e, para cães que cumpram as regras, a possibilidade de brincar soltos com outros cães durante todo o dia. O acompanhamento é personalizado, com suporte veterinário sempre que necessário, e elevados padrões de higiene e segurança. Além disso, oferece serviços de Banhos e Tosquias, permitindo que os cães brinquem à vontade antes de regressarem a casa limpos e cheirosos. Um serviço de transporte está disponível, assegurando o conforto do início ao fim da estadia. Desde a chegada, os cães recebem mimos e atenção para que se sintam felizes e bem cuidados.",
 		services: "Hotel canino",
 		prices: 17,
 		reservationEmail: "geral@quintadapatada.com",
@@ -163,7 +163,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Recreio Canino promove socialização e bem-estar dos cães com serviços personalizados.",
 		longDescription:
-			"Recreio Canino oferece um ambiente seguro e estimulante para os cães, funcionando de segunda a sexta das 9h às 16h, com serviços adaptados às necessidades dos animais.",
+			"Recreio Canino é um espaço dedicado à socialização e bem-estar dos cães, proporcionando um ambiente seguro e estimulante para os animais. Fundado por Fernando Silva, que tem formação cinotécnica e experiência em treino canino, o projeto baseia-se na transparência, rigor e competência. A filosofia do Recreio Canino é permitir que os cães sejam simplesmente cães, promovendo um ambiente de liberdade e socialização saudável. A equipa combina experiência prática e conhecimento técnico, adquiridos através de formação na Associação Cinófila do Oeste (ACO) e participação em eventos especializados sobre comportamento e treino canino. Além da socialização, o espaço oferece serviços que atendem às necessidades dos donos e garantem o bem-estar dos seus animais de estimação. Localizado em Loures, o Recreio Canino funciona de segunda a sexta-feira, das 9h às 16h.",
 		services: "Hotel canino",
 		prices: 25,
 		reservationEmail: null,
@@ -206,7 +206,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"O Hotel Canino 101 oferece instalações modernas com boxes privadas e parques espaçosos.",
 		longDescription:
-			"Localizado numa zona tranquila do Pinhal Novo, o Hotel Canino 101 dispõe de 20 boxes privadas e amplos parques com áreas equipadas para a socialização dos cães. Oferece serviços de banho e transporte, permitindo aos donos acompanhar a estadia por vídeos.",
+			"Localizado numa zona tranquila do Pinhal Novo, o Hotel Canino 101 oferece instalações modernas e confortáveis para cães. Com 20 boxes privadas de 8 m², cada uma equipada com cama, manta, bebedouro automático, comedouro ajustável e tapete aquecido, o espaço garante o bem-estar dos seus hóspedes. Os amplos parques de recreio, divididos em duas áreas com piscinas e bebedouros, permitem que os cães socializem e gastem energia durante o dia. Para famílias com mais de um cão, há a opção de partilhar a mesma box, reduzindo o stress da separação. Além das instalações, o hotel oferece serviços adicionais como banho e transporte, mediante pedido. Os donos podem acompanhar os momentos especiais dos seus cães através de vídeos enviados durante a estadia, trazendo tranquilidade e proximidade, mesmo à distância. O Hotel Canino 101 é dedicado a proporcionar uma experiência segura, confortável e cheia de diversão para os seus hóspedes de quatro patas.",
 		services: "Hotel canino",
 		prices: 12,
 		reservationEmail: "101hotelcanino@gmail.com",
@@ -264,7 +264,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"A Curti Dog oferece hospedagem, creche e estética para cães e gatos, com serviços de petshop, adestramento e transporte.",
 		longDescription:
-			"Estabelecida em 2018, a Curti Dog é uma empresa familiar que oferece serviços variados para cães e gatos, incluindo hospedagem, creche e estética. Durante o dia, os animais têm acesso a um espaço aberto, enquanto à noite são acomodados em boxes individuais com proteção contra condições climáticas adversas. Também oferece serviços de adestramento e transporte para consultas veterinárias.",
+			"A Curti Dog é uma empresa familiar que foi estabelecida em 2018 e está situada na zona oeste. Esta empresa oferece uma variedade de serviços para cães e gatos, incluindo hospedagem e creche. Durante o dia, os animais têm acesso a um espaço aberto, enquanto à noite, cada um é acomodado em uma box individual com sistemas de proteção contra frio, chuva e calor. Além das opções de hospedagem, a Curti Dog disponibiliza serviços de estética animal, que incluem tosquias, banhos e tratamentos para o pelo e a pele. A empresa também conta com uma petshop, oferece treinamentos de adestramento canino, transportes para consultas veterinárias e serviços de lavanderia. Para manter os donos informados e tranquilos, são realizadas publicações diárias com vídeos e fotos dos hóspedes.",
 		services: "Hotel canino",
 		prices: 10,
 		reservationEmail: "curti_dog@hotmail.com",
@@ -306,7 +306,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Sweetpet oferece um ambiente holístico para o bem-estar canino com serviços de saúde, educação e socialização.",
 		longDescription:
-			"Situada em Queijas, a Sweetpet adota uma abordagem holística no cuidado dos cães, tratando-os como membros da família. Suas instalações, que se estendem por 9.000 m², incluem parques, piscina e um chalet, e oferecem programas personalizados de saúde e educação canina.",
+			"A SweetPet, situada em Queijas com serviço de recolha em Lisboa, é um centro de bem-estar para cães que adota uma abordagem holística no cuidado destes animais, tratando-os como membros da família. O espaço está desenhado para fomentar a saúde, felicidade e sociabilidade canina, oferecendo serviços integrados de exercício, relaxamento, saúde, nutrição, higiene, educação e socialização. As instalações estendem-se por uma quinta de 9.000 m², equipada com três parques, uma piscina, diversas árvores e um chalet para descanso à sombra, proporcionando um ambiente ideal para brincadeiras, socialização e relaxamento. A SweetPet dispõe ainda de serviços de saúde, incluindo check-ups, vacinação e diagnósticos, bem como programas de educação focados em comportamento e obediência, com planos personalizados. Os requisitos para admissão na creche incluem uma avaliação comportamental e a comprovação de todas as vacinas em dia, incluindo a vacina da tosse dos canis. Machos com mais de 10 meses devem ser esterilizados e cadelas no cio não são aceites.",
 		services: "Hotel canino",
 		prices: 20,
 		reservationEmail: null,
@@ -350,7 +350,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Pet Hotel Gaia oferece alojamento para cães e gatos com passeios diários e apoio veterinário, com opções de estadia Outdoor e Indoor.",
 		longDescription:
-			"Localizado em Vila Nova de Gaia, o Pet Hotel Gaia oferece alojamento para cães e gatos, dividido em estadias Outdoor para cães de médio/grande porte e Indoor para cães pequenos, com serviços de água fresca, cama confortável, passeios diários e apoio veterinário.",
+			"O Pet Hotel Gaia, localizado em Vila Nova de Gaia, oferece alojamento para cães e gatos, com serviços que incluem passeios diários, zona de diversão, e apoio veterinário. O Hotel Canino oferece estadias Outdoor (ideal para cães de médio e grande porte) e estadias Indoor (ideal para cães de pequeno porte). Ao deixar o seu cão no Pet Hotel Gaia serviços como água fresca, uma cama confortável, passeios diários, diversão e apoio veterinário estão incluídos nas férias dos pets.",
 		services: "Hotel canino",
 		prices: 16,
 		reservationEmail: null,
@@ -394,7 +394,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"O Domi Canis Cattus EcoHotel combina design inovador e conforto para animais, sendo premiado e reconhecido internacionalmente.",
 		longDescription:
-			"Concebido em 2015 e inaugurado em 2019, o Domi Canis Cattus EcoHotel, no distrito do Porto, se consolidou como um dos espaços mais inovadores na hospitalidade para animais, com prêmios como 5 Estrelas Regiões 2020 e reconhecimentos internacionais. Sua infraestrutura de vanguarda oferece um ambiente seguro e funcional para os hóspedes de quatro patas.",
+			'O Domi Canis Cattus EcoHotel é uma obra-prima da arquitetura contemporânea, concebida para proporcionar o máximo conforto e bem-estar aos seus hóspedes de quatro patas. Desde a sua conceção em 2015 até à abertura ao público em 2019, o projeto consolidou-se como um dos espaços mais inovadores e premiados no setor de hospitalidade para animais. Localizado no distrito do Porto, foi distinguido com o prémio 5 Estrelas Regiões 2020, sendo reconhecido como o melhor na sua categoria. Mais do que um simples alojamento, destaca-se pela sua infraestrutura de vanguarda, cuidadosamente desenhada para criar um ambiente seguro, funcional e visualmente deslumbrante. A excelência do Domi Canis Cattus EcoHotel tem sido amplamente reconhecida a nível internacional, com uma impressionante coleção de prémios como o International Design Award, DNA Paris Design Awards e Muse Design Awards. Celebrado por instituições de renome como o Chicago Athenaeum e os Urban Design & Architecture Design Awards, o hotel foi consagrado como o "Pet Hotel mais bonito do mundo" em 2022. Devidamente licenciado pela CMVC e pela DGAV, reflete um compromisso com os mais altos padrões de qualidade e regulamentação, oferecendo uma experiência única e inesquecível tanto para os animais como para os seus tutores.',
 		services: "Hotel canino",
 		prices: 25,
 		reservationEmail: "domicaniscattus@gmail.com",
@@ -433,7 +433,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"A Pet Home foi criada por enfermeiras veterinárias e educadoras caninas, oferecendo hotel, creche, treino e serviços estéticos.",
 		longDescription:
-			"Localizada na Zona Industrial dos Arcos de Sardão em Vila Nova de Gaia, a Pet Home oferece serviços de treino, consultas, creche e hotel para animais, com cada pet tendo direito a uma box individual e os donos acompanhando a estadia via redes sociais.",
+			"A Pet Home, localizada na Zona Industrial dos Arcos de Sardão em Vila Nova de Gaia, foi criada por duas colegas de turma de Enfermagem Veterinária e educadoras caninas, com a visão de mudar e melhorar o mundo animal. Oferece uma gama de serviços incluindo treino canino, consultas de comportamento, creche e hotel canino, além de banhos e tosquias. Neste hotel, o pets têm acesso à creche canina da Pet Home. Cada animal tem direito a uma box individual (exceto para membros da mesma família, que podem ficar juntos). No fim-de-semana, os cães do hotel têm acesso à creche de manhã e ao final do dia. Na Pet Home, cada pet deve trazer a sua própria comida, para evitar grandes mudanças durante a sua estadia. O acompanhamento da estadia do seu patudo pode ser feita através das redes sociais. Deve efetuar o pagamento de 50% do valor total ao fazer a reserva.",
 		services: "Hotel canino",
 		prices: 0,
 		reservationEmail: null,
@@ -476,7 +476,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Pets and Family oferece creche e hotel canino sem espaços confinados, com avaliação inicial para segurança e adaptação.",
 		longDescription:
-			"Localizada na Maia, Pets and Family oferece um serviço diferenciado de creche e hotel para cães, funcionando das 8h às 20h, sem espaços confinados e com atenção 24 horas, com descontos variáveis conforme o número de cães e fidelidade ao serviço.",
+			"A Pets and Family, localizada na Maia, oferece um serviço diferenciado de creche e hotel canino, funcionando das 8h às 20h. Diferencia-se por não utilizar espaços confinados, tratando os animais como membros da família, com atenção 24 horas por parte dos tratadores, promovendo a socialização e atividade física em ambiente familiar. Neste hotel, os animais desfrutam de liberadade de circulação e de socialização com os restantes animais hospedados. Para garantir uma segurança eficaz, se for a primeira vez do pet no hotel, um teste será feito para avaliar a forma como este reage com os restantes patudos do hotel. Em termos de preços, uma estadia fica a 18,5 € por noite, havendo vários descontos concedidos, consoante o numero de cães da mesma família e se é ou não cliente da creche canina.",
 		services: "Hotel canino",
 		prices: 19,
 		reservationEmail: null,
@@ -514,7 +514,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Nortdog, com 25 anos de experiência, oferece hotel, creche e treino para cães e gatos, com eventos solidários.",
 		longDescription:
-			"A Nortdog é uma academia para cães e gatos em Braga, com 25 anos de experiência, oferecendo uma ampla seleção de produtos e serviços, incluindo hotéis, creches e cursos de obediência. Também organiza eventos como a 'Aqua Dog Party', destinando parte das receitas a associações de proteção animal.",
+			'A Nortdog é uma academia para cães e gatos situada em Braga, Portugal, com uma trajetória de 25 anos, oferecendo uma vasta seleção de produtos e serviços para estes animais. Esta entidade é reconhecida pelo seu compromisso com o bem-estar animal, permitindo que os pets aproveitem a natureza nas suas instalações, que incluem hotéis para caninos e felinos, creches para ambos, bem como cursos de obediência e treino personalizado. Adicionalmente, a Nortdog organiza eventos como a "Aqua Dog Party", um evento que mistura diversão aquática para os cães com uma componente social, redirecionando uma parte das receitas para associações de proteção animal locais. As instalações da academia são desenhadas para assegurar conforto e segurança, com espaços amplos e naturais, música ambiente, e cuidado contínuo aos animais hospedados.',
 		services: "Hotel canino",
 		prices: 16,
 		reservationEmail: null,
@@ -555,7 +555,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Family Dog oferece quartos autónomos e parques ao ar livre com atenção personalizada para o bem-estar dos cães.",
 		longDescription:
-			"Localizado em Alheira, Barcelos, o Hotel Family Dog destaca-se pelo cuidado e conforto oferecidos aos cães, com quartos autónomos, amplos parques para recreação e atendimento personalizado, funcionando de segunda a sexta, das 9h às 18h.",
+			"O Hotel Family Dog, localizado em Alheira, Barcelos, destaca-se pela sua preocupação com o bem-estar e conforto dos cães hospedados. Oferece quartos autónomos com áreas interiores e exteriores privativas, higienizados diariamente. Com cinco mil metros quadrados de espaço, divididos em parques ao ar livre, arborizados e vedados, os cães têm acesso diário a atividades recreativas e exercícios. A equipa do hotel garante atenção personalizada às características individuais e necessidades específicas de cada cão, assegurando a melhor comodidade possível. Para quem deseja conhecer o local, o Hotel Family Dog está de portas abertas para visitas. Os serviços disponíveis incluem áreas de descanso privadas, vários parques para lazer, contacto com a natureza, atividades adequadas a cada cão e vigilância permanente. Para a admissão no hotel, é necessário um boletim de vacinação atualizado, desparasitação interna e externa válida, e a aceitação dos termos e condições do hotel. O horário de funcionamento é de segunda a sexta-feira, das 9h00 às 18h00, com horários específicos para check-in e check-out.",
 		services: "Hotel canino",
 		prices: 18,
 		reservationEmail: null,
@@ -596,7 +596,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Dogtel oferece alojamento, treinos, creche e spa para cães e gatos em um espaço de 3000m².",
 		longDescription:
-			"Localizado na Ilha da Madeira, o Dogtel oferece uma gama completa de serviços para cães e gatos, incluindo alojamento, treinos, creche, spa e consultório veterinário. Conta também com um centro de reabilitação para condições como artrite.",
+			"O Dogtel é um complexo de excelência na Ilha da Madeira, dedicado ao bem-estar dos animais de estimação, que combina vários serviços num espaço de cerca de 3000m2. Este centro oferece uma gama completa de serviços, incluindo alojamento para cães e gatos, treinos caninos, uma piscina para hidroterapia e lazer, além de um spa para banhos e tosquias. Além disso, dispõem de um consultório veterinário, garantindo cuidados integrais de saúde e bem-estar para os pets. O Dogtel proporciona também serviços de creche canina, onde os cães podem interagir e socializar-se em um ambiente supervisionado enquanto seus donos estão ocupados. Outro destaque é o centro de reabilitação que utiliza a piscina para terapias, ajudando na recuperação de condições como artrites e lesões musculares.",
 		services: "Hotel canino",
 		prices: 0,
 		reservationEmail: "Ricardojesus@dogtel.pt",
@@ -635,7 +635,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Clínica Veterinária São Miguel dispõe de canis para cães e gatis para gatos, funcionando o ano todo.",
 		longDescription:
-			"Com 25 canis exteriores, 4 interiores para cães e 21 gatis para gatos, a Clínica Veterinária São Miguel oferece serviços personalizados de alimentação e cuidados, funcionando 365 dias por ano com horários flexíveis.",
+			"O Hotel Canino é composto por 25 canis exteriores e 4 interiores, oferecendo maior conforto e comodidade para os animais. Criados a pensar no bem-estar dos cães, os canis exteriores têm 5 metros de comprimento por 2 metros de largura. O Hotel Felino dispõe de 21 gatis interiores. Oferecem um serviço personalizado de alimentação para atender às necessidades específicas de cada animal durante a estadia. O hotel está disponível durante os 365 dias do ano, com check-in e check-out efetuados no horário da clínica ou em outro horário a combinar, mediante disponibilidade. Para maior conveniência, também disponibilizam um serviço de domicílio para recolher e entregar os animais.",
 		services: "Hotel canino",
 		prices: 0,
 		reservationEmail: null,
@@ -668,7 +668,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Hotel do Cão Algarve oferece alojamentos de luxo, praia para cães e SPA, com vigilância veterinária e transporte.",
 		longDescription:
-			"O Hotel do Cão Algarve proporciona uma experiência única para cães e gatos, com áreas verdes, alojamentos de luxo, praia exclusiva para cães, vigilância veterinária e um SPA que trata de banhos, escovagens e cortes de unhas, além de oferecer serviço de transporte.",
+			"O Hotel do Cão Algarve oferece uma experiência única para cães e gatos, incluindo amplas áreas verdes, alojamentos de luxo com espaços interiores e exteriores, e uma equipa experiente para cuidar dos pets. Destaca-se pela oferta de uma praia onde os cães podem nadar e brincar, garantindo uma estadia inesquecível. As operações do hotel já duram mais de 10 anos e conta com um portfólio alargado de clientes satisfeitos. o Hotel garante um acompanhamento da saúde de todos os hóspedes através de uma vigilância veterinária constante. Os patudos também desfrutam de um SPA, onde a aparência, banho, escovagem e cortes de unhas são tratados. Também oferecem um serviço de transporte para evitar qualquer obstáculo para a estadia do seu cão.",
 		services: "Hotel canino",
 		prices: 0,
 		reservationEmail: null,
@@ -700,7 +700,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Pets Inn oferece um ambiente seguro e tranquilo para cães, gatos e outros animais com alojamento e creche canina.",
 		longDescription:
-			"Localizado no campo em Loulé, Pets Inn oferece um ambiente personalizado para cães, gatos e outras espécies. Além de alojamento temporário, disponibiliza day care com atenção individualizada, acomodando diversos animais em um espaço que proporciona conforto e segurança.",
+			"Pets Inn é um hotel para animais de estimação que oferece um ambiente seguro, tranquilo e personalizado para cães, gatos e diversas outras espécies, como coelhos, répteis, furões e pássaros. Situado numa zona campestre, proporciona um refúgio relaxante, longe do stress da cidade, mas com fácil acesso urbano. Além do serviço de alojamento temporário, o Pets Inn também disponibiliza day care, uma creche canina ideal para donos com rotinas agitadas que querem garantir um dia estimulante e divertido para os seus animais. A infraestrutura foi pensada para criar uma experiência confortável, com um número reduzido de unidades de alojamento para garantir atenção individualizada. O espaço conta com capacidade para 13 cães, 18 gatos e 5 coelhos, além de áreas adaptadas para outros animais, incluindo répteis e aves. O objetivo do Pets Inn é proporcionar um ambiente onde todos os animais se sintam bem, relaxados e felizes, como se estivessem em casa.",
 		services: "Hotel canino",
 		prices: 20,
 		reservationEmail: "geral@petsinn.pt",
@@ -742,7 +742,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Dog Spa oferece hotel, creche, tosquia, treinos e transporte para cães e gatos, com acompanhamento veterinário.",
 		longDescription:
-			"A Dog Spa em Olhão conta com instalações projetadas para o conforto e diversão dos animais, com boxes espaçosas e uma área verde vedada para brincadeiras. Uma equipa de profissionais garante a saúde e o bem-estar dos hóspedes, acompanhando-os individualmente.",
+			"A Dog Spa em Olhão oferece uma ampla gama de serviços para cães e gatos, incluindo hotel, tosquia, creche, treinos, e serviço de transporte. As instalações são projetadas para garantir o melhor conforto e diversão para os animais, com boxes espaçosas e música ambiente para gatos. Uma equipa de profissionais da área veterinária assegura a saúde e bem-estar dos animais. O Hotel contém uma zona ampla, verde e vedada para que os animais possam brincar entre eles sem qualquer constrangimento. Enquanto usufruem desta área de brincadeira, os animais são devidamento acompanhados, a nivel individual, para que possam otimizar o bem-estar de cada um enquanto hóspedes do hotel.",
 		services: "Hotel canino",
 		prices: 0,
 		reservationEmail: null,
@@ -784,7 +784,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Centro Canino do Algarve oferece alojamento, passeios, treino e tosquias num ambiente rural com instalações modernas.",
 		longDescription:
-			"Localizado em Albufeira, o Centro Canino do Algarve oferece serviços para cães, como alojamento, alimentação, passeios, brincadeiras, treino, banhos e tosquias, em um ambiente rural relaxante, com canis individuais e áreas de lazer.",
+			"O Centro Canino do Algarve é um canil localizado em Albufeira, Portugal. O canil oferece uma variedade de serviços para cães, incluindo alojamento, alimentação, passeios, brincadeiras, treino, banhos e tosquias. O canil está localizado numa área rural, o que proporciona aos cães um ambiente tranquilo e relaxante. As instalações do canil são modernas e bem equipadas, com canis individuais, áreas de lazer e espaços exteriores para passeios. O pessoal do canil é experiente e qualificado, e está sempre disponível para cuidar dos cães com carinho e atenção. O canil oferece uma variedade de serviços personalizados, para que os tutores possam encontrar o que melhor se adequa às necessidades do seu animal.",
 		services: "Hotel canino",
 		prices: 0,
 		reservationEmail: null,
@@ -822,7 +822,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Pet Hotel do Algarve oferece suítes privativas isotérmicas, passeios diários e apoio veterinário, com transporte especializado.",
 		longDescription:
-			"O Merrylegs PET Hotel é um hotel familiar que oferece alojamento de luxo, cuidado diário, treino e serviço de entrega e coleta, proporcionando um ambiente seguro para cães, gatos e pequenos animais.",
+			"O Merrylegs PET Hotel é um hotel familiar para animais que oferece alojamento de luxo, cuidado diário, treino para cães, e serviço de entrega e coleta. Está operacional há 12 anos e localiza-se num espaço construído de propósito para proporcionar um ambiente seguro e confortável para cães, gatos e pequenos animais. As infraestruturas do hotel incluem apartamentos caninos, que tencionam proporcionar um ambiente confortável, estável e calmo para o animal. Além disso, a equipa do hotel acredita que o exercício e cuidado diário são essenciais para promover uma boa estadia do animal no Merrylegs.",
 		services: "Hotel canino",
 		prices: 22,
 		reservationEmail: "pethoteldoalgarve.lda@gmail.com",
@@ -861,7 +861,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Merrylegs Pet Hotel oferece alojamento de luxo, treino e transporte para cães, gatos e pequenos animais, com 12 anos de experiência.",
 		longDescription:
-			"O Merrylegs PET Hotel é um hotel familiar que oferece alojamento de luxo, cuidado diário, treino e serviço de entrega e coleta, proporcionando um ambiente seguro e confortável para cães, gatos e pequenos animais, com ênfase no exercício e cuidados diários.",
+			"O Merrylegs PET Hotel é um hotel familiar para animais que oferece alojamento de luxo, cuidado diário, treino para cães, e serviço de entrega e coleta. Está operacional há 12 anos e localiza-se num espaço construído de propósito para proporcionar um ambiente seguro e confortável para cães, gatos e pequenos animais. As infraestruturas do hotel incluem apartamentos caninos, que tencionam proporcionar um ambiente confortável, estável e calmo para o animal. Além disso, a equipa do hotel acredita que o exercício e cuidado diário são essenciais para promover uma boa estadia do animal no Merrylegs.",
 		services: "Hotel canino",
 		prices: 0,
 		reservationEmail: null,
@@ -900,7 +900,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Herdade Bonanza é um resort canino em Lagos com alojamento, creche, treino e transporte, com suítes isoladas e piscina interior.",
 		longDescription:
-			"A Herdade Bonanza, situada em Lagos, oferece serviços de alojamento, cuidados de higiene, creche, aulas de treino e transporte para cães, com 43 suítes privadas revestidas para isolamento e acesso a piscina interior e áreas monitoradas.",
+			"A Herdade Bonanza, situada em Lagos, é um resort canino que enfatiza o tratamento familiar para todos os cães. Oferece diversos serviços como alojamento, cuidados de higiene, uma equipa dedicada, creche, aulas de treino, e transporte para os animais. O Resort dispõe de 43 suítes privadas com uma dimensão de 9 m2 a 12 m2. Estas infraestruturas são revestidas com cortiça para garantir um isolamento térmico e sonoro.  Durante a estadia, o patudo terá acesso à piscina interior, preparada para cães de todos os portes, pavilhões de atividade com monitorização permanente da nossa equipa. A Herdade dispõe de vários campos vedados independentes, com água e sombra.",
 		services: "Hotel canino",
 		prices: 0,
 		reservationEmail: null,
@@ -941,7 +941,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"A Curti Dog oferece hospedagem, creche e estética para cães e gatos, com serviços de petshop, adestramento e transporte.",
 		longDescription:
-			"Estabelecida em 2018, a Curti Dog é uma empresa familiar que oferece serviços de hospedagem, creche e estética para cães e gatos, com boxes individuais e serviços de adestramento e transporte para consultas veterinárias.",
+			"A Curti Dog é uma empresa familiar que foi estabelecida em 2018 e está situada na zona oeste. Esta empresa oferece uma variedade de serviços para cães e gatos, incluindo hospedagem e creche. Durante o dia, os animais têm acesso a um espaço aberto, enquanto à noite, cada um é acomodado em uma box individual com sistemas de proteção contra frio, chuva e calor. Além das opções de hospedagem, a Curti Dog disponibiliza serviços de estética animal, que incluem tosquias, banhos e tratamentos para o pelo e a pele. A empresa também conta com uma petshop, oferece treinamentos de adestramento canino, transportes para consultas veterinárias e serviços de lavanderia. Para manter os donos informados e tranquilos, são realizadas publicações diárias com vídeos e fotos dos hóspedes.",
 		services: "Hotel canino",
 		prices: 10,
 		reservationEmail: "curti_dog@hotmail.com",
@@ -980,7 +980,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"O Hotel e SPA Animal VIP oferece suites de luxo para cães e gatos com TV, webcam e videochamadas diárias, além de serviços de piscina, grooming e massagens.",
 		longDescription:
-			"Localizado em Travassós de Baixo, Viseu, o Hotel e SPA Animal VIP proporciona uma experiência de luxo para cães e gatos com suites equipadas com televisão, ventoinha e webcam, passeios diários em um parque vedado de 4000 m², além de serviços de grooming diário, massagens e outras comodidades, funcionando de segunda a sábado.",
+			"O Hotel e SPA Animal VIP, localizado em Travassós de Baixo, Viseu, oferece uma experiência de luxo para cães e gatos, ultrapassando o conceito tradicional de hotel para animais. Os animais podem desfrutar de suites de luxo com áreas internas e externas, equipadas com televisão, ventoinha e webcam com transmissão para o smartphone do dono. As estadias incluem passeios diários em um parque vedado de 4000m² e videochamadas com os donos ao fim do dia. Para os gatos, há jardins de inverno e verão e todas as suites têm janela para a rua. O hotel também oferece serviços de grooming diário, massagens, e outros mimos. Além das comodidades de luxo, o Hotel e SPA Animal VIP disponibiliza uma série de serviços adicionais, como piscina no terraço, câmaras de videovigilância, banhos e tosquias, videografia, táxi para animais e massagens. Localizado na Estrada entre Viseu e Sátão, junto ao antigo nó da IP5, o hotel funciona de segunda a sábado, das 10h00 às 12h00 e das 15h00 às 19h00. As reservas podem ser feitas online ou via telefone, proporcionando uma estadia inesquecível para os animais, que podem até relutar em voltar para casa após a experiência.",
 		services: "Hotel canino",
 		prices: 0,
 		reservationEmail: null,
@@ -1019,7 +1019,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"O Hotel d’A Trela Amarela oferece alojamento para cães e gatos com amplos espaços vedados, passeios diários e monitorização veterinária.",
 		longDescription:
-			"Situado numa zona rural a 5 minutos da A1 em Santarém, o Hotel d’A Trela Amarela dispõe de 20 boxes para cães e 10 para gatos, com dois passeios diários em um espaço de 15.000 m². Os check-ins ocorrem das 9h às 11h e os check-outs das 16h às 18h, com filmagens das brincadeiras para os donos.",
+			"Situado numa zona rural, apenas a 5 minutos da saída da A1 em Santarém, o Hotel d’A Trela Amarela dispõe de 20 boxes para cães e 10 boxes para gatos. Os cães desfrutam de dois passeios diários em um espaço vedado de 15.000 m², onde podem correr livremente, enquanto suas brincadeiras são filmadas e fotografadas para envio aos donos. Em caso de doença súbita, o médico veterinário responsável observa os hóspedes, sendo os custos suportados pelos donos. Brinquedos e objetos familiares são bem-vindos para facilitar a adaptação dos animais. Os check-ins e check-outs são realizados das 9h às 11h e das 16h às 18h.",
 		services: "Hotel canino",
 		prices: 14,
 		reservationEmail: null,
@@ -1061,7 +1061,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Monte da Benviuda oferece alojamento tranquilo para cães com boxes individuais, parque de passeios e centro de estética canina.",
 		longDescription:
-			"Localizado em Mértola, o Hotel Canino 'Monte da Benviúda' oferece tratamento personalizado e um ambiente acolhedor, com boxes individuais, um parque para passeios e um centro de estética canina, proporcionando um espaço seguro para os animais.",
+			'O Hotel Canino "Monte da Benviúda", localizado no concelho de Mértola, terá o maior prazer em alojar o seu cão em caso de necessidade de sair, comprometendo-se a proporcionar um tratamento personalizado cheio de dedicação e carinho, num ambiente acolhedor na tranquilidade do Alentejo. O seu animal terá espaço para correr e brincar, podendo fazer novos amigos de quatro patas, essencial para o seu equilíbrio social.  O Hotel dispõe de boxes individuais, parque de passeios e um centro de estética Canina.',
 		services: "Hotel canino",
 		prices: 12,
 		reservationEmail: "Monte.da.benviuda@sapo.pt",
@@ -1108,7 +1108,7 @@ export const hotelList: Hotel[] = [
 		shortDescription:
 			"Residência Canina e Felina Forte de Elvas oferece alojamento seguro para cães e gatos, com treinos e cuidados veterinários.",
 		longDescription:
-			"Localizada em Elvas, a Residência Canina e Felina Forte de Elvas é dedicada ao cuidado dos animais, oferecendo serviços de hospedagem, cuidados diários, treinos e serviços veterinários em um ambiente seguro e confortável.",
+			"A Residência Canina e Felina Forte de Elvas é um local dedicado ao cuidado e bem-estar dos amigos de quatro patas. Localizada em Elvas, esta residência oferece um ambiente seguro e confortável para cães e gatos, proporcionando serviços de hospedagem, cuidados diários e atividades recreativas. A equipa, composta por profissionais qualificados e amantes de animais, garante que todos os hóspedes recebam atenção personalizada e cuidados adequados às suas necessidades específicas. Além dos serviços de hospedagem, a Residência Canina e Felina Forte de Elvas também oferece treinos e serviços veterinários, assegurando que os animais estejam sempre saudáveis e bem cuidados. Com instalações modernas e espaços amplos para brincadeiras e exercícios, esta residência é o lugar ideal para deixar os animais de estimação, seja durante uma viagem ou por um período de tempo prolongado. Aqui, os cães e gatos encontram um verdadeiro lar longe de casa, onde podem desfrutar de carinho, segurança e diversão.",
 		services: "Hotel canino",
 		prices: 12,
 		reservationEmail: null,

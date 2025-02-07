@@ -10,6 +10,7 @@ import PetClusterIcon from "@marketing/home/components/PetClusterIcon";
 import { regionList } from "@marketing/db/regions";
 import { Star } from "lucide-react";
 import { Hotel } from "@marketing/db/hotels";
+import Image from "next/image";
 
 // Dynamically import react-leaflet components (prevents SSR issues)
 const MapContainer = dynamic(
@@ -48,7 +49,7 @@ function SmallHotelCard({
 		<div className="flex items-center gap-2 p-4 border rounded-md shadow-sm bg-white flex-wrap">
 			{/* Image container */}
 			<div className="w-20 h-20 flex-shrink-0">
-				<img
+				<Image
 					src={hotel.images ? hotel?.images[0] : ""}
 					alt={hotel.name ?? ""}
 					className="object-cover rounded-md w-full h-full"

@@ -1,5 +1,5 @@
 "use client";
-import { BadgeCheck, Facebook, Instagram } from "lucide-react";
+import { BadgeCheck, Facebook, Globe, Instagram } from "lucide-react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { use, useEffect, useState } from "react";
 import "swiper/css";
 import { type Hotel, hotelList } from "@marketing/db/hotels";
+import HotelMarkerSVG from "@marketing/home/components/HotelMarkerSVG";
 
 // ✅ Dynamically import `react-leaflet` components to prevent SSR issues
 const MapContainer = dynamic(
@@ -24,6 +25,8 @@ const Marker = dynamic(
 const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), {
 	ssr: false,
 });
+
+const L = typeof window !== "undefined" ? require("leaflet") : null;
 const nearbyServices = [
 	{
 		id: 1,
@@ -119,7 +122,14 @@ export default function HotelDetailsPage({
 
 	if (!hotel)
 		return <p className="mt-20 text-center text-gray-500">A carregar...</p>;
-
+	const createHotelIcon = (hotelId: string) =>
+		L.divIcon({
+			className: "custom-marker",
+			html: HotelMarkerSVG({ hover: false }),
+			iconSize: [40, 50],
+			iconAnchor: [20, 50],
+			popupAnchor: [0, -50],
+		});
 	return (
 		<div className="container mx-auto mt-20 p-4">
 			<Link href="/" className="hover:underline">
@@ -188,11 +198,14 @@ export default function HotelDetailsPage({
 					</button>
 
 					<div className="mt-5 flex gap-3">
-						<Link href="https://instagram.com">
+						<Link href={hotel.instagram ?? ""}>
 							<Instagram className="hover:!grayscale-0 size-5 text-primary grayscale" />
 						</Link>
-						<Link href="https://facebook.com">
+						<Link href={hotel.facebook ?? ""}>
 							<Facebook className="hover:!grayscale-0 size-5 text-primary grayscale" />
+						</Link>
+						<Link href={hotel.website ?? ""}>
+							<Globe className="hover:!grayscale-0 size-5 text-primary grayscale" />
 						</Link>
 					</div>
 				</div>
@@ -216,7 +229,10 @@ export default function HotelDetailsPage({
 							className="h-full w-full rounded-lg"
 						>
 							<TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-							<Marker position={[hotel.lat, hotel.lng]}>
+							<Marker
+								position={[hotel.lat, hotel.lng]}
+								icon={createHotelIcon(hotel.uuid)}
+							>
 								<Popup>{hotel.name}</Popup>
 							</Marker>
 						</MapContainer>

@@ -5,24 +5,62 @@ const testimonials = [
 	{
 		name: "Sarah & Bella 🐶",
 		review:
-			"This was the best stay for my dog! The hotel was super friendly and clean.",
-		location: "Lisbon",
+			"Esta foi a melhor estadia para o meu cão! O hotel era super acolhedor e limpo.",
+		location: "Lisboa",
 	},
 	{
-		name: "John & Max 🐕",
-		review: "Max loved the backyard and play area. Highly recommended!",
+		name: "João & Max 🐕",
+		review:
+			"O Max adorou o quintal e a área de brincadeiras. Recomendo vivamente!",
 		location: "Porto",
 	},
 	{
-		name: "Emily & Charlie 🐾",
+		name: "Emília & Charlie 🐾",
 		review:
-			"A wonderful experience! My cat was super comfortable and well cared for.",
+			"Uma experiência maravilhosa! O meu gato esteve super confortável e bem cuidado.",
 		location: "Algarve",
 	},
 	{
 		name: "Daniel & Coco 🐩",
-		review: "Great service! The pet hotel had everything my dog needed.",
+		review:
+			"Ótimo serviço! O hotel para animais tinha tudo o que o meu cão precisava.",
 		location: "Madeira",
+	},
+	{
+		name: "Beatriz & Nala 🐕‍🦺",
+		review:
+			"Fiquei muito satisfeita com os cuidados prestados. A Nala foi tratada como uma rainha!",
+		location: "Coimbra",
+	},
+	{
+		name: "Rui & Thor 🐾",
+		review:
+			"Espaço incrível, funcionários muito simpáticos. O Thor adorou cada momento!",
+		location: "Braga",
+	},
+	{
+		name: "Ana & Luna 🐈",
+		review:
+			"Foi a primeira vez que deixei a minha gata num hotel e não podia estar mais feliz. Serviço excelente!",
+		location: "Faro",
+	},
+	{
+		name: "Carlos & Simba 🐕",
+		review:
+			"Muito profissionalismo e carinho pelos animais. O Simba já quer voltar!",
+		location: "Évora",
+	},
+	{
+		name: "Marta & Bolinha 🐹",
+		review:
+			"Até o meu pequeno Bolinha foi bem tratado! Adorei a atenção aos detalhes.",
+		location: "Aveiro",
+	},
+	{
+		name: "Tiago & Rex 🐶",
+		review:
+			"Estadia perfeita! O Rex divertiu-se imenso e veio para casa super feliz.",
+		location: "Viana do Castelo",
 	},
 ];
 

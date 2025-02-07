@@ -24,7 +24,7 @@ export default function HotelCard({
 }: Hotel) {
 	const router = useRouter();
 	return (
-		<div className="transform overflow-hidden rounded-lg bg-white shadow-sm transition hover:scale-105">
+		<div className="min-h-96 transform overflow-hidden rounded-lg bg-white shadow-sm transition hover:scale-105">
 			{/* Hotel Image */}
 			<div className="relative h-48 w-full">
 				{petabookPartner && (
@@ -41,10 +41,9 @@ export default function HotelCard({
 					/>
 				)}
 			</div>
-
 			{/* Hotel Details */}
-			<div className="p-4">
-				<h3 className="font-semibold text-gray-800 text-lg">{name}</h3>
+			<div className="flex h-full flex-col content-between justify-between p-4 ">
+				<h3 className="h-14 font-semibold text-gray-800 text-lg">{name}</h3>
 				<div className="mt-1 flex items-center text-gray-500 text-sm">
 					<MapPin size={16} className="mr-1" />
 					{location}
@@ -64,7 +63,9 @@ export default function HotelCard({
 				</div>
 
 				{/* Price & Booking Button */}
-				<div className="mt-4 flex items-center justify-between">
+				<div
+					className={`mt-4 flex items-center ${prices != 0 ? "justify-between" : "justify-end"}`}
+				>
 					{prices != 0 && (
 						<span className="font-semibold text-blue-600 text-lg">
 							€{prices}/noite
@@ -72,7 +73,7 @@ export default function HotelCard({
 					)}
 					<button
 						onClick={() => router.push(`/hotels/${uuid}`)}
-						className="rounded-lg bg-blue-600 px-4 py-2 text-sm text-white transition hover:bg-blue-700"
+						className="rounded-lg bg-blue-600 px-4 py-2 text-right text-sm text-white transition hover:bg-blue-700"
 					>
 						Ver
 					</button>
