@@ -10,7 +10,7 @@
 		"@types/node": "22.10.2",
 		"dotenv-cli": "^8.0.0",
 		"prisma": "^6.1.0",
-		"zod-prisma-types": "^3.2.1"
+		"zod-prisma-types": "^3.2.4"
 	},
 	"main": "./index.ts",
 	"name": "@repo/database",
