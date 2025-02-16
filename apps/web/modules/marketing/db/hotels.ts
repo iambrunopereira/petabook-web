@@ -1143,7 +1143,7 @@ export const hotelList: Hotel[] = [
 		],
 	},
 	{
-		uuid: "1a2b3c4d-0028-0028-0028-000000000028",
+		uuid: "1a2b3c4d-0028-0028-0028-000000000030",
 		name: "Pet Hotel do Jardim Zoológico",
 		region: [
 			"c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91",
