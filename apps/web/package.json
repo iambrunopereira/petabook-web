@@ -81,7 +81,7 @@
 		"@repo/auth": "workspace:*",
 		"@repo/tailwind-config": "workspace:*",
 		"@repo/tsconfig": "workspace:*",
-		"@shikijs/rehype": "^1.24.4",
+		"@shikijs/rehype": "^2.4.2",
 		"@types/cookie": "^0.6.0",
 		"@types/js-cookie": "^3.0.4",
 		"@types/leaflet": "^1.9.16",
