@@ -1,6 +1,6 @@
 {
 	"dependencies": {
-		"@prisma/client": "^6.1.0",
+		"@prisma/client": "^6.3.1",
 		"@repo/config": "workspace:*",
 		"zod": "^3.24.1"
 	},
@@ -9,7 +9,7 @@
 		"@repo/tsconfig": "workspace:*",
 		"@types/node": "22.10.2",
 		"dotenv-cli": "^8.0.0",
-		"prisma": "^6.1.0",
+		"prisma": "^6.3.1",
 		"zod-prisma-types": "^3.2.1"
 	},
 	"main": "./index.ts",
