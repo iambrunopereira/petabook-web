@@ -28,8 +28,8 @@ export function Hero() {
 				</h1>
 
 				<p className="mx-auto mt-4 max-w-lg text-balance text-foreground/60 text-lg">
-					This is a demo application built with petabook. It will save you a
-					lot of time and effort building your next SaaS.
+					This is a demo application built with petabook. It will save you a lot
+					of time and effort building your next SaaS.
 				</p>
 
 				<div className="mt-6 flex flex-col items-center justify-center gap-3 md:flex-row">
@@ -161,13 +161,13 @@ export function Hero() {
 				<div className="mx-auto mt-16 max-w-5xl rounded-2xl border bg-card/50 p-2 shadow-lg dark:shadow-foreground/10">
 					<Image
 						src={heroImage}
-						alt="Our application"
+						alt="A nossa aplicação"
 						className="block rounded-xl dark:hidden"
 						priority
 					/>
 					<Image
 						src={heroImageDark}
-						alt="Our application"
+						alt="A nossa aplicação"
 						className="hidden rounded-xl dark:block"
 						priority
 					/>

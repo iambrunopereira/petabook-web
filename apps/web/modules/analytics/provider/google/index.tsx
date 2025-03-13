@@ -2,7 +2,7 @@
 
 import Script from "next/script";
 
-const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID as string;
+const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string;
 
 export function AnalyticsScript() {
 	return (

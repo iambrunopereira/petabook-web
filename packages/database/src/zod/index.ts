@@ -30,6 +30,8 @@ export const InvitationScalarFieldEnumSchema = z.enum(['id','organizationId','em
 
 export const PurchaseScalarFieldEnumSchema = z.enum(['id','organizationId','userId','type','customerId','subscriptionId','productId','status','createdAt','updatedAt']);
 
+export const RegionScalarFieldEnumSchema = z.enum(['uuid','region','centerLat','centerLng','type','main','image','createdAt','updatedAt']);
+
 export const SortOrderSchema = z.enum(['asc','desc']);
 
 export const QueryModeSchema = z.enum(['default','insensitive']);
@@ -39,6 +41,10 @@ export const NullsOrderSchema = z.enum(['first','last']);
 export const PurchaseTypeSchema = z.enum(['SUBSCRIPTION','ONE_TIME']);
 
 export type PurchaseTypeType = `${z.infer<typeof PurchaseTypeSchema>}`
+
+export const RegionTypeSchema = z.enum(['city','region']);
+
+export type RegionTypeType = `${z.infer<typeof RegionTypeSchema>}`
 
 /////////////////////////////////////////
 // MODELS
@@ -206,3 +212,21 @@ export const PurchaseSchema = z.object({
 })
 
 export type Purchase = z.infer<typeof PurchaseSchema>
+
+/////////////////////////////////////////
+// REGION SCHEMA
+/////////////////////////////////////////
+
+export const RegionSchema = z.object({
+  type: RegionTypeSchema,
+  uuid: z.string().uuid(),
+  region: z.string(),
+  centerLat: z.number(),
+  centerLng: z.number(),
+  main: z.boolean(),
+  image: z.string(),
+  createdAt: z.coerce.date(),
+  updatedAt: z.coerce.date(),
+})
+
+export type Region = z.infer<typeof RegionSchema>

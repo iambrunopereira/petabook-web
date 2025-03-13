@@ -32,21 +32,21 @@ const nearbyServices = [
 		id: 1,
 		name: "Lisbon Vet Clinic",
 		category: "vet",
-		location: "Lisbon",
+		location: "Lisboa",
 		image: "/images/assets/lisboa.jpg",
 	},
 	{
 		id: 2,
 		name: "Pet-Friendly Café",
 		category: "cafe",
-		location: "Lisbon",
+		location: "Lisboa",
 		image: "/images/assets/porto.jpg",
 	},
 	{
 		id: 3,
 		name: "Pet Supplies Store",
 		category: "store",
-		location: "Lisbon",
+		location: "Lisboa",
 		image: "/images/assets/algarve.jpg",
 	},
 ];
@@ -54,7 +54,7 @@ const hotels = [
 	{
 		id: 1,
 		name: "Cozy Pet Stay",
-		location: "Lisbon",
+		location: "Lisboa",
 		lat: 38.7169,
 		lng: -9.1399,
 		price: 89,
@@ -86,7 +86,9 @@ const hotels = [
 
 export default function HotelDetailsPage({
 	params,
-}: { params: Promise<{ id: string }> }) {
+}: {
+	params: Promise<{ id: string }>;
+}) {
 	const router = useRouter();
 	const { id } = use(params);
 	const [hotel, setHotel] = useState<Hotel | any>(null);
@@ -177,10 +179,13 @@ export default function HotelDetailsPage({
 					<p className="text-gray-600 text-lg">{hotel.location}</p>
 					<p className="mt-3 text-gray-700">{hotel.shortDescription}</p>
 					<div className="my-5">
-						<span className="font-semibold text-green-600 text-xl">
-							€{hotel.prices} / noite
-						</span>
-						<span className="ml-4 text-yellow-500">⭐ {hotel.rating} / 5</span>
+						{hotel.prices !== 0 && (
+							<span className="mr-4 font-semibold text-green-600 text-xl">
+								€{hotel.prices} / noite
+							</span>
+						)}
+
+						<span className=" text-yellow-500">⭐ {hotel.rating} / 5</span>
 					</div>
 
 					<p className="text-sm opacity-70">Contacto: {hotel.contact}</p>

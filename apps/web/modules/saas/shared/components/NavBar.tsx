@@ -11,7 +11,6 @@ import {
 	SettingsIcon,
 	UserCog2Icon,
 	UserCogIcon,
-	Wand2Icon,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -47,12 +46,12 @@ export function NavBar() {
 					},
 				]
 			: [
-					{
+					/* {
 						label: t("app.menu.aiDemo"),
 						href: "/app/ai-demo",
 						icon: Wand2Icon,
 						isActive: pathname.startsWith("/app/ai-demo"),
-					},
+					}, */
 					{
 						label: t("app.menu.accountSettings"),
 						href: "/app/settings",

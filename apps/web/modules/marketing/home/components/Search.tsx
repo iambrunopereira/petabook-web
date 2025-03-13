@@ -54,7 +54,7 @@ export default function SearchBar() {
 					<div className="relative w-full">
 						<input
 							type="text"
-							placeholder="Procura o hotel para o teu pet..."
+							placeholder="Para onde?"
 							className="w-full rounded-lg bg-transparent px-4 py-3 text-gray-700 placeholder-gray-500 outline-none"
 							value={search}
 							onChange={(e) => setSearch(e.target.value)}

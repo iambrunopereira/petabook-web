@@ -24,7 +24,10 @@ export default function HotelCard({
 }: Hotel) {
 	const router = useRouter();
 	return (
-		<div className="min-h-96 transform overflow-hidden rounded-lg bg-white shadow-sm transition hover:scale-105">
+		<div
+			className="min-h-96 transform cursor-pointer overflow-hidden rounded-lg bg-white shadow-sm transition hover:scale-105"
+			onClick={() => router.push(`/hotels/${uuid}`)}
+		>
 			{/* Hotel Image */}
 			<div className="relative h-48 w-full">
 				{petabookPartner && (
@@ -37,7 +40,7 @@ export default function HotelCard({
 						src={images[0]!}
 						alt={name ?? ""}
 						fill
-						className="rounded-t-lg"
+						className="rounded-t-lg object-cover object-center"
 					/>
 				)}
 			</div>
@@ -71,12 +74,9 @@ export default function HotelCard({
 							€{prices}/noite
 						</span>
 					)}
-					<button
-						onClick={() => router.push(`/hotels/${uuid}`)}
-						className="rounded-lg bg-blue-600 px-4 py-2 text-right text-sm text-white transition hover:bg-blue-700"
-					>
+					{/* 	<button className="rounded-lg bg-blue-600 px-4 py-2 text-right text-sm text-white transition hover:bg-blue-700">
 						Ver
-					</button>
+					</button> */}
 				</div>
 			</div>
 		</div>

@@ -14,6 +14,7 @@ import { organizationsRouter } from "./routes/organizations";
 import { paymentsRouter } from "./routes/payments/router";
 import { uploadsRouter } from "./routes/uploads";
 import { webhooksRouter } from "./routes/webhooks";
+import { regionsRouter } from "./routes/regions";
 
 export const app = new Hono().basePath("/api");
 
@@ -30,6 +31,7 @@ const appRouter = app
 	.route("/", newsletterRouter)
 	.route("/", organizationsRouter)
 	.route("/", adminRouter)
+	.route("/", regionsRouter)
 	.route("/", healthRouter);
 
 app.get(

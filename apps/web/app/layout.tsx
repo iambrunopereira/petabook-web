@@ -5,9 +5,10 @@ import "cropperjs/dist/cropper.css";
 
 export const metadata: Metadata = {
 	title: {
-		absolute: "Petabook  - Application",
-		default: "Petabook - Application",
-		template: "%s | Petabook  - Application",
+		absolute: "Petabook  - A melhor plataforma de hoteis caninos em Portugal",
+		default: "Petabook - A melhor plataforma de hoteis caninos em Portugal",
+		template:
+			"%s | Petabook  - A melhor plataforma de hoteis caninos em Portugal",
 	},
 };
 

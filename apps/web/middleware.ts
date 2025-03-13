@@ -75,6 +75,14 @@ export default async function middleware(req: NextRequest) {
 		return NextResponse.next();
 	}
 
+	if (pathname.startsWith("/manage")) {
+		const response = NextResponse.next();
+
+		console.log("manage");
+
+		return response;
+	}
+
 	if (!appConfig.ui.marketing.enabled) {
 		return NextResponse.redirect(new URL("/app", origin));
 	}

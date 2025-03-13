@@ -20,14 +20,14 @@ export default function HotelList(props: any) {
 			{/* Navigation Buttons with Hover Effect */}
 			<button
 				onClick={() => swiperRef.current?.slidePrev()}
-				className="-left-3 -translate-y-1/2 absolute top-1/2 z-10 hidden transform rounded-full bg-white p-3 shadow-md transition-transform duration-300 hover:scale-110 hover:bg-gray-100 md:block"
+				className="-left-3 -translate-y-1/2 absolute top-1/2 z-10 transform rounded-full bg-white p-3 shadow-md transition-transform duration-300 hover:scale-110 hover:bg-gray-100 md:block"
 			>
 				<ChevronLeft size={24} className="text-gray-700" />
 			</button>
 
 			<button
 				onClick={() => swiperRef.current?.slideNext()}
-				className="-right-3 -translate-y-1/2 absolute top-1/2 z-10 hidden transform rounded-full bg-white p-3 shadow-md transition-transform duration-300 hover:scale-110 hover:bg-gray-100 md:block"
+				className="-right-3 -translate-y-1/2 absolute top-1/2 z-10 transform rounded-full bg-white p-3 shadow-md transition-transform duration-300 hover:scale-110 hover:bg-gray-100 md:block"
 			>
 				<ChevronRight size={24} className="text-gray-700" />
 			</button>

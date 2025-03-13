@@ -55,10 +55,10 @@ export interface HotelData {
 
 // The hotel list – note that "n.a." values have been converted to null.
 // The region property is now an array of region UUIDs.
-// For hotels originally from Lisbon, we add both "Lisboa" and "Centro".
+// For hotels originally from Lisboa, we add both "Lisboa" and "Centro".
 // For hotels originally from Porto, we add both "Porto" and "Norte".
 export const hotelList: Hotel[] = [
-	// Hotels from Lisbon:
+	// Hotels from Lisboa:
 	{
 		uuid: "1a2b3c4d-0001-0001-0001-000000000001",
 		name: "Quinta da Patada",
@@ -68,7 +68,7 @@ export const hotelList: Hotel[] = [
 		],
 		address:
 			"Rua do Murtal, Quinta da Patada Manjoeira, 2660-499 Santo Antão do Tojal",
-		location: "Lisbon",
+		location: "Lisboa",
 		lat: 38.877185,
 		lng: -9.159951,
 		rating: 5,
@@ -109,7 +109,7 @@ export const hotelList: Hotel[] = [
 			"ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34",
 		],
 		address: "Praceta Damião Peres 25, São Domingos de Rana",
-		location: "Lisbon",
+		location: "Lisboa",
 		lat: 38.7108,
 		lng: -9.348441,
 		rating: 5,
@@ -150,7 +150,7 @@ export const hotelList: Hotel[] = [
 			"ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34",
 		],
 		address: "Rua da Amoreira, Lousa",
-		location: "Lisbon",
+		location: "Lisboa",
 		lat: 38.894259,
 		lng: -9.205887,
 		rating: 5,
@@ -251,7 +251,7 @@ export const hotelList: Hotel[] = [
 			"ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34",
 		],
 		address: "Rua Casal da Curtinha 13 2530, Reguengo Grande",
-		location: "Pinhal Novo, Setubal",
+		location: "Lourinhã, Lisboa",
 		lat: 39.290466,
 		lng: -9.226298,
 		rating: 5,
@@ -420,7 +420,7 @@ export const hotelList: Hotel[] = [
 			"f0d2c8a9-5f7a-4e30-b8a4-d3b9a8f7e6c5",
 		],
 		address: "Zona Industrial Arcos de Sadrão 401, Vila Nova de Gaia",
-		location: "Pinhal Novo, Setubal",
+		location: "Vila Nova de Gaia, Porto",
 		lat: 41.117081,
 		lng: -8.580973,
 		rating: 5,

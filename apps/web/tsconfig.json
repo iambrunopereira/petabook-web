@@ -6,6 +6,7 @@
 			"@analytics": ["./modules/analytics"],
 			"@marketing/*": ["./modules/marketing/*"],
 			"@saas/*": ["./modules/saas/*"],
+			"@admin/*": ["./modules/admin/*"],
 			"@ui/*": ["./modules/ui/*"],
 			"@i18n": ["./modules/i18n"],
 			"@i18n/*": ["./modules/i18n/*"],

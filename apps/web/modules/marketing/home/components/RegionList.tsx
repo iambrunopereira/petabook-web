@@ -15,7 +15,7 @@ export default function RegionList() {
 	return (
 		<div className="container mx-auto max-w-6xl py-12">
 			<h2 className="mb-6 font-semibold text-2xl text-gray-800">
-				Explora as regions favoritas
+				Explora as tuas regiões favoritas...
 			</h2>
 
 			{/* Main Regions (Top Row) */}
