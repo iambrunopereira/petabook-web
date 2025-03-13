@@ -1,12 +1,9 @@
 // apps/web/modules/admin/regions/page.tsx
 "use client";
 
-import { useRegionListQuery } from "@admin/regions/lib/api";
-import { Button } from "@ui/components/button";
-import Link from "next/link";
-
 export default function RegionsListPage() {
-	const { data: regions, isLoading, error } = useRegionListQuery();
+	return <main className="p-4">hello</main>;
+	/* const { data: regions, isLoading, error } = useRegionListQuery();
 	console.log(error);
 	if (isLoading) return <div>Loading...</div>;
 	if (error) return <div>Error loading regions</div>;
@@ -30,5 +27,5 @@ export default function RegionsListPage() {
 				))}
 			</ul>
 		</main>
-	);
+	); */
 }

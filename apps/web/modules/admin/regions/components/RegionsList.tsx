@@ -1,4 +1,4 @@
-"use client";
+/* "use client";
 
 import { useRegionListQuery } from "@admin/regions/lib/api";
 import {
@@ -83,7 +83,7 @@ export default function RegionsListPage() {
 	/* 	if (isLoading) return <div>Loading...</div>;
 	if (error) return <div>Error loading regions</div>; */
 
-	/* return (
+/* return (
 		<main className="p-4">
 			<h1 className="font-bold text-2xl">Regions</h1>
 			<Link href="/admin/regions/new">
@@ -102,7 +102,7 @@ export default function RegionsListPage() {
 				))}
 			</ul>
 		</main>
-	); */
+	);
 	const columns: ColumnDef<NonNullable<typeof data>["regions"][number]>[] =
 		useMemo(
 			() => [
@@ -168,7 +168,7 @@ export default function RegionsListPage() {
 													),
 													destructive: true,
 													onConfirm: () =>
-														/* deleteOrganization(id) */ console.log("delete"),
+
 												})
 											}
 										>
@@ -272,3 +272,4 @@ export default function RegionsListPage() {
 		</Card>
 	);
 }
+ */

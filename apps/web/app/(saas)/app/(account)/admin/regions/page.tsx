@@ -1,5 +1,5 @@
-import RegionsListPage from "@admin/regions/components/RegionsList";
+/* import RegionsListPage from "@admin/regions/components/RegionsList"; */
 
 export default function AdminRegionsPage() {
-	return <RegionsListPage />;
+	return <h1>Regions</h1>;
 }

@@ -1,4 +1,4 @@
-// apps/web/modules/admin/regions/components/EditRegionForm.tsx
+/* // apps/web/modules/admin/regions/components/EditRegionForm.tsx
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -132,7 +132,7 @@ export function EditRegionForm({ defaultValues }: EditRegionFormProps) {
 							<FormItem>
 								<FormLabel>Main</FormLabel>
 								<FormControl>
-									<input type="checkbox" {...field} checked={field.value} />
+									 <input type="checkbox" {...field} checked={field.value} />
 								</FormControl>
 								<FormMessage />
 							</FormItem>
@@ -163,3 +163,4 @@ export function EditRegionForm({ defaultValues }: EditRegionFormProps) {
 		</div>
 	);
 }
+ */

@@ -1,4 +1,4 @@
-// apps/web/modules/admin/regions/components/CreateRegionForm.tsx
+/* // apps/web/modules/admin/regions/components/CreateRegionForm.tsx
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -132,7 +132,6 @@ export function CreateRegionForm() {
 							<FormItem>
 								<FormLabel>Main</FormLabel>
 								<FormControl>
-									<input type="checkbox" {...field} checked={field.value} />
 								</FormControl>
 								<FormMessage />
 							</FormItem>
@@ -163,3 +162,4 @@ export function CreateRegionForm() {
 		</div>
 	);
 }
+ */

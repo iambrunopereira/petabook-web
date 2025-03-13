@@ -1,4 +1,4 @@
-// apps/web/modules/admin/regions/lib/api.ts
+/* // apps/web/modules/admin/regions/lib/api.ts
 import { apiClient } from "@shared/lib/api-client"; // your shared API client
 import { useMutation, useQuery } from "@tanstack/react-query";
 
@@ -67,3 +67,4 @@ export const useUpdateRegionMutation = () => {
 		},
 	});
 };
+ */
