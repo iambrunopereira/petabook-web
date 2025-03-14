@@ -170,7 +170,7 @@ export function NavBar() {
 										}
 										className="block px-3 py-2 text-base"
 									>
-										Registe o seu estabelecimento?
+										Registe o seu estabelecimento
 									</NextLink>
 									<NextLink
 										key={user ? "start" : "login"}
@@ -190,7 +190,7 @@ export function NavBar() {
 							variant="secondary"
 						>
 							<NextLink href="https://docs.google.com/forms/d/e/1FAIpQLSdkBUeU2VgiVBdKPQ9nhEFj5kLSoh4SsOwvE2DWD4_YV9Vz1Q/viewform?usp=header">
-								Registe o seu estabelecimento?
+								Registe o seu estabelecimento
 							</NextLink>
 						</Button>
 						{config.ui.saas.enabled &&
