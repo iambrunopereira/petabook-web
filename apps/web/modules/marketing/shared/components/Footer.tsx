@@ -22,7 +22,7 @@ export function Footer() {
 						Termos e condições
 					</LocaleLink>
 					<LocaleLink href="/contact" className="block">
-						Contact
+						Contacto
 					</LocaleLink>
 					{/*
 					<a href="#features" className="block">
