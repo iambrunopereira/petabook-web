@@ -1,12 +1,12 @@
 "use client";
 import { BadgeCheck, Facebook, Globe, Instagram } from "lucide-react";
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { use, useEffect, useState } from "react";
 import "swiper/css";
 import { type Hotel, hotelList } from "@marketing/db/hotels";
+import HotelImageCard from "@marketing/home/components/HotelImageCard";
 import HotelMarkerSVG from "@marketing/home/components/HotelMarkerSVG";
 
 // ✅ Dynamically import `react-leaflet` components to prevent SSR issues
@@ -141,36 +141,18 @@ export default function HotelDetailsPage({
 			{/* SECTION: HOTEL HEADER */}
 			<div className="mt-5 flex flex-col border-b pb-6 md:flex-row">
 				<div className="md:w-1/2">
-					<div className="relative overflow-hidden rounded-lg shadow-lg">
+					<div className="relative overflow-hidden rounded-lg shadow-lg ">
 						{hotel.isPartner && (
 							<div className="absolute top-2 right-2 flex items-center rounded-lg bg-yellow-500 px-2 py-1 font-bold text-white text-xs">
 								<BadgeCheck size={14} className="mr-1" /> Hotel parceiro
 							</div>
 						)}
-						<Image
-							src={selectedImage!}
-							alt={hotel.name}
-							width={600}
-							height={400}
-							className="w-full rounded-lg"
+
+						<HotelImageCard
+							images={hotel.images}
+							title={hotel.name}
+							uuid={hotel.uuid}
 						/>
-					</div>
-					<div className="mt-3 flex space-x-2">
-						{hotel.images.map((src: string, index: number) => (
-							<button
-								key={index}
-								onClick={() => setSelectedImage(src)}
-								className={`overflow-hidden rounded-lg border transition ${selectedImage === src ? "border-blue-500" : "border-gray-300"}`}
-							>
-								<Image
-									src={src}
-									alt={`Preview ${index + 1}`}
-									width={100}
-									height={70}
-									className="h-16 w-24 object-cover"
-								/>
-							</button>
-						))}
 					</div>
 				</div>
 

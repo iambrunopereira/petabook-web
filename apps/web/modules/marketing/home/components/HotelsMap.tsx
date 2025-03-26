@@ -52,6 +52,8 @@ function SmallHotelCard({
 				<Image
 					src={hotel.images ? hotel?.images[0] : ""}
 					alt={hotel.name ?? ""}
+					width={80}
+					height={80}
 					className="object-cover rounded-md w-full h-full"
 				/>
 			</div>

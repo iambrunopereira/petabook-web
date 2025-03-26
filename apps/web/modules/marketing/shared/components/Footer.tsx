@@ -1,14 +1,20 @@
 import { LocaleLink } from "@i18n/routing";
-import { Logo } from "@shared/components/Logo";
 import { Facebook, Instagram } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
 	return (
 		<footer className="border-t py-8 text-foreground/60 text-sm">
 			<div className="container grid grid-cols-1 gap-6 lg:grid-cols-3">
 				<div>
-					<Logo className="opacity-70 grayscale" />
+					<Image
+						src="/images/assets/logo.png"
+						alt="Petabook"
+						fill
+						className="!h-8 !w-44 !relative opacity-70 grayscale"
+						priority
+					/>
 					<p className="mt-3 text-sm opacity-70">
 						© {new Date().getFullYear()} Petabook. Todos os direitos reservados.
 					</p>

@@ -3,7 +3,6 @@
 import { LocaleLink, useLocalePathname } from "@i18n/routing";
 import { config } from "@repo/config";
 import { useSession } from "@saas/auth/hooks/use-session";
-import { Logo } from "@shared/components/Logo";
 import { Button } from "@ui/components/button";
 import {
 	Sheet,
@@ -14,6 +13,7 @@ import {
 import { cn } from "@ui/lib";
 import { MenuIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import NextLink from "next/link";
 import { useEffect, useState } from "react";
 import { useDebounceCallback } from "usehooks-ts";
@@ -88,7 +88,7 @@ export function NavBar() {
 	return (
 		<nav
 			className={cn(
-				"fixed top-0 left-0 z-[9999] w-full transition-shadow duration-200",
+				" top-0 left-0 z-[9999] w-full transition-shadow duration-200",
 				!isTop || isDocsPage
 					? "bg-card/80 shadow-sm backdrop-blur-lg"
 					: "shadow-none",
@@ -107,7 +107,15 @@ export function NavBar() {
 							href="/"
 							className="block hover:no-underline active:no-underline"
 						>
-							<Logo />
+							{/* <Logo />
+							sad */}
+							<Image
+								src="/images/assets/logo.png"
+								alt="Petabook"
+								fill
+								className="!h-8 !w-44 !relative"
+								priority
+							/>
 						</LocaleLink>
 					</div>
 
