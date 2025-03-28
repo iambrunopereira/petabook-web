@@ -124,6 +124,7 @@ export function ContactForm() {
 					href={
 						"https://docs.google.com/forms/d/e/1FAIpQLSePjLZ5a_J2W_lwqo9g95Ek78Y9fasCcqk6fu7oT4qBZee87w/viewform?usp=header"
 					}
+					target="_blank"
 					className="block px-3 py-2 text-base"
 				>
 					Entrar em contacto

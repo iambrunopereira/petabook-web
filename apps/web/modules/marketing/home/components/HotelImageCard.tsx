@@ -33,7 +33,7 @@ export default function HotelImageCard(props: any) {
 			<Swiper
 				modules={[Navigation]}
 				spaceBetween={16}
-				slidesPerView={0}
+				slidesPerView={1}
 				loop={true} // ✅ Enables infinite looping
 				breakpoints={{
 					640: { slidesPerView: 1 },

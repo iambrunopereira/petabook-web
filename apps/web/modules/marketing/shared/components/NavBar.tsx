@@ -69,14 +69,14 @@ export function NavBar() {
 			label: t("common.menu.changelog"),
 			href: "/changelog",
 		}, */
-		...(config.contactForm.enabled
+		/* ...(config.contactForm.enabled
 			? [
 					{
 						label: t("common.menu.contact"),
 						href: "/contact",
 					},
 				]
-			: []),
+			: []), */
 		/* {
 			label: t("common.menu.docs"),
 			href: "/docs",
@@ -173,6 +173,7 @@ export function NavBar() {
 									))}
 									<NextLink
 										key={"partner-button"}
+										target="_blank"
 										href={
 											"https://docs.google.com/forms/d/e/1FAIpQLSdkBUeU2VgiVBdKPQ9nhEFj5kLSoh4SsOwvE2DWD4_YV9Vz1Q/viewform?usp=header"
 										}
@@ -197,7 +198,10 @@ export function NavBar() {
 							asChild
 							variant="secondary"
 						>
-							<NextLink href="https://docs.google.com/forms/d/e/1FAIpQLSdkBUeU2VgiVBdKPQ9nhEFj5kLSoh4SsOwvE2DWD4_YV9Vz1Q/viewform?usp=header">
+							<NextLink
+								target="_blank"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSdkBUeU2VgiVBdKPQ9nhEFj5kLSoh4SsOwvE2DWD4_YV9Vz1Q/viewform?usp=header"
+							>
 								Registe o seu estabelecimento
 							</NextLink>
 						</Button>

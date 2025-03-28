@@ -7,7 +7,6 @@ import { use, useEffect, useState } from "react";
 import "swiper/css";
 import { type Hotel, hotelList } from "@marketing/db/hotels";
 import HotelImageCard from "@marketing/home/components/HotelImageCard";
-import HotelMarkerSVG from "@marketing/home/components/HotelMarkerSVG";
 
 // ✅ Dynamically import `react-leaflet` components to prevent SSR issues
 const MapContainer = dynamic(
@@ -25,7 +24,12 @@ const Marker = dynamic(
 const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), {
 	ssr: false,
 });
-
+const MapComponent = dynamic(
+	() => import("@marketing/home/components/MapComponent"),
+	{
+		ssr: false,
+	},
+);
 const L = typeof window !== "undefined" ? require("leaflet") : null;
 const nearbyServices = [
 	{
@@ -127,7 +131,7 @@ export default function HotelDetailsPage({
 	const createHotelIcon = (hotelId: string) =>
 		L.divIcon({
 			className: "custom-marker",
-			html: HotelMarkerSVG({ hover: false }),
+
 			iconSize: [40, 50],
 			iconAnchor: [20, 50],
 			popupAnchor: [0, -50],
@@ -210,23 +214,13 @@ export default function HotelDetailsPage({
 			{/* SECTION: SMALLER MAP */}
 			<div className="mt-10 border-b pb-6">
 				<h3 className="font-bold text-xl">Localização</h3>
-				{isClient && (
-					<div className="relative mt-4 h-40 w-full overflow-hidden rounded-lg">
-						<MapContainer
-							center={[hotel.lat, hotel.lng]}
-							zoom={13}
-							className="h-full w-full rounded-lg"
-						>
-							<TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-							<Marker
-								position={[hotel.lat, hotel.lng]}
-								icon={createHotelIcon(hotel.uuid)}
-							>
-								<Popup>{hotel.name}</Popup>
-							</Marker>
-						</MapContainer>
-					</div>
-				)}
+				<div className="relative mt-4 h-40 w-full overflow-hidden rounded-lg">
+					<MapComponent
+						hotelId="hotel-123"
+						center={[38.7169, -9.1399]}
+						positions={[{ lat: 38.7169, lng: -9.1399 }]}
+					/>
+				</div>
 			</div>
 			{/* SECTION: SERVICES */}
 			{/* 	<div className="mt-10 pb-6">

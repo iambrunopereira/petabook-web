@@ -37,7 +37,7 @@ export function Newsletter() {
 	return (
 		<section className="py-16">
 			<div className="container">
-				<div className="mb-8 text-center">
+				{/* <div className="mb-8 text-center">
 					<MailboxIcon className="mx-auto mb-3 size-8 text-primary" />
 					<h1 className="font-bold text-3xl lg:text-4xl">
 						{t("newsletter.title")}
@@ -79,7 +79,7 @@ export function Newsletter() {
 							)}
 						</form>
 					)}
-				</div>
+				</div> */}
 				<iframe
 					src="https://embeds.beehiiv.com/101ff242-e655-4fd5-a36a-2db36c03ecbd"
 					data-test-id="beehiiv-embed"
