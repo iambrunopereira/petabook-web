@@ -23,7 +23,8 @@ export default function HotelsPage() {
 		minPrice: 0,
 		maxPrice: 30,
 	});
-
+	const [sortBy, setSortBy] = useState<"rating" | "price">("price");
+	const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
 	useEffect(() => {
 		if (!searchParams) return;
 
@@ -31,8 +32,12 @@ export default function HotelsPage() {
 		const onlyPartners = searchParams.get("partner") === "1";
 		const minPrice = Number.parseInt(searchParams.get("minPrice") || "0");
 		const maxPrice = Number.parseInt(searchParams.get("maxPrice") || "30");
-
-		setFilters({ regions, onlyPartners, minPrice, maxPrice });
+		setFilters({
+			regions,
+			onlyPartners,
+			minPrice,
+			maxPrice,
+		});
 	}, [searchParams]);
 
 	// ⬆️ When filters change, update URL
@@ -57,7 +62,7 @@ export default function HotelsPage() {
 	};
 
 	const filteredHotels = useMemo(() => {
-		return hotelList.filter((hotel) => {
+		const result = hotelList.filter((hotel) => {
 			const regionMatch = filters.regions.length
 				? hotel.region?.some((r) => filters.regions.includes(r))
 				: true;
@@ -71,7 +76,20 @@ export default function HotelsPage() {
 
 			return regionMatch && partnerMatch && priceMatch;
 		});
-	}, [filters]);
+
+		result.sort((a, b) => {
+			const fieldA = sortBy === "price" ? a.prices : a.rating;
+			const fieldB = sortBy === "price" ? b.prices : b.rating;
+
+			if (fieldA === undefined || fieldB === undefined) return 0;
+
+			return sortOrder === "asc"
+				? (fieldA ?? 0) - (fieldB ?? 0)
+				: (fieldB ?? 0) - (fieldA ?? 0);
+		});
+
+		return result;
+	}, [filters, sortBy, sortOrder]);
 
 	return (
 		<div
@@ -86,6 +104,23 @@ export default function HotelsPage() {
 				{/* View Switcher */}
 				<div className="my-4">
 					<ViewToggleDropdown view={view} onChange={setView} />
+				</div>
+
+				<div className="relative mb-4 w-full md:mb-0">
+					<select
+						value={`${sortBy}-${sortOrder}`}
+						onChange={(e) => {
+							const [field, order] = e.target.value.split("-");
+							setSortBy(field as "rating" | "price");
+							setSortOrder(order as "asc" | "desc");
+						}}
+						className="flex w-full items-center justify-between rounded border border-gray-200 bg-white px-3 py-2 shadow-sm "
+					>
+						<option value="price-asc">Preço: menor para maior</option>
+						<option value="price-desc">Preço: maior para menor</option>
+						<option value="rating-asc">Avaliação: menor para maior</option>
+						<option value="rating-desc">Avaliação: maior para menor</option>
+					</select>
 				</div>
 
 				{/* Mobile filter toggle */}

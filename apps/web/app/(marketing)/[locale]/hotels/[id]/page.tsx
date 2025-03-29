@@ -220,7 +220,6 @@ export default function HotelDetailsPage({
 				<h3 className="font-bold text-xl">Localização</h3>
 				<div className="relative mt-4 h-40 w-full overflow-hidden rounded-lg">
 					<MapComponent
-						hotelId="hotel-123"
 						center={[hotel.lat, hotel.lng]}
 						positions={[{ lat: hotel.lat, lng: hotel.lng }]}
 					/>

@@ -60,9 +60,8 @@ export default function Filters({ filters, onChange }: Props) {
 		onChange({
 			regions,
 			onlyPartners,
-			minPrice,
-			maxPrice,
-			priceRange,
+			minPrice: priceRange[0],
+			maxPrice: priceRange[1],
 		});
 	};
 

@@ -126,9 +126,14 @@ const createHotelIcon = () => {
 	};
 };
 
-const MapComponent = ({ hotelId, center, positions }) => {
+interface MapComponentProps {
+	center: [number, number];
+	positions: { lat: number; lng: number }[];
+}
+
+const MapComponent = ({ center, positions }: MapComponentProps) => {
 	const { isLoaded } = useJsApiLoader({
-		googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+		googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "",
 	});
 
 	const mapCenter =
@@ -136,7 +141,7 @@ const MapComponent = ({ hotelId, center, positions }) => {
 			? { lat: Number(center[0]), lng: Number(center[1]) }
 			: { lat: 0, lng: 0 };
 
-	const [icon, setIcon] = useState(null);
+	const [icon, setIcon] = useState<google.maps.Icon | null>(null);
 
 	useEffect(() => {
 		if (isLoaded && window.google) {

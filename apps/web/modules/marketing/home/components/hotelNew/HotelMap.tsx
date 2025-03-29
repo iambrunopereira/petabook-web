@@ -123,7 +123,7 @@ const createHotelIcon = () => {
 	};
 };
 export default function HotelMap({ hotels }: { hotels: Hotel[] }) {
-	const [icon, setIcon] = useState(null);
+	const [icon, setIcon] = useState<google.maps.Icon | null>(null);
 	const { isLoaded } = useJsApiLoader({
 		googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
 	});
@@ -150,7 +150,7 @@ export default function HotelMap({ hotels }: { hotels: Hotel[] }) {
 								key={hotel.uuid}
 								position={{ lat: hotel.lat, lng: hotel.lng }}
 								title={hotel.name ?? ""}
-								icon={icon}
+								{...(icon && { icon })}
 							/>
 						),
 				)}
