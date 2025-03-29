@@ -41,12 +41,7 @@ export const contactRouter = new Hono().basePath("/contact").post(
 				subject: config.contactForm.subject,
 				text: `Name: ${name}\n\nEmail: ${email}\n\nMessage: ${message}`,
 			});
-      console.log('TEXT CONTACT', {
-				to: config.contactForm.to,
-				locale,
-				subject: config.contactForm.subject,
-				text: `Name: ${name}\n\nEmail: ${email}\n\nMessage: ${message}`,
-			})
+
 			return c.body(null, 204);
 		} catch (error) {
 			logger.error(error);

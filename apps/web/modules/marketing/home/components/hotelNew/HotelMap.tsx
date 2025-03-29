@@ -1,11 +1,14 @@
-// components/MapComponent.js
+// components/HotelMap.tsx
+"use client";
+
+import type { Hotel } from "@marketing/db/hotels";
 import { getHotelMarkerSvg } from "@marketing/home/components/HotelMarkerSVG";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import { useEffect, useState } from "react";
 
 const containerStyle = {
-	width: "100%",
-	height: "150px",
+	width: "18.5rem",
+	height: "100%",
 	borderRadius: "10px",
 	border: "1px solid #D1D5DB",
 	shadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
@@ -106,15 +109,9 @@ const mapOptions = {
 	streetViewControl: false,
 	mapTypeControl: false,
 	fullscreenControl: false,
-	focusable: false,
-	clickableIcons: false,
-	draggable: false,
-	keyboardShortcuts: false,
-	scrollwheel: false,
-	disableDoubleClickZoom: true,
-	gestureHandling: "none",
 	styles: minimalistMapStyle,
 };
+
 const createHotelIcon = () => {
 	let svgMarkup = getHotelMarkerSvg();
 	svgMarkup = svgMarkup.replace(/currentColor/g, "#0074d9"); // Replace with desired color
@@ -125,44 +122,39 @@ const createHotelIcon = () => {
 		anchor: new window.google.maps.Point(20, 50),
 	};
 };
-
-const MapComponent = ({ hotelId, center, positions }) => {
-	const { isLoaded } = useJsApiLoader({
-		googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
-	});
-
-	const mapCenter =
-		Array.isArray(center) && center.length === 2
-			? { lat: Number(center[0]), lng: Number(center[1]) }
-			: { lat: 0, lng: 0 };
-
+export default function HotelMap({ hotels }: { hotels: Hotel[] }) {
 	const [icon, setIcon] = useState(null);
-
+	const { isLoaded } = useJsApiLoader({
+		googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
+	});
 	useEffect(() => {
 		if (isLoaded && window.google) {
 			setIcon(createHotelIcon());
 		}
 	}, [isLoaded]);
-
-	if (!isLoaded) return null; // or a loading spinner
+	if (!isLoaded) return <div>Loading map...</div>;
 
 	return (
-		<GoogleMap
-			mapContainerStyle={containerStyle}
-			center={mapCenter}
-			zoom={13}
-			options={mapOptions}
-		>
-			{icon &&
-				positions?.map((pos, idx) => (
-					<Marker
-						key={idx}
-						position={{ lat: Number(pos.lat), lng: Number(pos.lng) }}
-						icon={icon}
-					/>
-				))}
-		</GoogleMap>
+		<div className="top-2 left-4 z-10 hidden md:sticky md:block md:h-[200px]">
+			<GoogleMap
+				center={{ lat: 39.5, lng: -8.0 }}
+				zoom={6}
+				mapContainerStyle={containerStyle}
+				options={mapOptions}
+			>
+				{hotels.map(
+					(hotel) =>
+						hotel.lat &&
+						hotel.lng && (
+							<Marker
+								key={hotel.uuid}
+								position={{ lat: hotel.lat, lng: hotel.lng }}
+								title={hotel.name ?? ""}
+								icon={icon}
+							/>
+						),
+				)}
+			</GoogleMap>
+		</div>
 	);
-};
-
-export default MapComponent;
+}

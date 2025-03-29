@@ -1,5 +1,5 @@
 "use client";
-import { BadgeCheck, Facebook, Globe, Instagram } from "lucide-react";
+import { BadgeCheck, Facebook, Globe, Instagram, PawPrint } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -171,7 +171,11 @@ export default function HotelDetailsPage({
 							</span>
 						)}
 
-						<span className=" text-yellow-500">⭐ {hotel.rating} / 5</span>
+						<div className="mt-1 flex items-center gap-1 text-yellow-500">
+							{Array.from({ length: hotel.rating || 0 }).map((_, i) => (
+								<PawPrint key={i} size={16} className="fill-yellow-500" />
+							))}
+						</div>
 					</div>
 
 					<p className="text-sm opacity-70">Contacto: {hotel.contact}</p>
@@ -217,8 +221,8 @@ export default function HotelDetailsPage({
 				<div className="relative mt-4 h-40 w-full overflow-hidden rounded-lg">
 					<MapComponent
 						hotelId="hotel-123"
-						center={[38.7169, -9.1399]}
-						positions={[{ lat: 38.7169, lng: -9.1399 }]}
+						center={[hotel.lat, hotel.lng]}
+						positions={[{ lat: hotel.lat, lng: hotel.lng }]}
 					/>
 				</div>
 			</div>

@@ -10,7 +10,6 @@ export const useRegionListQuery = () => {
 		queryFn: async () => {
 			const res = await apiClient.regions.$get();
 
-			console.log("test", res);
 			if (!res.ok) {
 				const errorText = await res.text();
 				console.error("Error fetching regions:", res.status, errorText);

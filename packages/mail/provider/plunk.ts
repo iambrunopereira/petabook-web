@@ -15,7 +15,6 @@ export const send: SendEmailHandler = async ({ to, subject, html, text }) => {
 			text,
 		}),
 	});
-  console.log('MAIL:', response)
 	if (!response.ok) {
 		logger.error(await response.json());
 

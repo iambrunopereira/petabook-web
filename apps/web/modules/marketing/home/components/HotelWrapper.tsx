@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 export default function HotelsMapPage() {
 	const [visibleHotels, setVisibleHotels] = useState(hotelList); // ✅ Track visible hotels
 	const [showList, setShowList] = useState(false); // ✅ Toggle hotel list on mobile
-	console.log("visible", visibleHotels);
+
 	useEffect(() => {
 		console.log(visibleHotels);
 	}, [visibleHotels]);
