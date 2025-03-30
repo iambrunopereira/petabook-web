@@ -215,8 +215,9 @@ export default function HotelsPage() {
 				) : (
 					<div className="flex flex-col items-center justify-center space-y-4">
 						<div className="flex w-full gap-4 rounded-lg border bg-white p-4 shadow-sm transition">
-							Ups... Não conseguimos encontrar hotéis com as opçoes que
-							escolhes-te.
+							Ups... Não conseguimos encontrar nenhum estabelecimento com as
+							opções que escolheste. Não desistas, de certeza que temos o que
+							procuras!
 						</div>
 						<button
 							type="button"
@@ -238,7 +239,7 @@ export default function HotelsPage() {
 							}}
 							className="rounded bg-blue-600 px-4 py-2 text-white shadow"
 						>
-							Remover filtros
+							Tentar novamente
 						</button>
 					</div>
 				)}
