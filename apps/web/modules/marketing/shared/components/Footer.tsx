@@ -1,7 +1,7 @@
 import { LocaleLink } from "@i18n/routing";
 import { Facebook, Instagram } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Footer() {
 	return (
@@ -45,10 +45,13 @@ export function Footer() {
 						Privacy policy
 					</LocaleLink> */}
 					<div className="mb-2 flex gap-3">
-						<Link href="https://instagram.com">
+						<Link href="https://www.instagram.com/petabookcom/" target="_blank">
 							<Instagram className="hover:!grayscale-0 size-5 text-primary grayscale" />
 						</Link>
-						<Link href="https://facebook.com">
+						<Link
+							href="https://www.facebook.com/people/Petabook/61555341819450"
+							target="_blank"
+						>
 							<Facebook className="hover:!grayscale-0 size-5 text-primary grayscale" />
 						</Link>
 					</div>

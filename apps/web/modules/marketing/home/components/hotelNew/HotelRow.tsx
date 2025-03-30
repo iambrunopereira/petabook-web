@@ -2,15 +2,19 @@
 import type { Hotel } from "@marketing/db/hotels";
 import { BadgeCheck, PawPrint } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 type Props = {
 	hotel: Hotel;
 };
 
 export default function HotelRow({ hotel }: Props) {
+	const router = useRouter();
 	return (
-		<div className="flex gap-4 rounded-lg border bg-white p-4 shadow-sm transition hover:shadow">
+		<div
+			className="flex cursor-pointer gap-4 rounded-lg border bg-white p-4 shadow-sm transition hover:scale-105 hover:shadow-md"
+			onClick={() => router.push(`/hotels/${hotel.uuid}`)}
+		>
 			<div className="relative h-32 w-40 shrink-0">
 				{hotel.petabookPartner && (
 					<div className="absolute top-2 right-2 z-10 flex items-center rounded-lg bg-yellow-500 px-2 py-1 font-bold text-white text-xs">
@@ -47,12 +51,12 @@ export default function HotelRow({ hotel }: Props) {
 						</span>
 					)}
 
-					<Link
+					{/* <Link
 						href={`/hotels/${hotel.uuid}`}
 						className="text-blue-600 text-sm hover:underline"
 					>
 						Ver detalhes
-					</Link>
+					</Link> */}
 				</div>
 			</div>
 		</div>
