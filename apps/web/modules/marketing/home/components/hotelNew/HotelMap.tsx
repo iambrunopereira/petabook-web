@@ -122,7 +122,11 @@ const createHotelIcon = () => {
 		anchor: new window.google.maps.Point(20, 50),
 	};
 };
-export default function HotelMap({ hotels }: { hotels: Hotel[] }) {
+export default function HotelMap({
+	hotels,
+	center,
+	zoom,
+}: { hotels: Hotel[]; center: number[]; zoom: number }) {
 	const [icon, setIcon] = useState<google.maps.Icon | null>(null);
 	const { isLoaded } = useJsApiLoader({
 		googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
@@ -137,8 +141,8 @@ export default function HotelMap({ hotels }: { hotels: Hotel[] }) {
 	return (
 		<div className="top-2 left-4 z-10 hidden md:sticky md:block md:h-[200px]">
 			<GoogleMap
-				center={{ lat: 39.5, lng: -8.0 }}
-				zoom={6}
+				center={{ lat: center[0], lng: center[1] }}
+				zoom={zoom}
 				mapContainerStyle={containerStyle}
 				options={mapOptions}
 			>

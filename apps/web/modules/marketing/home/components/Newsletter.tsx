@@ -2,10 +2,8 @@
 //@ts-nocheck
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useNewsletterSignupMutation } from "@marketing/home/lib/api";
-import { Alert, AlertDescription, AlertTitle } from "@ui/components/alert";
-import { Button } from "@ui/components/button";
-import { Input } from "@ui/components/input";
-import { CheckCircleIcon, MailboxIcon } from "lucide-react";
+import {} from "@ui/components/alert";
+import {} from "lucide-react";
 
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";

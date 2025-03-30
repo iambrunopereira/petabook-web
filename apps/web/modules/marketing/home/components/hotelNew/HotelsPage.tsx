@@ -2,6 +2,7 @@
 "use client";
 
 import { hotelList } from "@marketing/db/hotels";
+import { regionObj } from "@marketing/db/regions";
 import Filters from "@marketing/home/components/hotelNew/Filters";
 import HotelCard from "@marketing/home/components/hotelNew/HotelCard";
 import HotelMap from "@marketing/home/components/hotelNew/HotelMap";
@@ -14,6 +15,8 @@ import { useEffect, useMemo, useState } from "react";
 export default function HotelsPage() {
 	const [view, setView] = useState<"grid" | "list">("grid");
 	const [isDropdownOpen, setDropdownOpen] = useState(false);
+	const [currentCenter, setCurrentCenter] = useState([39.5, -8.0]);
+	const [currentZoom, setCurrentZoom] = useState(6);
 	const router = useRouter();
 	const searchParams = useSearchParams();
 	const [isMobileFiltersOpen, setMobileFiltersOpen] = useState(false);
@@ -32,6 +35,23 @@ export default function HotelsPage() {
 		const onlyPartners = searchParams.get("partner") === "1";
 		const minPrice = Number.parseInt(searchParams.get("minPrice") || "0");
 		const maxPrice = Number.parseInt(searchParams.get("maxPrice") || "30");
+
+		const mainCenter = regionObj[regions[0]];
+		console.log("mainCenter", mainCenter, regions[0]);
+		if (regions.length === 1) {
+			setCurrentCenter(mainCenter.center);
+			setCurrentZoom(9);
+		} else if (regions.length > 1) {
+			setCurrentCenter(mainCenter.center);
+			setCurrentZoom(7);
+		} else {
+			setCurrentCenter([39.5, -8.0]);
+			setCurrentZoom(5);
+		}
+		if (mainCenter) {
+			setCurrentCenter(mainCenter.center);
+		}
+
 		setFilters({
 			regions,
 			onlyPartners,
@@ -39,6 +59,7 @@ export default function HotelsPage() {
 			maxPrice,
 		});
 	}, [searchParams]);
+	console.log("hotelList", filters.regions);
 
 	// ⬆️ When filters change, update URL
 	const updateUrlFilters = (newFilters: typeof filters) => {
@@ -99,7 +120,11 @@ export default function HotelsPage() {
 		>
 			{/* Map top left on all views */}
 			<div className="top-2 left-4 z-10 block md:sticky md:h-[200px]">
-				<HotelMap hotels={filteredHotels} />
+				<HotelMap
+					hotels={filteredHotels}
+					center={currentCenter}
+					zoom={currentZoom}
+				/>
 
 				{/* View Switcher */}
 				<div className="my-4">
@@ -170,22 +195,53 @@ export default function HotelsPage() {
 				<Filters filters={filters} onChange={handleFiltersChange} />
 			</div> */}
 
-			<div>
-				<div
-					className={
-						view === "grid"
-							? "grid grid-cols-1 gap-4 sm:grid-cols-2"
-							: "space-y-4"
-					}
-				>
-					{filteredHotels.map((hotel) =>
-						view === "grid" ? (
-							<HotelCard key={hotel.uuid} hotel={hotel} />
-						) : (
-							<HotelRow key={hotel.uuid} hotel={hotel} />
-						),
-					)}
-				</div>
+			<div className="w-full">
+				{filteredHotels.length > 0 ? (
+					<div
+						className={
+							view === "grid"
+								? "grid grid-cols-1 gap-4 sm:grid-cols-2"
+								: "space-y-4"
+						}
+					>
+						{filteredHotels.map((hotel) =>
+							view === "grid" ? (
+								<HotelCard key={hotel.uuid} hotel={hotel} />
+							) : (
+								<HotelRow key={hotel.uuid} hotel={hotel} />
+							),
+						)}
+					</div>
+				) : (
+					<div className="flex flex-col items-center justify-center space-y-4">
+						<div className="flex w-full gap-4 rounded-lg border bg-white p-4 shadow-sm transition">
+							Ups... Não conseguimos encontrar hotéis com as opçoes que
+							escolhes-te.
+						</div>
+						<button
+							type="button"
+							onClick={() => {
+								setFilters({
+									regions: [],
+									onlyPartners: false,
+									minPrice: 0,
+									maxPrice: 30,
+								});
+								setSortBy("price");
+								setSortOrder("asc");
+								updateUrlFilters({
+									regions: [],
+									onlyPartners: false,
+									minPrice: 0,
+									maxPrice: 30,
+								});
+							}}
+							className="rounded bg-blue-600 px-4 py-2 text-white shadow"
+						>
+							Remover filtros
+						</button>
+					</div>
+				)}
 			</div>
 		</div>
 	);

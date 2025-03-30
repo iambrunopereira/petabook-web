@@ -5,7 +5,7 @@ export default function HeroSection() {
 	return (
 		<div className="relative w-full pb-6">
 			{/* Hero Image with Blur Gradient */}
-			<div className="relative mt-3 aspect-[16/9] max-h-[70vh] w-full overflow-hidden">
+			<div className="relative mt-3 aspect-[16/9] max-h-[70vh] w-full overflow-hidden min-h-[40rem]">
 				{/* Background Image */}
 				<Image
 					src="/images/assets/hero-pet.jpg"

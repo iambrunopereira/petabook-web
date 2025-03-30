@@ -113,7 +113,7 @@ export function NavBar() {
 								src="/images/assets/logo.png"
 								alt="Petabook"
 								fill
-								className="!h-8 !w-44 !relative"
+								className="!h-8 !w-40 !relative"
 								priority
 							/>
 						</LocaleLink>
