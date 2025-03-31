@@ -30,6 +30,7 @@ export default function HotelsPage() {
 	const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
 	useEffect(() => {
 		if (!searchParams) return;
+		window.scrollTo(0, 0);
 
 		const regions = searchParams.get("regions")?.split(",") ?? [];
 		const onlyPartners = searchParams.get("partner") === "1";

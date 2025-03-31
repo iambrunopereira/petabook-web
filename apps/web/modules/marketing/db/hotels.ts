@@ -720,7 +720,7 @@ export const hotelList: Hotel[] = [
 		rating: 5,
 		contact: "964639587",
 		email: "info@dogspa.com.pt",
-		website: "https://www.dogspa.pt/",
+		website: "https://dogspa.com.pt/",
 		facebook: "https://www.facebook.com/DogSpaQuintaLobos/",
 		instagram: "https://www.instagram.com/dogspa_algarve/",
 		petabookPartner: false,
