@@ -112,6 +112,11 @@ export default function HotelsPage() {
 		return result;
 	}, [filters, sortBy, sortOrder]);
 
+	useEffect(() => {
+		// Reset scroll position to the top when filters or hotels change
+		window.scrollTo(0, 0);
+	}, [filters, filteredHotels]);
+
 	return (
 		<div
 			className={

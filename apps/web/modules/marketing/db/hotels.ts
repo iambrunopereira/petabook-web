@@ -62,10 +62,7 @@ export const hotelList: Hotel[] = [
 	{
 		uuid: "1a2b3c4d-0001-0001-0001-000000000001",
 		name: "Quinta da Patada",
-		region: [
-			"c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91", // Lisboa
-			"ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34", // Centro
-		],
+		region: ["c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91"],
 		address:
 			"Rua do Murtal, Quinta da Patada Manjoeira, 2660-499 Santo Antão do Tojal",
 		location: "Lisboa",
@@ -104,10 +101,7 @@ export const hotelList: Hotel[] = [
 	{
 		uuid: "1a2b3c4d-0002-0002-0002-000000000002",
 		name: "Just4Buddies",
-		region: [
-			"c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91",
-			"ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34",
-		],
+		region: ["c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91"],
 		address: "Praceta Damião Peres 25, São Domingos de Rana",
 		location: "Lisboa",
 		lat: 38.7108,
@@ -145,10 +139,7 @@ export const hotelList: Hotel[] = [
 	{
 		uuid: "1a2b3c4d-0003-0003-0003-000000000003",
 		name: "Recreio Canino",
-		region: [
-			"c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91",
-			"ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34",
-		],
+		region: ["c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91"],
 		address: "Rua da Amoreira, Lousa",
 		location: "Lisboa",
 		lat: 38.894259,
@@ -187,10 +178,7 @@ export const hotelList: Hotel[] = [
 	{
 		uuid: "1a2b3c4d-0004-0004-0004-000000000004",
 		name: "101 Hotel Canino",
-		region: [
-			"c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91",
-			"ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34",
-		],
+		region: ["ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34"],
 		address: "Quinta do Pinheirinho, R. dos Comerciantes, Pinhal Novo",
 		location: "Pinhal Novo, Setubal",
 		lat: 38.624525,
@@ -246,10 +234,7 @@ export const hotelList: Hotel[] = [
 	{
 		uuid: "1a2b3c4d-0005-0005-0005-000000000005",
 		name: "Curti Dog",
-		region: [
-			"c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91",
-			"ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34",
-		],
+		region: ["ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34"],
 		address: "Rua Casal da Curtinha 13 2530, Reguengo Grande",
 		location: "Lourinhã, Lisboa",
 		lat: 39.290466,
@@ -292,10 +277,7 @@ export const hotelList: Hotel[] = [
 		lat: 38.716321,
 		lng: -9.273028,
 		rating: 5,
-		region: [
-			"c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91",
-			"ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34",
-		],
+		region: ["c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91"],
 		address: "Caminho das Batatas nº 2, Queijas",
 		contact: "912269890",
 		email: "info@sweetpet.pt",
@@ -583,7 +565,7 @@ export const hotelList: Hotel[] = [
 		name: "Dogtel",
 		region: ["ea3f9a57-2c8b-40d8-8f51-7f9f8d8a27cb"],
 		address: "Rua do Lazareto 227, São Gonçalo",
-		location: "São Gonçalo",
+		location: "Madeira",
 		lat: 32.649149,
 		lng: -16.880804,
 		rating: 4,
@@ -622,7 +604,7 @@ export const hotelList: Hotel[] = [
 		name: "Clínica Veterinária São Miguel",
 		region: ["ea3f9a57-2c8b-40d8-8f51-7f9f8d8a27cb"],
 		address: "Rua das Mercês 29, Atalhada Lagoa",
-		location: "Madeira",
+		location: "Açores",
 		lat: 37.748211,
 		lng: -25.592762,
 		rating: 4,
@@ -929,7 +911,7 @@ export const hotelList: Hotel[] = [
 	{
 		uuid: "1a2b3c4d-0025-0025-0025-000000000025",
 		name: "Hotel e Spa Animal VIP",
-		region: ["ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34"],
+		region: ["f0d2c8a9-5f7a-4e30-b8a4-d3b9a8f7e6c5"],
 		address: "Rua da Escola 16, Travassós de Baixo, Viseu",
 		location: "Viseu",
 		lat: 40.679599,
@@ -1094,10 +1076,7 @@ export const hotelList: Hotel[] = [
 	{
 		uuid: "1a2b3c4d-0028-0028-0028-000000000029",
 		name: "Hotel Monsanto Pet",
-		region: [
-			"c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91",
-			"ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34",
-		],
+		region: ["c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91"],
 		address: "Estrada da Circunvalação Parque Florestal de Monsanto, 1400-061",
 		location: "Monsanto",
 		lat: 38.728311,
@@ -1148,10 +1127,7 @@ export const hotelList: Hotel[] = [
 	{
 		uuid: "1a2b3c4d-0028-0028-0028-000000000030",
 		name: "Pet Hotel do Jardim Zoológico",
-		region: [
-			"c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91",
-			"ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34",
-		],
+		region: ["c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91"],
 		address: "Estrada da Luz, nº 1 A",
 		location: "Lisboa",
 		lat: 38.746966,
@@ -1200,10 +1176,7 @@ export const hotelList: Hotel[] = [
 	{
 		uuid: "1a2b3c4d-0028-0028-0028-000000000031",
 		name: "Pet Nanny Paradise Eco Resort",
-		region: [
-			"c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91",
-			"ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34",
-		],
+		region: ["ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34"],
 		address: "R. do Moinho 28, 2500-639 Salir de Matos",
 		location: "Caldas da Rainha",
 		lat: 39.412916,
@@ -1259,10 +1232,7 @@ export const hotelList: Hotel[] = [
 	{
 		uuid: "1a2b3c4d-0028-0028-0028-000000000032",
 		name: "Dog Sweet Dog",
-		region: [
-			"c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91",
-			"ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34",
-		],
+		region: ["c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91"],
 		address: "São João da Telha",
 		location: "Loures, Lisboa",
 		lat: 38.768245,
