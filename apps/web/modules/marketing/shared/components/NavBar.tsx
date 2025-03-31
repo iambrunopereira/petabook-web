@@ -181,14 +181,14 @@ export function NavBar() {
 									>
 										Registe o seu estabelecimento
 									</NextLink>
-									<NextLink
+									{/* <NextLink
 										key={user ? "start" : "login"}
 										href={user ? "/app" : "/auth/login"}
 										className="block px-3 py-2 text-base"
 										prefetch={!user}
 									>
 										{user ? t("common.menu.dashboard") : t("common.menu.login")}
-									</NextLink>
+									</NextLink> */}
 								</div>
 							</SheetContent>
 						</Sheet>
