@@ -30,6 +30,14 @@ export default function HotelsPage() {
 	const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
 	useEffect(() => {
 		if (!searchParams) return;
+
+		if (
+			typeof window !== "undefined" &&
+			"scrollRestoration" in window.history
+		) {
+			window.history.scrollRestoration = "manual";
+		}
+
 		window.scrollTo(0, 0);
 
 		const regions = searchParams.get("regions")?.split(",") ?? [];
@@ -117,7 +125,18 @@ export default function HotelsPage() {
 		// Reset scroll position to the top when filters or hotels change
 		window.scrollTo(0, 0);
 	}, [filters, filteredHotels]);
+	useEffect(() => {
+		if (
+			typeof window !== "undefined" &&
+			"scrollRestoration" in window.history
+		) {
+			window.history.scrollRestoration = "manual";
 
+			return () => {
+				window.history.scrollRestoration = "auto";
+			};
+		}
+	}, []);
 	return (
 		<div
 			className={
