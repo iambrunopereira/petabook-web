@@ -3,7 +3,6 @@
 import { LocaleLink, useLocalePathname } from "@i18n/routing";
 import { config } from "@repo/config";
 import { useSession } from "@saas/auth/hooks/use-session";
-import { Logo } from "@shared/components/Logo";
 import { Button } from "@ui/components/button";
 import {
 	Sheet,
@@ -14,6 +13,7 @@ import {
 import { cn } from "@ui/lib";
 import { MenuIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import NextLink from "next/link";
 import { useEffect, useState } from "react";
 import { useDebounceCallback } from "usehooks-ts";
@@ -69,14 +69,14 @@ export function NavBar() {
 			label: t("common.menu.changelog"),
 			href: "/changelog",
 		}, */
-		...(config.contactForm.enabled
+		/* ...(config.contactForm.enabled
 			? [
 					{
 						label: t("common.menu.contact"),
 						href: "/contact",
 					},
 				]
-			: []),
+			: []), */
 		/* {
 			label: t("common.menu.docs"),
 			href: "/docs",
@@ -88,7 +88,7 @@ export function NavBar() {
 	return (
 		<nav
 			className={cn(
-				"fixed top-0 left-0 z-[9999] w-full transition-shadow duration-200",
+				" top-0 left-0 z-[9999] w-full transition-shadow duration-200",
 				!isTop || isDocsPage
 					? "bg-card/80 shadow-sm backdrop-blur-lg"
 					: "shadow-none",
@@ -107,7 +107,15 @@ export function NavBar() {
 							href="/"
 							className="block hover:no-underline active:no-underline"
 						>
-							<Logo />
+							{/* <Logo />
+							sad */}
+							<Image
+								src="/images/assets/logo.png"
+								alt="Petabook"
+								fill
+								className="!h-8 !w-40 !relative"
+								priority
+							/>
 						</LocaleLink>
 					</div>
 
@@ -165,6 +173,7 @@ export function NavBar() {
 									))}
 									<NextLink
 										key={"partner-button"}
+										target="_blank"
 										href={
 											"https://docs.google.com/forms/d/e/1FAIpQLSdkBUeU2VgiVBdKPQ9nhEFj5kLSoh4SsOwvE2DWD4_YV9Vz1Q/viewform?usp=header"
 										}
@@ -172,14 +181,14 @@ export function NavBar() {
 									>
 										Registe o seu estabelecimento
 									</NextLink>
-									<NextLink
+									{/* <NextLink
 										key={user ? "start" : "login"}
 										href={user ? "/app" : "/auth/login"}
 										className="block px-3 py-2 text-base"
 										prefetch={!user}
 									>
 										{user ? t("common.menu.dashboard") : t("common.menu.login")}
-									</NextLink>
+									</NextLink> */}
 								</div>
 							</SheetContent>
 						</Sheet>
@@ -189,7 +198,10 @@ export function NavBar() {
 							asChild
 							variant="secondary"
 						>
-							<NextLink href="https://docs.google.com/forms/d/e/1FAIpQLSdkBUeU2VgiVBdKPQ9nhEFj5kLSoh4SsOwvE2DWD4_YV9Vz1Q/viewform?usp=header">
+							<NextLink
+								target="_blank"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSdkBUeU2VgiVBdKPQ9nhEFj5kLSoh4SsOwvE2DWD4_YV9Vz1Q/viewform?usp=header"
+							>
 								Registe o seu estabelecimento
 							</NextLink>
 						</Button>

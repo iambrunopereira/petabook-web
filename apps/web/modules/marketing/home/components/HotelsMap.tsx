@@ -5,12 +5,11 @@ import dynamic from "next/dynamic";
 import { useRouter, useSearchParams } from "next/navigation";
 import "leaflet/dist/leaflet.css";
 import HotelCard from "@marketing/home/components/HotelCard";
-import HotelMarkerSVG from "@marketing/home/components/HotelMarkerSVG";
-import PetClusterIcon from "@marketing/home/components/PetClusterIcon";
 import { regionList } from "@marketing/db/regions";
 import { Star } from "lucide-react";
 import { Hotel } from "@marketing/db/hotels";
 import Image from "next/image";
+import { getHotelMarkerSvg } from "@marketing/home/components/HotelMarkerSVG";
 
 // Dynamically import react-leaflet components (prevents SSR issues)
 const MapContainer = dynamic(
@@ -52,6 +51,8 @@ function SmallHotelCard({
 				<Image
 					src={hotel.images ? hotel?.images[0] : ""}
 					alt={hotel.name ?? ""}
+					width={80}
+					height={80}
 					className="object-cover rounded-md w-full h-full"
 				/>
 			</div>
@@ -137,31 +138,25 @@ export default function HotelsMap({
 	// Update the map view when the map instance, center, or zoom changes.
 	useEffect(() => {
 		if (map && initialCenter && initialZoom) {
-			console.log("Setting map view to", initialCenter, initialZoom);
 			map.setView(initialCenter, initialZoom);
 		}
 	}, [map, initialCenter, initialZoom]);
 
 	// This function filters hotels based on the map's current bounds.
 	const updateVisibleHotels = () => {
-		console.log("updateVisibleHotels fired");
 		if (!map) return;
 		const bounds = map.getBounds();
-		console.log("Current map bounds:", bounds);
 		const filteredHotels = hotels.filter((hotel) => {
 			const hotelLatLng = L.latLng(hotel.lat, hotel.lng);
 			return bounds.contains(hotelLatLng);
 		});
-		console.log("Filtered hotels:", filteredHotels);
 		setVisibleHotels(filteredHotels);
 	};
 
 	// When the map is created, attach the "moveend" event listener.
 	const handleMapCreated = (mapInstance: any) => {
-		console.log("Map created:", mapInstance);
 		setMap(mapInstance);
 		mapInstance.on("moveend", () => {
-			console.log("moveend event fired");
 			updateVisibleHotels();
 		});
 		// Initial update once the map is created.
@@ -180,7 +175,7 @@ export default function HotelsMap({
 	const createHotelIcon = (hotelId: string) =>
 		L.divIcon({
 			className: "custom-marker",
-			html: HotelMarkerSVG({ hover: true }),
+			html: getHotelMarkerSvg(),
 			iconSize: [40, 50],
 			iconAnchor: [20, 50],
 			popupAnchor: [0, -50],
@@ -208,7 +203,6 @@ export default function HotelsMap({
 							eventHandlers={{
 								// When a marker is clicked, show the bottom overlay with the hotel card.
 								click: () => {
-									console.log("Marker clicked for hotel", hotel);
 									setSelectedHotel(hotel);
 								},
 							}}

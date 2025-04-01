@@ -6,15 +6,14 @@ import { useRouter } from "next/navigation";
 interface RegionCardProps {
 	image: string;
 	region: string;
+	uuid: string;
 }
 
-export default function RegionCard({ image, region }: RegionCardProps) {
+export default function RegionCard({ image, region, uuid }: RegionCardProps) {
 	const router = useRouter();
 
 	const handleClick = () => {
-		router.push(
-			`/search?location=${encodeURIComponent(region.toLocaleLowerCase())}`,
-		);
+		router.push(`/search?regions=${encodeURIComponent(uuid)}`);
 	};
 
 	return (

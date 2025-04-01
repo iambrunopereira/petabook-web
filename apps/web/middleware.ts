@@ -78,8 +78,6 @@ export default async function middleware(req: NextRequest) {
 	if (pathname.startsWith("/manage")) {
 		const response = NextResponse.next();
 
-		console.log("manage");
-
 		return response;
 	}
 

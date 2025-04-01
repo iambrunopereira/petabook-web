@@ -1,6 +1,6 @@
 import { LocaleLink } from "@i18n/routing";
-import { Logo } from "@shared/components/Logo";
 import { Facebook, Instagram } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
@@ -8,7 +8,13 @@ export function Footer() {
 		<footer className="border-t py-8 text-foreground/60 text-sm">
 			<div className="container grid grid-cols-1 gap-6 lg:grid-cols-3">
 				<div>
-					<Logo className="opacity-70 grayscale" />
+					<Image
+						src="/images/assets/logo.png"
+						alt="Petabook"
+						fill
+						className="!h-8 !w-44 !relative opacity-70 grayscale"
+						priority
+					/>
 					<p className="mt-3 text-sm opacity-70">
 						© {new Date().getFullYear()} Petabook. Todos os direitos reservados.
 					</p>
@@ -39,10 +45,13 @@ export function Footer() {
 						Privacy policy
 					</LocaleLink> */}
 					<div className="mb-2 flex gap-3">
-						<Link href="https://instagram.com">
+						<Link href="https://www.instagram.com/petabookcom/" target="_blank">
 							<Instagram className="hover:!grayscale-0 size-5 text-primary grayscale" />
 						</Link>
-						<Link href="https://facebook.com">
+						<Link
+							href="https://www.facebook.com/people/Petabook/61555341819450"
+							target="_blank"
+						>
 							<Facebook className="hover:!grayscale-0 size-5 text-primary grayscale" />
 						</Link>
 					</div>

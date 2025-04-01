@@ -1,13 +1,12 @@
 "use client";
-import { BadgeCheck, Facebook, Globe, Instagram } from "lucide-react";
+import { BadgeCheck, Facebook, Globe, Instagram, PawPrint } from "lucide-react";
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { use, useEffect, useState } from "react";
 import "swiper/css";
 import { type Hotel, hotelList } from "@marketing/db/hotels";
-import HotelMarkerSVG from "@marketing/home/components/HotelMarkerSVG";
+import HotelImageCard from "@marketing/home/components/HotelImageCard";
 
 // ✅ Dynamically import `react-leaflet` components to prevent SSR issues
 const MapContainer = dynamic(
@@ -25,7 +24,12 @@ const Marker = dynamic(
 const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), {
 	ssr: false,
 });
-
+const MapComponent = dynamic(
+	() => import("@marketing/home/components/MapComponent"),
+	{
+		ssr: false,
+	},
+);
 const L = typeof window !== "undefined" ? require("leaflet") : null;
 const nearbyServices = [
 	{
@@ -127,7 +131,7 @@ export default function HotelDetailsPage({
 	const createHotelIcon = (hotelId: string) =>
 		L.divIcon({
 			className: "custom-marker",
-			html: HotelMarkerSVG({ hover: false }),
+
 			iconSize: [40, 50],
 			iconAnchor: [20, 50],
 			popupAnchor: [0, -50],
@@ -141,36 +145,18 @@ export default function HotelDetailsPage({
 			{/* SECTION: HOTEL HEADER */}
 			<div className="mt-5 flex flex-col border-b pb-6 md:flex-row">
 				<div className="md:w-1/2">
-					<div className="relative overflow-hidden rounded-lg shadow-lg">
+					<div className="relative overflow-hidden rounded-lg shadow-lg ">
 						{hotel.isPartner && (
 							<div className="absolute top-2 right-2 flex items-center rounded-lg bg-yellow-500 px-2 py-1 font-bold text-white text-xs">
 								<BadgeCheck size={14} className="mr-1" /> Hotel parceiro
 							</div>
 						)}
-						<Image
-							src={selectedImage!}
-							alt={hotel.name}
-							width={600}
-							height={400}
-							className="w-full rounded-lg"
+
+						<HotelImageCard
+							images={hotel.images}
+							title={hotel.name}
+							uuid={hotel.uuid}
 						/>
-					</div>
-					<div className="mt-3 flex space-x-2">
-						{hotel.images.map((src: string, index: number) => (
-							<button
-								key={index}
-								onClick={() => setSelectedImage(src)}
-								className={`overflow-hidden rounded-lg border transition ${selectedImage === src ? "border-blue-500" : "border-gray-300"}`}
-							>
-								<Image
-									src={src}
-									alt={`Preview ${index + 1}`}
-									width={100}
-									height={70}
-									className="h-16 w-24 object-cover"
-								/>
-							</button>
-						))}
 					</div>
 				</div>
 
@@ -185,7 +171,11 @@ export default function HotelDetailsPage({
 							</span>
 						)}
 
-						<span className=" text-yellow-500">⭐ {hotel.rating} / 5</span>
+						<div className="mt-1 flex items-center gap-1 text-yellow-500">
+							{Array.from({ length: hotel.rating || 0 }).map((_, i) => (
+								<PawPrint key={i} size={16} className="fill-yellow-500" />
+							))}
+						</div>
 					</div>
 
 					<p className="text-sm opacity-70">Contacto: {hotel.contact}</p>
@@ -228,23 +218,12 @@ export default function HotelDetailsPage({
 			{/* SECTION: SMALLER MAP */}
 			<div className="mt-10 border-b pb-6">
 				<h3 className="font-bold text-xl">Localização</h3>
-				{isClient && (
-					<div className="relative mt-4 h-40 w-full overflow-hidden rounded-lg">
-						<MapContainer
-							center={[hotel.lat, hotel.lng]}
-							zoom={13}
-							className="h-full w-full rounded-lg"
-						>
-							<TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-							<Marker
-								position={[hotel.lat, hotel.lng]}
-								icon={createHotelIcon(hotel.uuid)}
-							>
-								<Popup>{hotel.name}</Popup>
-							</Marker>
-						</MapContainer>
-					</div>
-				)}
+				<div className="relative mt-4 h-40 w-full overflow-hidden rounded-lg">
+					<MapComponent
+						center={[hotel.lat, hotel.lng]}
+						positions={[{ lat: hotel.lat, lng: hotel.lng }]}
+					/>
+				</div>
 			</div>
 			{/* SECTION: SERVICES */}
 			{/* 	<div className="mt-10 pb-6">
