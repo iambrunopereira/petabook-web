@@ -8,9 +8,9 @@ export default function HotelsMapPage() {
 	const [visibleHotels, setVisibleHotels] = useState(hotelList); // ✅ Track visible hotels
 	const [showList, setShowList] = useState(false); // ✅ Toggle hotel list on mobile
 
-	useEffect(() => {
+	/* useEffect(() => {
 		console.log(visibleHotels);
-	}, [visibleHotels]);
+	}, [visibleHotels]); */
 	return (
 		<div className="container mt-20 mb-5 flex h-[90vh] flex-col md:flex-row">
 			<button

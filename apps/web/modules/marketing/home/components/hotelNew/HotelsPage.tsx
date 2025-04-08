@@ -31,22 +31,12 @@ export default function HotelsPage() {
 	useEffect(() => {
 		if (!searchParams) return;
 
-		if (
-			typeof window !== "undefined" &&
-			"scrollRestoration" in window.history
-		) {
-			window.history.scrollRestoration = "manual";
-		}
-
-		window.scrollTo(0, 0);
-
 		const regions = searchParams.get("regions")?.split(",") ?? [];
 		const onlyPartners = searchParams.get("partner") === "1";
 		const minPrice = Number.parseInt(searchParams.get("minPrice") || "0");
 		const maxPrice = Number.parseInt(searchParams.get("maxPrice") || "30");
 
 		const mainCenter = regionObj[regions[0]];
-		console.log("mainCenter", mainCenter, regions[0]);
 		if (regions.length === 1) {
 			setCurrentCenter(mainCenter.center);
 			setCurrentZoom(9);
@@ -68,7 +58,6 @@ export default function HotelsPage() {
 			maxPrice,
 		});
 	}, [searchParams]);
-	console.log("hotelList", filters.regions);
 
 	// ⬆️ When filters change, update URL
 	const updateUrlFilters = (newFilters: typeof filters) => {
@@ -125,18 +114,6 @@ export default function HotelsPage() {
 		// Reset scroll position to the top when filters or hotels change
 		window.scrollTo(0, 0);
 	}, [filters, filteredHotels]);
-	useEffect(() => {
-		if (
-			typeof window !== "undefined" &&
-			"scrollRestoration" in window.history
-		) {
-			window.history.scrollRestoration = "manual";
-
-			return () => {
-				window.history.scrollRestoration = "auto";
-			};
-		}
-	}, []);
 	return (
 		<div
 			className={

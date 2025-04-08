@@ -6,7 +6,7 @@ export default function RegionList() {
 	const mainRegions: Region[] = regionList.filter((region) => region.main);
 	// Filter out the other regions.
 	const otherRegions: Region[] = regionList.filter((region) => !region.main);
-	console.log(mainRegions);
+
 	// Randomize the other regions and take the first 4.
 	const randomOtherRegions: Region[] = [...otherRegions]
 		.sort(() => Math.random() - 0.5)
