@@ -1,4 +1,3 @@
-import { AnalyticsScript } from "@analytics";
 import { config } from "@repo/config";
 import { ApiClientProvider } from "@shared/components/ApiClientProvider";
 import { Toaster } from "@ui/components/toaster";
@@ -10,6 +9,7 @@ import { Poppins } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import type { PropsWithChildren } from "react";
+import { AnalyticsScript } from "../../analytics/provider/google";
 
 export const metadata: Metadata = {
 	title: {
