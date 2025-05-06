@@ -161,21 +161,27 @@ export default function HotelDetailsPage({
 				</div>
 
 				<div className="p-5 md:w-1/2">
-					<h1 className="font-bold text-3xl">{hotel.name}</h1>
+					<div className="mt-1 mb-2 flex items-center gap-1 text-yellow-500">
+						{Array.from({ length: hotel.rating || 0 }).map((_, i) => (
+							<PawPrint key={i} size={16} className="fill-yellow-500" />
+						))}
+					</div>
+					<div className="flex gap-2">
+						<h1 className="font-bold text-3xl">{hotel.name}</h1>
+					</div>
 					<p className="text-gray-600 text-lg">{hotel.location}</p>
 					<p className="mt-3 text-gray-700">{hotel.shortDescription}</p>
 					<div className="my-5">
 						{hotel.prices !== 0 && (
-							<span className="mr-4 font-semibold text-green-600 text-xl">
-								€{hotel.prices} / noite
-							</span>
+							<div className="flex flex-col gap-2">
+								<span className="mr-2 font-semibold text-green-600 text-xl">
+									€{hotel.prices} / noite*
+								</span>
+								<span className="text-gray-500 text-xs">
+									*Preços indicativos, podem variar consoante a época
+								</span>
+							</div>
 						)}
-
-						<div className="mt-1 flex items-center gap-1 text-yellow-500">
-							{Array.from({ length: hotel.rating || 0 }).map((_, i) => (
-								<PawPrint key={i} size={16} className="fill-yellow-500" />
-							))}
-						</div>
 					</div>
 
 					<p className="text-sm opacity-70">Contacto: {hotel.contact}</p>
@@ -210,7 +216,7 @@ export default function HotelDetailsPage({
 			<div className="mt-10 border-b pb-6">
 				<h3 className="font-bold text-xl">Descrição</h3>
 				{isClient && (
-					<div className="relative mt-4 h-40 w-full overflow-hidden rounded-lg">
+					<div className="mt-4 w-full rounded-lg">
 						<p className="mt-3 text-gray-700">{hotel.longDescription}</p>
 					</div>
 				)}
