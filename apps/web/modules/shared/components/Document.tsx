@@ -31,6 +31,9 @@ export function Document({
 }: PropsWithChildren<{ locale: string }>) {
 	return (
 		<html lang={locale} suppressHydrationWarning>
+			<head>
+				<AnalyticsScript />
+			</head>
 			<body
 				className={cn(
 					"min-h-screen bg-background font-sans text-foreground antialiased",
@@ -51,7 +54,6 @@ export function Document({
 						</ApiClientProvider>
 					</ThemeProvider>
 					<Toaster />
-					<AnalyticsScript />
 				</NuqsAdapter>
 			</body>
 		</html>
