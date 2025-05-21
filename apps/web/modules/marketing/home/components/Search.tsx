@@ -1,25 +1,46 @@
 "use client";
 
+import { attributeList } from "@marketing/db/attributes";
 import { regionList } from "@marketing/db/regions";
 import { PriceRangeSlider } from "@marketing/home/components/hotelNew/PriceRangeSlider";
-import { ChevronDown, ChevronUp, MapPin, Search } from "lucide-react";
+import {
+	ChevronDown,
+	ChevronUp,
+	MapPin,
+	Search,
+	Settings2,
+} from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 export default function SearchBar() {
-	const [isDropdownOpen, setDropdownOpen] = useState(false);
+	const [isRegionDropdownOpen, setRegionDropdownOpen] = useState(false);
+	const [isAttributeDropdownOpen, setAttributeDropdownOpen] = useState(false);
+
 	const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
+	const [selectedAttributes, setSelectedAttributes] = useState<string[]>([]);
 	const [priceRange, setPriceRange] = useState<[number, number]>([0, 30]);
 	const [onlyPartners, setOnlyPartners] = useState(false);
-	const dropdownRef = useRef<HTMLDivElement>(null);
+
+	const regionDropdownRef = useRef<HTMLDivElement>(null);
+	const attributeDropdownRef = useRef<HTMLDivElement>(null);
+
 	const router = useRouter();
 
+	// Toggle logic
 	const toggleRegion = (uuid: string) => {
 		setSelectedRegions((prev) =>
 			prev.includes(uuid) ? prev.filter((r) => r !== uuid) : [...prev, uuid],
 		);
 	};
 
+	const toggleAttribute = (uuid: string) => {
+		setSelectedAttributes((prev) =>
+			prev.includes(uuid) ? prev.filter((a) => a !== uuid) : [...prev, uuid],
+		);
+	};
+
+	// Build search URL
 	const handleSearch = (e: React.FormEvent) => {
 		e.preventDefault();
 
@@ -27,6 +48,9 @@ export default function SearchBar() {
 
 		if (selectedRegions.length > 0) {
 			params.set("regions", selectedRegions.join(","));
+		}
+		if (selectedAttributes.length > 0) {
+			params.set("attributes", selectedAttributes.join(","));
 		}
 		if (onlyPartners) {
 			params.set("partner", "1");
@@ -37,13 +61,20 @@ export default function SearchBar() {
 		router.push(`/search?${params.toString()}`);
 	};
 
+	// Close dropdowns on outside click
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
 			if (
-				dropdownRef.current &&
-				!dropdownRef.current.contains(event.target as Node)
+				regionDropdownRef.current &&
+				!regionDropdownRef.current.contains(event.target as Node)
 			) {
-				setDropdownOpen(false);
+				setRegionDropdownOpen(false);
+			}
+			if (
+				attributeDropdownRef.current &&
+				!attributeDropdownRef.current.contains(event.target as Node)
+			) {
+				setAttributeDropdownOpen(false);
 			}
 		};
 
@@ -51,11 +82,18 @@ export default function SearchBar() {
 		return () => document.removeEventListener("mousedown", handleClickOutside);
 	}, []);
 
-	const selectedLabels =
+	// Selected Labels
+	const selectedRegionLabels =
 		regionList
 			.filter((r) => selectedRegions.includes(r.uuid))
 			.map((r) => r.region)
-			.join(", ") || "Selecionar região";
+			.join(", ") || "Selecionar regiões";
+
+	const selectedAttributeLabels =
+		attributeList
+			.filter((a) => selectedAttributes.includes(a.uuid))
+			.map((a) => a.name)
+			.join(", ") || "Selecionar características";
 
 	return (
 		<div className="relative">
@@ -64,7 +102,7 @@ export default function SearchBar() {
 				className="-translate-x-1/2 absolute top-1/2 left-1/2 flex w-full max-w-2xl translate-y-1/2 transform flex-col gap-4 rounded-xl bg-white/80 p-4 shadow-lg backdrop-blur-lg"
 			>
 				{/* Region Multi-Select */}
-				<div className="relative" ref={dropdownRef}>
+				<div className="relative" ref={regionDropdownRef}>
 					<label className="mb-1 flex items-center gap-2 text-gray-600">
 						<MapPin size={20} />
 						Regiões
@@ -72,22 +110,22 @@ export default function SearchBar() {
 
 					<button
 						type="button"
-						onClick={() => setDropdownOpen((prev) => !prev)}
+						onClick={() => setRegionDropdownOpen((prev) => !prev)}
 						className="flex w-full items-center justify-between rounded-lg border bg-white px-4 py-3 text-left text-gray-700 shadow-sm focus:outline-none"
 					>
 						<span
 							className={selectedRegions.length === 0 ? "text-gray-400" : ""}
 						>
-							{selectedLabels}
+							{selectedRegionLabels}
 						</span>
-						{isDropdownOpen ? (
+						{isRegionDropdownOpen ? (
 							<ChevronUp size={18} className="text-gray-500" />
 						) : (
 							<ChevronDown size={18} className="text-gray-500" />
 						)}
 					</button>
 
-					{isDropdownOpen && (
+					{isRegionDropdownOpen && (
 						<div className="absolute z-20 mt-2 max-h-60 w-full overflow-y-auto rounded border bg-white shadow-md">
 							{regionList.map((region) => (
 								<label
@@ -101,6 +139,50 @@ export default function SearchBar() {
 										className="accent-blue-600"
 									/>
 									{region.region}
+								</label>
+							))}
+						</div>
+					)}
+				</div>
+
+				{/* Attribute Multi-Select */}
+				<div className="relative" ref={attributeDropdownRef}>
+					<label className="mb-1 flex items-center gap-2 text-gray-600">
+						<Settings2 size={20} />
+						Características
+					</label>
+
+					<button
+						type="button"
+						onClick={() => setAttributeDropdownOpen((prev) => !prev)}
+						className="flex w-full items-center justify-between rounded-lg border bg-white px-4 py-3 text-left text-gray-700 shadow-sm focus:outline-none"
+					>
+						<span
+							className={selectedAttributes.length === 0 ? "text-gray-400" : ""}
+						>
+							{selectedAttributeLabels}
+						</span>
+						{isAttributeDropdownOpen ? (
+							<ChevronUp size={18} className="text-gray-500" />
+						) : (
+							<ChevronDown size={18} className="text-gray-500" />
+						)}
+					</button>
+
+					{isAttributeDropdownOpen && (
+						<div className="absolute z-20 mt-2 max-h-60 w-full overflow-y-auto rounded border bg-white shadow-md">
+							{attributeList.map((attr) => (
+								<label
+									key={attr.uuid}
+									className="flex cursor-pointer items-center gap-2 px-4 py-2 hover:bg-gray-50"
+								>
+									<input
+										type="checkbox"
+										checked={selectedAttributes.includes(attr.uuid)}
+										onChange={() => toggleAttribute(attr.uuid)}
+										className="accent-blue-600"
+									/>
+									{attr.name}
 								</label>
 							))}
 						</div>

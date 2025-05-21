@@ -12,7 +12,7 @@ import type { Prisma } from '@prisma/client';
 
 export const TransactionIsolationLevelSchema = z.enum(['ReadUncommitted','ReadCommitted','RepeatableRead','Serializable']);
 
-export const UserScalarFieldEnumSchema = z.enum(['id','name','email','emailVerified','image','createdAt','updatedAt','username','role','banned','banReason','banExpires','onboardingComplete','locale']);
+export const UserScalarFieldEnumSchema = z.enum(['id','name','email','emailVerified','image','createdAt','updatedAt','username','address','address2','city','state','country','postalCode','phone','role','banned','banReason','banExpires','onboardingComplete','locale']);
 
 export const SessionScalarFieldEnumSchema = z.enum(['id','expiresAt','ipAddress','userAgent','userId','impersonatedBy','activeOrganizationId','token','createdAt','updatedAt']);
 
@@ -31,6 +31,8 @@ export const InvitationScalarFieldEnumSchema = z.enum(['id','organizationId','em
 export const PurchaseScalarFieldEnumSchema = z.enum(['id','organizationId','userId','type','customerId','subscriptionId','productId','status','createdAt','updatedAt']);
 
 export const RegionScalarFieldEnumSchema = z.enum(['uuid','region','centerLat','centerLng','type','main','image','createdAt','updatedAt']);
+
+export const DogScalarFieldEnumSchema = z.enum(['id','image','name','breed','age','gender','color','weight','size','neutered','healthy','vaccinated','dewormed','microchip','allergies','sociable','eatingHabits','ownerId','createdAt','updatedAt']);
 
 export const SortOrderSchema = z.enum(['asc','desc']);
 
@@ -63,6 +65,13 @@ export const UserSchema = z.object({
   createdAt: z.coerce.date(),
   updatedAt: z.coerce.date(),
   username: z.string().nullable(),
+  address: z.string().nullable(),
+  address2: z.string().nullable(),
+  city: z.string().nullable(),
+  state: z.string().nullable(),
+  country: z.string().nullable(),
+  postalCode: z.string().nullable(),
+  phone: z.string().nullable(),
   role: z.string().nullable(),
   banned: z.boolean().nullable(),
   banReason: z.string().nullable(),
@@ -230,3 +239,32 @@ export const RegionSchema = z.object({
 })
 
 export type Region = z.infer<typeof RegionSchema>
+
+/////////////////////////////////////////
+// DOG SCHEMA
+/////////////////////////////////////////
+
+export const DogSchema = z.object({
+  id: z.string().cuid(),
+  image: z.string().nullable(),
+  name: z.string(),
+  breed: z.string().nullable(),
+  age: z.number().int().nullable(),
+  gender: z.string().nullable(),
+  color: z.string().nullable(),
+  weight: z.number().nullable(),
+  size: z.string(),
+  neutered: z.boolean(),
+  healthy: z.boolean(),
+  vaccinated: z.boolean(),
+  dewormed: z.boolean(),
+  microchip: z.boolean(),
+  allergies: z.string().nullable(),
+  sociable: z.boolean(),
+  eatingHabits: z.string().nullable(),
+  ownerId: z.string(),
+  createdAt: z.coerce.date(),
+  updatedAt: z.coerce.date(),
+})
+
+export type Dog = z.infer<typeof DogSchema>

@@ -25,6 +25,13 @@ model User {
   createdAt          DateTime
   updatedAt          DateTime
   username           String?
+  address            String?
+  address2           String?
+  city               String?
+  state              String?
+  country            String?
+  postalCode         String?
+  phone              String?
   role               String?
   banned             Boolean?
   banReason          String?
@@ -37,6 +44,7 @@ model User {
   invitations        Invitation[]
   purchases          Purchase[]
   memberships        Member[]
+  dogs               Dog[]
 
   @@unique([email])
   @@unique([username])
@@ -191,4 +199,30 @@ model Region {
 enum RegionType {
   city
   region
+}
+
+model Dog {
+  id           String   @id @default(cuid())
+  image        String?
+  name         String
+  breed        String?
+  age          Int?
+  gender       String?
+  color        String?
+  weight       Float?
+  size         String // small, medium, or big
+  neutered     Boolean // Is the dog/bitch neutered/spayed?
+  healthy      Boolean // Is the dog/bitch healthy?
+  vaccinated   Boolean // Are all vaccinations up to date?
+  dewormed     Boolean // Is the dog/bitch dewormed?
+  microchip    Boolean // Does the dog/bitch have a microchip?
+  allergies    String? // Allergies, dietary restrictions, medication, and special care
+  sociable     Boolean // Is the dog/bitch sociable?
+  eatingHabits String? // Eating habits
+  ownerId      String
+  owner        User     @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("dog")
 }

@@ -20,15 +20,19 @@ export const UserAvatar = forwardRef<
 		[name],
 	);
 
-	const avatarSrc = useMemo(
-		() =>
-			avatarUrl
-				? avatarUrl.startsWith("http")
-					? avatarUrl
-					: `/image-proxy/${config.storage.bucketNames.avatars}/${avatarUrl}`
-				: undefined,
-		[avatarUrl],
-	);
+	const avatarSrc = useMemo(() => {
+		if (!avatarUrl) return undefined;
+
+		// Check if the avatarUrl is a Base64 string
+		if (avatarUrl.startsWith("data:image/")) {
+			return avatarUrl; // Use Base64 directly
+		}
+
+		// Otherwise, assume it's a regular URL or proxy path
+		return avatarUrl.startsWith("http")
+			? avatarUrl
+			: `/image-proxy/${config.storage.bucketNames.avatars}/${avatarUrl}`;
+	}, [avatarUrl]);
 
 	return (
 		<Avatar ref={ref} className={className}>

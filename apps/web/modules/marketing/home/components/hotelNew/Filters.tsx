@@ -1,11 +1,14 @@
-"use client"; // Adjust path if needed
+"use client";
+
 import { regionList } from "@marketing/db/regions";
+import { attributeList } from "@marketing/db/attributes";
 import { PriceRangeSlider } from "@marketing/home/components/hotelNew/PriceRangeSlider";
 import { useEffect, useRef, useState } from "react";
 
 type Props = {
 	filters: {
 		regions: string[];
+		attributes: string[];
 		onlyPartners: boolean;
 		minPrice: number;
 		maxPrice: number;
@@ -15,15 +18,21 @@ type Props = {
 
 export default function Filters({ filters, onChange }: Props) {
 	const [regions, setRegions] = useState(filters.regions);
+	const [attributes, setAttributes] = useState(filters.attributes);
 	const [onlyPartners, setOnlyPartners] = useState(filters.onlyPartners);
 	const [minPrice, setMinPrice] = useState(filters.minPrice);
 	const [maxPrice, setMaxPrice] = useState(filters.maxPrice);
 	const [priceRange, setPriceRange] = useState<[number, number]>([0, 30]);
+
 	const [showRegionDropdown, setShowRegionDropdown] = useState(false);
+	const [showAttributeDropdown, setShowAttributeDropdown] = useState(false);
+
 	const dropdownRef = useRef<HTMLDivElement>(null);
+	const attributeDropdownRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		setRegions(filters.regions);
+		setAttributes(filters.attributes);
 		setOnlyPartners(filters.onlyPartners);
 		setMinPrice(filters.minPrice);
 		setMaxPrice(filters.maxPrice);
@@ -38,16 +47,22 @@ export default function Filters({ filters, onChange }: Props) {
 			) {
 				setShowRegionDropdown(false);
 			}
+			if (
+				attributeDropdownRef.current &&
+				!attributeDropdownRef.current.contains(event.target as Node)
+			) {
+				setShowAttributeDropdown(false);
+			}
 		}
 
-		if (showRegionDropdown) {
+		if (showRegionDropdown || showAttributeDropdown) {
 			document.addEventListener("mousedown", handleClickOutside);
 		}
 
 		return () => {
 			document.removeEventListener("mousedown", handleClickOutside);
 		};
-	}, [showRegionDropdown]);
+	}, [showRegionDropdown, showAttributeDropdown]);
 
 	const toggleRegion = (uuid: string) => {
 		const updated = regions.includes(uuid)
@@ -56,9 +71,17 @@ export default function Filters({ filters, onChange }: Props) {
 		setRegions(updated);
 	};
 
+	const toggleAttribute = (uuid: string) => {
+		const updated = attributes.includes(uuid)
+			? attributes.filter((a) => a !== uuid)
+			: [...attributes, uuid];
+		setAttributes(updated);
+	};
+
 	const updateFilters = () => {
 		onChange({
 			regions,
+			attributes,
 			onlyPartners,
 			minPrice: priceRange[0],
 			maxPrice: priceRange[1],
@@ -106,6 +129,43 @@ export default function Filters({ filters, onChange }: Props) {
 				</div>
 			</div>
 
+			{/* Attribute Multi-Select Dropdown */}
+			<div className="mb-4">
+				<label className="mb-1 block font-medium">Características</label>
+				<div className="relative" ref={attributeDropdownRef}>
+					<button
+						type="button"
+						onClick={() => setShowAttributeDropdown((v) => !v)}
+						className="w-full rounded border px-3 py-2 text-left hover:border-gray-400"
+					>
+						{attributes.length > 0
+							? attributeList
+									.filter((a) => attributes.includes(a.uuid))
+									.map((a) => a.name)
+									.join(", ")
+							: "Selecionar características"}
+					</button>
+
+					{showAttributeDropdown && (
+						<div className="absolute z-10 mt-2 max-h-60 w-full overflow-auto rounded border bg-white shadow">
+							{attributeList.map((attr) => (
+								<label
+									key={attr.uuid}
+									className="flex items-center gap-2 px-3 py-2 hover:bg-gray-100"
+								>
+									<input
+										type="checkbox"
+										checked={attributes.includes(attr.uuid)}
+										onChange={() => toggleAttribute(attr.uuid)}
+									/>
+									{attr.name}
+								</label>
+							))}
+						</div>
+					)}
+				</div>
+			</div>
+
 			{/* Petabook Partner Toggle */}
 			<div className="mb-4">
 				<div className="flex items-center justify-between">
@@ -128,25 +188,6 @@ export default function Filters({ filters, onChange }: Props) {
 			{/* Price Range Inputs */}
 			<div className="mb-4">
 				<div className="flex items-center gap-2">
-					{/* <input
-						type="number"
-						min={0}
-						max={maxPrice}
-						value={minPrice}
-						onChange={(e) => setMinPrice(Number(e.target.value))}
-						className="w-full rounded border px-2 py-1"
-						placeholder="Min"
-					/>
-					<span>até</span>
-					<input
-						type="number"
-						min={minPrice}
-						max={100}
-						value={maxPrice}
-						onChange={(e) => setMaxPrice(Number(e.target.value))}
-						className="w-full rounded border px-2 py-1"
-						placeholder="Max"
-					/> */}
 					<PriceRangeSlider value={priceRange} onChange={setPriceRange} />
 				</div>
 			</div>

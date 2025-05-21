@@ -312,7 +312,13 @@
 		"account": {
 			"avatar": "Avatar",
 			"avatarDescription": "Click the circle or drop an image to it to upload your avatar.",
-			"name": "Name"
+			"name": "Name",
+			"number": "Number",
+			"address": "Address",
+			"country": "Country",
+			"phone": "Phone",
+			"postalCode": "Postal Code",
+			"city": "City"
 		},
 		"continue": "Continue",
 		"message": "Just a few quick steps to get you started.",
@@ -320,7 +326,33 @@
 			"accountSetupFailed": "We are sorry, but we were unable to set up your account. Please try again later."
 		},
 		"step": "Step {step} / {total}",
-		"title": "Set up your account"
+		"title": "Set up your account",
+		"dog": {
+			"title": "Pet {index}",
+			"name": "Nome",
+			"breed": "Raça",
+			"age": "Idade",
+			"gender": "Género",
+			"color": "Cor",
+			"weight": "Peso",
+			"size": "Tamanho",
+			"neutered": "Esterilizado",
+			"healthy": "Saudável",
+			"vaccinated": "Vacinado",
+			"dewormed": "Desparasitado",
+			"microchip": "Microchip",
+			"allergies": "Alergias",
+			"sociable": "Sociável",
+			"eatingHabits": "Hábitos alimentares",
+			"add": "Adicionar pet",
+			"remove": "Remover pet",
+			"sizeSmall": "Pequeno",
+			"sizeMedium": "Médio",
+			"sizeBig": "Grande",
+			"genderBoy": "Menino",
+			"genderGirl": "Menina",
+			"image": "Imagem ou Emoji"
+		}
 	},
 	"organizations": {
 		"createForm": {
@@ -553,6 +585,20 @@
 					"success": "Name was updated successfully"
 				},
 				"title": "Your name"
+			},
+			"changeAddress": {
+				"notifications": {
+					"error": "Could not update address",
+					"success": "Address was updated successfully"
+				},
+				"title": "Your address"
+			},
+			"changePhone": {
+				"notifications": {
+					"error": "Could not update phone number",
+					"success": "Phone number was updated successfully"
+				},
+				"title": "Your phone number"
 			},
 			"deleteAccount": {
 				"confirmation": "Are you sure you want to delete your account?",

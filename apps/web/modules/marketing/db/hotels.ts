@@ -35,6 +35,10 @@ export interface Hotel {
 		lat: number;
 		lng: number;
 	};
+	attributes?: {
+		uuid: string;
+		name: string;
+	}[]; // added attributes property
 }
 
 // A mapping type to index hotels by their uuid .
@@ -97,6 +101,74 @@ export const hotelList: Hotel[] = [
 			"/images/hoteis/quinta-da-patada/img-12.jpeg",
 			"/images/hoteis/quinta-da-patada/img-13.jpeg",
 		],
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{
+				uuid: "e3fbe581-1a40-4b57-bdde-9d89e6cba730",
+				name: "Quinta / Espaço rural",
+			},
+			{ uuid: "293d0f88-40c9-4b5c-9016-f1f57044d803", name: "Alimentação" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{ uuid: "02414d3a-16c2-4b47-b33f-83a4cfb20884", name: "Suites privadas" },
+			{
+				uuid: "d89c981f-3d5c-4e75-aeb4-5abdc7506f92",
+				name: "Serviços veterinários",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "7696cfc9-d1c9-4652-94f9-5f3b843d1ff2",
+				name: "Passeios e trilhos diários",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{
+				uuid: "a01f9e5a-4f14-4a87-96e4-735c9d152a08",
+				name: "Espaço para corridas livres",
+			},
+			{ uuid: "41e40af0-c5c1-4e89-974f-9736f36fcfd3", name: "Vigilância 24h" },
+			{
+				uuid: "16cf2f56-9d5f-46a2-a187-0a51b324f3f1",
+				name: "CCTV / câmaras de segurança",
+			},
+			{
+				uuid: "a3c89715-f4d6-4761-846f-24961b6f0b4a",
+				name: "Presença humana permanente",
+			},
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+			{
+				uuid: "394408e4-5f5e-49f3-bfa3-cd0b1b457bcc",
+				name: "Envio de fotografias",
+			},
+			{
+				uuid: "15b1368f-6b57-49a9-89cd-e4a37f774e68",
+				name: "Equipa com formação em comportamento animal",
+			},
+			{
+				uuid: "c2959df8-f5b0-4a3d-b7e6-4d49b607c961",
+				name: "Localização rural tranquila",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0002-0002-0002-000000000002",
@@ -135,6 +207,77 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "9b423b5a-9dd9-4ed8-a6f9-d2e0db8b77ae", name: "Estadia canina" },
+			{
+				uuid: "e19e989c-0875-4f90-b460-9bfb7e6f8f52",
+				name: "Ambiente familiar",
+			},
+			{ uuid: "fba40be5-e83f-4989-9841-8d05bc147800", name: "Hotel urbano" },
+			{ uuid: "293d0f88-40c9-4b5c-9016-f1f57044d803", name: "Alimentação" },
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{ uuid: "c2959df8-f5b0-4a3d-b7e6-4d49b607x123", name: "Ar condicionado" },
+
+			{
+				uuid: "d89c981f-3d5c-4e75-aeb4-5abdc7506f92",
+				name: "Serviços veterinários",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "394408e4-5f5e-49f3-bfa3-cd0b1b457bcc",
+				name: "Envio de fotografias",
+			},
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{ uuid: "41e40af0-c5c1-4e89-974f-9736f36fcfd3", name: "Vigilância 24h" },
+			{
+				uuid: "16cf2f56-9d5f-46a2-a187-0a51b324f3f1",
+				name: "CCTV / câmaras de segurança",
+			},
+			{
+				uuid: "a3c89715-f4d6-4761-846f-24961b6f0b4a",
+				name: "Presença humana permanente",
+			},
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "8e5951f3-5e15-4624-b0de-6a40a27d227a",
+				name: "Serviços de banhos e tosquias",
+			},
+			{
+				uuid: "9b980e69-9b84-4460-b6c2-1164565b5e53",
+				name: "Adestramento / treino canino",
+			},
+			{
+				uuid: "be71c18c-51d1-4cb1-85b4-292cc3f13498",
+				name: "Possibilidade de levar a própria ração",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+			{
+				uuid: "394408e4-5f5e-49f3-bfa3-cd0b1b457bcc",
+				name: "Envio de fotografias",
+			},
+			{ uuid: "2959df8-f5b0-4a3d-b7e6-4d49b60z432", name: "Perto do centro" },
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0003-0003-0003-000000000003",
@@ -174,6 +317,60 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{ uuid: "02414d3a-16c2-4b47-b33f-83a4cfb20884", name: "Suites privadas" },
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{
+				uuid: "a01f9e5a-4f14-4a87-96e4-735c9d152a08",
+				name: "Espaço para corridas livres",
+			},
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "be71c18c-51d1-4cb1-85b4-292cc3f13498",
+				name: "Possibilidade de levar a própria ração",
+			},
+			{
+				uuid: "394408e4-5f5e-49f3-bfa3-cd0b1b457bcc",
+				name: "Envio de fotografias",
+			},
+			{
+				uuid: "15b1368f-6b57-49a9-89cd-e4a37f774e68",
+				name: "Equipa com formação em comportamento animal",
+			},
+			{
+				uuid: "08962d7e-129e-4031-8238-b38739081635",
+				name: "Staff certificado",
+			},
+			{
+				uuid: "c2959df8-f5b0-4a3d-b7e6-4d49b607c961",
+				name: "Localização rural tranquila",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0004-0004-0004-000000000004",
@@ -230,6 +427,46 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{
+				uuid: "e3fbe581-1a40-4b57-bdde-9d89e6cba730",
+				name: "Quinta / Espaço rural",
+			},
+			{ uuid: "293d0f88-40c9-4b5c-9016-f1f57044d803", name: "Alimentação" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{
+				uuid: "70276d17-5b3d-4867-a2aa-823b37c9f06b",
+				name: "Piscina para cães",
+			},
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "a01f9e5a-4f14-4a87-96e4-735c9d152a08",
+				name: "Espaço para corridas livres",
+			},
+			{
+				uuid: "8e5951f3-5e15-4624-b0de-6a40a27d227a",
+				name: "Serviços de banhos e tosquias",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0005-0005-0005-000000000005",
@@ -269,6 +506,49 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "9b423b5a-9dd9-4ed8-a6f9-d2e0db8b77ae", name: "Estadia canina" },
+			{
+				uuid: "e19e989c-0875-4f90-b460-9bfb7e6f8f52",
+				name: "Ambiente familiar",
+			},
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{ uuid: "41e40af0-c5c1-4e89-974f-9736f36fcfd3", name: "Vigilância 24h" },
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "8e5951f3-5e15-4624-b0de-6a40a27d227a",
+				name: "Serviços de banhos e tosquias",
+			},
+			{
+				uuid: "be71c18c-51d1-4cb1-85b4-292cc3f13498",
+				name: "Possibilidade de levar a própria ração",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+			{
+				uuid: "c2959df8-f5b0-4a3d-b7e6-4d49b607c961",
+				name: "Localização rural tranquila",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0006-0006-0006-000000000006",
@@ -309,6 +589,27 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "9b423b5a-9dd9-4ed8-a6f9-d2e0db8b77ae", name: "Estadia canina" },
+			{ uuid: "293d0f88-40c9-4b5c-9016-f1f57044d803", name: "Alimentação" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{
+				uuid: "8e5951f3-5e15-4624-b0de-6a40a27d227a",
+				name: "Serviços de banhos e tosquias",
+			},
+		],
 	},
 	// Hotels from Porto:
 	{
@@ -354,6 +655,38 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{
+				uuid: "d89c981f-3d5c-4e75-aeb4-5abdc7506f92",
+				name: "Serviços veterinários",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "9b980e69-9b84-4460-b6c2-1164565b5e53",
+				name: "Adestramento / treino canino",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0010-0010-0010-000000000010",
@@ -385,6 +718,14 @@ export const hotelList: Hotel[] = [
 		workingHours: "",
 		images: [
 			"/images/hoteis/domi-cannis-catus/img-1.jpg",
+			"/images/hoteis/domi-cannis-catus/img-2.jpg",
+			"/images/hoteis/domi-cannis-catus/img-3.jpg",
+			"/images/hoteis/domi-cannis-catus/img-4.jpg",
+			"/images/hoteis/domi-cannis-catus/img-5.jpg",
+			"/images/hoteis/domi-cannis-catus/img-6.jpg",
+			"/images/hoteis/domi-cannis-catus/img-7.jpg",
+			"/images/hoteis/domi-cannis-catus/img-8.jpg",
+			"/images/hoteis/domi-cannis-catus/img-9.jpg",
 			"/images/hoteis/domi-cannis-catus/img-10.jpg",
 			"/images/hoteis/domi-cannis-catus/img-11.jpg",
 		],
@@ -393,6 +734,58 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{ uuid: "fb9f5f2f-bd57-49b7-81de-82f3b182d8df", name: "Resort canino" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{ uuid: "02414d3a-16c2-4b47-b33f-83a4cfb20884", name: "Suites privadas" },
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{
+				uuid: "d89c981f-3d5c-4e75-aeb4-5abdc7506f92",
+				name: "Serviços veterinários",
+			},
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "394408e4-5f5e-49f3-bfa3-cd0b1b457bcc",
+				name: "Envio de fotografias",
+			},
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{ uuid: "41e40af0-c5c1-4e89-974f-9736f36fcfd3", name: "Vigilância 24h" },
+			{
+				uuid: "16cf2f56-9d5f-46a2-a187-0a51b324f3f1",
+				name: "CCTV / câmaras de segurança",
+			},
+			{
+				uuid: "a3c89715-f4d6-4761-846f-24961b6f0b4a",
+				name: "Presença humana permanente",
+			},
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "be71c18c-51d1-4cb1-85b4-292cc3f13498",
+				name: "Possibilidade de levar a própria ração",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+			{
+				uuid: "08962d7e-129e-4031-8238-b38739081635",
+				name: "Staff certificado",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0011-0011-0011-000000000011",
@@ -436,6 +829,42 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{
+				uuid: "7696cfc9-d1c9-4652-94f9-5f3b843d1ff2",
+				name: "Passeios e trilhos diários",
+			},
+			{
+				uuid: "16cf2f56-9d5f-46a2-a187-0a51b324f3f1",
+				name: "CCTV / câmaras de segurança",
+			},
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "8e5951f3-5e15-4624-b0de-6a40a27d227a",
+				name: "Serviços de banhos e tosquias",
+			},
+			{
+				uuid: "9b980e69-9b84-4460-b6c2-1164565b5e53",
+				name: "Adestramento / treino canino",
+			},
+			{
+				uuid: "be71c18c-51d1-4cb1-85b4-292cc3f13498",
+				name: "Possibilidade de levar a própria ração",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0012-0012-0012-000000000012",
@@ -476,6 +905,33 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{
+				uuid: "70276d17-5b3d-4867-a2aa-823b37c9f06b",
+				name: "Piscina para cães",
+			},
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{
+				uuid: "be71c18c-51d1-4cb1-85b4-292cc3f13498",
+				name: "Possibilidade de levar a própria ração",
+			},
+		],
 	},
 	// Hotels from Norte (already have region "Norte")
 	{
@@ -518,6 +974,58 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{
+				uuid: "e3fbe581-1a40-4b57-bdde-9d89e6cba730",
+				name: "Quinta / Espaço rural",
+			},
+			{ uuid: "293d0f88-40c9-4b5c-9016-f1f57044d803", name: "Alimentação" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{ uuid: "289a5246-3605-4f14-b3c3-05a678c89153", name: "Música ambiente" },
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "70276d17-5b3d-4867-a2aa-823b37c9f06b",
+				name: "Piscina para cães",
+			},
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "8e5951f3-5e15-4624-b0de-6a40a27d227a",
+				name: "Serviços de banhos e tosquias",
+			},
+			{
+				uuid: "be71c18c-51d1-4cb1-85b4-292cc3f13498",
+				name: "Possibilidade de levar a própria ração",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+			{
+				uuid: "394408e4-5f5e-49f3-bfa3-cd0b1b457bcc",
+				name: "Envio de fotografias",
+			},
+			{
+				uuid: "15b1368f-6b57-49a9-89cd-e4a37f774e68",
+				name: "Equipa com formação em comportamento animal",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0014-0014-0014-000000000014",
@@ -558,6 +1066,61 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{
+				uuid: "e3fbe581-1a40-4b57-bdde-9d89e6cba730",
+				name: "Quinta / Espaço rural",
+			},
+			{ uuid: "293d0f88-40c9-4b5c-9016-f1f57044d803", name: "Alimentação" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{ uuid: "02414d3a-16c2-4b47-b33f-83a4cfb20884", name: "Suites privadas" },
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{
+				uuid: "70276d17-5b3d-4867-a2aa-823b37c9f06b",
+				name: "Piscina para cães",
+			},
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{
+				uuid: "a01f9e5a-4f14-4a87-96e4-735c9d152a08",
+				name: "Espaço para corridas livres",
+			},
+			{ uuid: "41e40af0-c5c1-4e89-974f-9736f36fcfd3", name: "Vigilância 24h" },
+			{
+				uuid: "a3c89715-f4d6-4761-846f-24961b6f0b4a",
+				name: "Presença humana permanente",
+			},
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "8e5951f3-5e15-4624-b0de-6a40a27d227a",
+				name: "Serviços de banhos e tosquias",
+			},
+			{
+				uuid: "9b980e69-9b84-4460-b6c2-1164565b5e53",
+				name: "Adestramento / treino canino",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+			{
+				uuid: "394408e4-5f5e-49f3-bfa3-cd0b1b457bcc",
+				name: "Envio de fotografias",
+			},
+		],
 	},
 	// Hotels from Arquipélagos:
 	{
@@ -598,6 +1161,50 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{
+				uuid: "e3fbe581-1a40-4b57-bdde-9d89e6cba730",
+				name: "Quinta / Espaço rural",
+			},
+			{ uuid: "293d0f88-40c9-4b5c-9016-f1f57044d803", name: "Alimentação" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{ uuid: "02414d3a-16c2-4b47-b33f-83a4cfb20884", name: "Suites privadas" },
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{
+				uuid: "d89c981f-3d5c-4e75-aeb4-5abdc7506f92",
+				name: "Serviços veterinários",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "70276d17-5b3d-4867-a2aa-823b37c9f06b",
+				name: "Piscina para cães",
+			},
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "8e5951f3-5e15-4624-b0de-6a40a27d227a",
+				name: "Serviços de banhos e tosquias",
+			},
+			{
+				uuid: "9b980e69-9b84-4460-b6c2-1164565b5e53",
+				name: "Adestramento / treino canino",
+			},
+			{
+				uuid: "ee27b9b6-2227-4f04-93be-932cdfa9b1cc",
+				name: "Administração de medicação",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0016-0016-0016-000000000016",
@@ -633,6 +1240,35 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{
+				uuid: "76131b59-d2b2-4c56-881b-ff531cc33e0c",
+				name: "Clínica veterinária com estadias caninas",
+			},
+			{ uuid: "293d0f88-40c9-4b5c-9016-f1f57044d803", name: "Alimentação" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "d89c981f-3d5c-4e75-aeb4-5abdc7506f92",
+				name: "Serviços veterinários",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "41e40af0-c5c1-4e89-974f-9736f36fcfd3", name: "Vigilância 24h" },
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "08962d7e-129e-4031-8238-b38739081635",
+				name: "Staff certificado",
+			},
+			{
+				uuid: "c2959df8-f5b0-4a3d-b7e6-4d49b607c961",
+				name: "Localização rural tranquila",
+			},
+		],
 	},
 	// Hotels from Algarve:
 	{
@@ -679,6 +1315,66 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{ uuid: "fb9f5f2f-bd57-49b7-81de-82f3b182d8df", name: "Resort canino" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{ uuid: "02414d3a-16c2-4b47-b33f-83a4cfb20884", name: "Suites privadas" },
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{
+				uuid: "d89c981f-3d5c-4e75-aeb4-5abdc7506f92",
+				name: "Serviços veterinários",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "70276d17-5b3d-4867-a2aa-823b37c9f06b",
+				name: "Piscina para cães",
+			},
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{
+				uuid: "a01f9e5a-4f14-4a87-96e4-735c9d152a08",
+				name: "Espaço para corridas livres",
+			},
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "8e5951f3-5e15-4624-b0de-6a40a27d227a",
+				name: "Serviços de banhos e tosquias",
+			},
+			{
+				uuid: "9b980e69-9b84-4460-b6c2-1164565b5e53",
+				name: "Adestramento / treino canino",
+			},
+			{
+				uuid: "15b1368f-6b57-49a9-89cd-e4a37f774e68",
+				name: "Equipa com formação em comportamento animal",
+			},
+			{
+				uuid: "08962d7e-129e-4031-8238-b38739081635",
+				name: "Staff certificado",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0018-0018-0018-000000000018",
@@ -721,6 +1417,64 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{
+				uuid: "e3fbe581-1a40-4b57-bdde-9d89e6cba730",
+				name: "Quinta / Espaço rural",
+			},
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "7696cfc9-d1c9-4652-94f9-5f3b843d1ff2",
+				name: "Passeios e trilhos diários",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{
+				uuid: "a01f9e5a-4f14-4a87-96e4-735c9d152a08",
+				name: "Espaço para corridas livres",
+			},
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "8e5951f3-5e15-4624-b0de-6a40a27d227a",
+				name: "Serviços de banhos e tosquias",
+			},
+			{
+				uuid: "9b980e69-9b84-4460-b6c2-1164565b5e53",
+				name: "Adestramento / treino canino",
+			},
+			{
+				uuid: "be71c18c-51d1-4cb1-85b4-292cc3f13498",
+				name: "Possibilidade de levar a própria ração",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0019-0019-0019-000000000019",
@@ -763,6 +1517,45 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{ uuid: "02414d3a-16c2-4b47-b33f-83a4cfb20884", name: "Suites privadas" },
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "a01f9e5a-4f14-4a87-96e4-735c9d152a08",
+				name: "Espaço para corridas livres",
+			},
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "8e5951f3-5e15-4624-b0de-6a40a27d227a",
+				name: "Serviços de banhos e tosquias",
+			},
+			{
+				uuid: "9b980e69-9b84-4460-b6c2-1164565b5e53",
+				name: "Adestramento / treino canino",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0020-0020-0020-000000000020",
@@ -801,6 +1594,17 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "9b423b5a-9dd9-4ed8-a6f9-d2e0db8b77ae", name: "Estadia canina" },
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0021-0021-0021-000000000021",
@@ -839,6 +1643,54 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{ uuid: "293d0f88-40c9-4b5c-9016-f1f57044d803", name: "Alimentação" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{ uuid: "02414d3a-16c2-4b47-b33f-83a4cfb20884", name: "Suites privadas" },
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "7696cfc9-d1c9-4652-94f9-5f3b843d1ff2",
+				name: "Passeios e trilhos diários",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{
+				uuid: "a01f9e5a-4f14-4a87-96e4-735c9d152a08",
+				name: "Espaço para corridas livres",
+			},
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+			{
+				uuid: "15b1368f-6b57-49a9-89cd-e4a37f774e68",
+				name: "Equipa com formação em comportamento animal",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0022-0022-0022-000000000022",
@@ -879,6 +1731,52 @@ export const hotelList: Hotel[] = [
 		checkInDays: "",
 		checkOutDays: "",
 		restrictions: "",
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "7696cfc9-d1c9-4652-94f9-5f3b843d1ff2",
+				name: "Passeios e trilhos diários",
+			},
+			{
+				uuid: "a01f9e5a-4f14-4a87-96e4-735c9d152a08",
+				name: "Espaço para corridas livres",
+			},
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "9b980e69-9b84-4460-b6c2-1164565b5e53",
+				name: "Adestramento / treino canino",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+			{
+				uuid: "15b1368f-6b57-49a9-89cd-e4a37f774e68",
+				name: "Equipa com formação em comportamento animal",
+			},
+			{
+				uuid: "08962d7e-129e-4031-8238-b38739081635",
+				name: "Staff certificado",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0023-0023-0023-000000000023",
@@ -920,6 +1818,39 @@ export const hotelList: Hotel[] = [
 			"/images/hoteis/herdade-bonanza/img-6.jpg",
 			"/images/hoteis/herdade-bonanza/img-8.jpg",
 		],
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "8e5951f3-5e15-4624-b0de-6a40a27d227a",
+				name: "Serviços de banhos e tosquias",
+			},
+			{
+				uuid: "9b980e69-9b84-4460-b6c2-1164565b5e53",
+				name: "Adestramento / treino canino",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0025-0025-0025-000000000025",
@@ -958,6 +1889,47 @@ export const hotelList: Hotel[] = [
 			"/images/hoteis/hotel-e-spa-animal-vip/img-12.jpg",
 			"/images/hoteis/hotel-e-spa-animal-vip/img-2.jpg",
 			"/images/hoteis/hotel-e-spa-animal-vip/img-5.png",
+		],
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{ uuid: "02414d3a-16c2-4b47-b33f-83a4cfb20884", name: "Suites privadas" },
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{
+				uuid: "d89c981f-3d5c-4e75-aeb4-5abdc7506f92",
+				name: "Serviços veterinários",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+			{
+				uuid: "15b1368f-6b57-49a9-89cd-e4a37f774e68",
+				name: "Equipa com formação em comportamento animal",
+			},
+			{
+				uuid: "08962d7e-129e-4031-8238-b38739081635",
+				name: "Staff certificado",
+			},
+			{
+				uuid: "c2959df8-f5b0-4a3d-b7e6-4d49b607c961",
+				name: "Localização rural tranquila",
+			},
 		],
 	},
 	{
@@ -998,6 +1970,59 @@ export const hotelList: Hotel[] = [
 			"/images/hoteis/trela-amarela/img-13.jpg",
 			"/images/hoteis/trela-amarela/img-14.jpg",
 			"/images/hoteis/trela-amarela/img-15.jpg",
+		],
+		attributes: [
+			{ uuid: "9b423b5a-9dd9-4ed8-a6f9-d2e0db8b77ae", name: "Estadia canina" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{
+				uuid: "d89c981f-3d5c-4e75-aeb4-5abdc7506f92",
+				name: "Serviços veterinários",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "7696cfc9-d1c9-4652-94f9-5f3b843d1ff2",
+				name: "Passeios e trilhos diários",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{
+				uuid: "a01f9e5a-4f14-4a87-96e4-735c9d152a08",
+				name: "Espaço para corridas livres",
+			},
+			{
+				uuid: "8e5951f3-5e15-4624-b0de-6a40a27d227a",
+				name: "Serviços de banhos e tosquias",
+			},
+			{
+				uuid: "9b980e69-9b84-4460-b6c2-1164565b5e53",
+				name: "Adestramento / treino canino",
+			},
+			{
+				uuid: "c2959df8-f5b0-4a3d-b7e6-4d49b607c961",
+				name: "Localização rural tranquila",
+			},
 		],
 	},
 	// Hotels from Alentejo:
@@ -1047,6 +2072,55 @@ export const hotelList: Hotel[] = [
 			"/images/hoteis/monte-da-benviuda/img-8.jpg",
 			"/images/hoteis/monte-da-benviuda/img-9.jpg",
 		],
+		attributes: [
+			{ uuid: "9b423b5a-9dd9-4ed8-a6f9-d2e0db8b77ae", name: "Estadia canina" },
+			{
+				uuid: "e3fbe581-1a40-4b57-bdde-9d89e6cba730",
+				name: "Quinta / Espaço rural",
+			},
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "7696cfc9-d1c9-4652-94f9-5f3b843d1ff2",
+				name: "Passeios e trilhos diários",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{
+				uuid: "a01f9e5a-4f14-4a87-96e4-735c9d152a08",
+				name: "Espaço para corridas livres",
+			},
+			{
+				uuid: "be71c18c-51d1-4cb1-85b4-292cc3f13498",
+				name: "Possibilidade de levar a própria ração",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+			{
+				uuid: "394408e4-5f5e-49f3-bfa3-cd0b1b457bcc",
+				name: "Envio de fotografias",
+			},
+			{
+				uuid: "c2959df8-f5b0-4a3d-b7e6-4d49b607c961",
+				name: "Localização rural tranquila",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0028-0028-0028-000000000028",
@@ -1084,6 +2158,50 @@ export const hotelList: Hotel[] = [
 			"/images/hoteis/residencia-canina-e-felina/img-10.jpg",
 			"/images/hoteis/residencia-canina-e-felina/img-11.jpg",
 			"/images/hoteis/residencia-canina-e-felina/img-12.jpg",
+		],
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{ uuid: "289a5246-3605-4f14-b3c3-05a678c89153", name: "Música ambiente" },
+			{
+				uuid: "d89c981f-3d5c-4e75-aeb4-5abdc7506f92",
+				name: "Serviços veterinários",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{
+				uuid: "a01f9e5a-4f14-4a87-96e4-735c9d152a08",
+				name: "Espaço para corridas livres",
+			},
+			{ uuid: "41e40af0-c5c1-4e89-974f-9736f36fcfd3", name: "Vigilância 24h" },
+			{
+				uuid: "16cf2f56-9d5f-46a2-a187-0a51b324f3f1",
+				name: "CCTV / câmaras de segurança",
+			},
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "8e5951f3-5e15-4624-b0de-6a40a27d227a",
+				name: "Serviços de banhos e tosquias",
+			},
+			{
+				uuid: "c2959df8-f5b0-4a3d-b7e6-4d49b607c961",
+				name: "Localização rural tranquila",
+			},
 		],
 	},
 	{
@@ -1136,6 +2254,56 @@ export const hotelList: Hotel[] = [
 			"/images/hoteis/hotel-monsanto-pet/img-17.jpeg",
 			"/images/hoteis/hotel-monsanto-pet/img-18.png",
 		],
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{
+				uuid: "e3fbe581-1a40-4b57-bdde-9d89e6cba730",
+				name: "Quinta / Espaço rural",
+			},
+			{ uuid: "293d0f88-40c9-4b5c-9016-f1f57044d803", name: "Alimentação" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "d89c981f-3d5c-4e75-aeb4-5abdc7506f92",
+				name: "Serviços veterinários",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "9b980e69-9b84-4460-b6c2-1164565b5e53",
+				name: "Adestramento / treino canino",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+			{
+				uuid: "08962d7e-129e-4031-8238-b38739081635",
+				name: "Staff certificado",
+			},
+			{
+				uuid: "c2959df8-f5b0-4a3d-b7e6-4d49b607c961",
+				name: "Localização rural tranquila",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0028-0028-0028-000000000030",
@@ -1184,6 +2352,45 @@ export const hotelList: Hotel[] = [
 			"/images/hoteis/zoo-pet-hotel/img-14.png",
 			"/images/hoteis/zoo-pet-hotel/img-15.jpg",
 			"/images/hoteis/zoo-pet-hotel/img-16.png",
+		],
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{ uuid: "fba40be5-e83f-4989-9841-8d05bc147800", name: "Hotel urbano" },
+			{ uuid: "293d0f88-40c9-4b5c-9016-f1f57044d803", name: "Alimentação" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "7696cfc9-d1c9-4652-94f9-5f3b843d1ff2",
+				name: "Passeios e trilhos diários",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+			{
+				uuid: "08962d7e-129e-4031-8238-b38739081635",
+				name: "Staff certificado",
+			},
 		],
 	},
 	{
@@ -1241,6 +2448,54 @@ export const hotelList: Hotel[] = [
 			"/images/hoteis/pet-nanny-paradise-eco-resort/img-21.jpg",
 			"/images/hoteis/pet-nanny-paradise-eco-resort/img-22.jpg",
 		],
+		attributes: [
+			{ uuid: "9b423b5a-9dd9-4ed8-a6f9-d2e0db8b77ae", name: "Estadia canina" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "7cc9c6f6-60ea-48db-8c41-76aa95b8cc7f",
+				name: "Camas confortáveis",
+			},
+			{
+				uuid: "d89c981f-3d5c-4e75-aeb4-5abdc7506f92",
+				name: "Serviços veterinários",
+			},
+			{
+				uuid: "70276d17-5b3d-4867-a2aa-823b37c9f06b",
+				name: "Piscina para cães",
+			},
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "7696cfc9-d1c9-4652-94f9-5f3b843d1ff2",
+				name: "Passeios e trilhos diários",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{ uuid: "1cfb882f-5a8e-407b-89e5-5f65bc514c3a", name: "Transporte" },
+			{
+				uuid: "8e5951f3-5e15-4624-b0de-6a40a27d227a",
+				name: "Serviços de banhos e tosquias",
+			},
+			{
+				uuid: "9b980e69-9b84-4460-b6c2-1164565b5e53",
+				name: "Adestramento / treino canino",
+			},
+			{
+				uuid: "15b1368f-6b57-49a9-89cd-e4a37f774e68",
+				name: "Equipa com formação em comportamento animal",
+			},
+			{
+				uuid: "08962d7e-129e-4031-8238-b38739081635",
+				name: "Staff certificado",
+			},
+		],
 	},
 	{
 		uuid: "1a2b3c4d-0028-0028-0028-000000000032",
@@ -1278,6 +2533,390 @@ export const hotelList: Hotel[] = [
 			"/images/hoteis/dog-sweet-dog/img-3.jpg",
 			"/images/hoteis/dog-sweet-dog/img-4.png",
 			"/images/hoteis/dog-sweet-dog/img-5.png",
+		],
+		attributes: [
+			{
+				uuid: "e61b1532-50e0-47fa-85b5-43c2f97320b3",
+				name: "Estadia familiar",
+			},
+			{ uuid: "293d0f88-40c9-4b5c-9016-f1f57044d803", name: "Alimentação" },
+			{
+				uuid: "2bb9621d-0f9e-42ce-9f44-058b90fa11c0",
+				name: "Alojamento em casa do cuidador",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{
+				uuid: "7696cfc9-d1c9-4652-94f9-5f3b843d1ff2",
+				name: "Passeios e trilhos diários",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{
+				uuid: "a3c89715-f4d6-4761-846f-24961b6f0b4a",
+				name: "Presença humana permanente",
+			},
+			{
+				uuid: "c05d3c91-0c8e-4ab1-9b5e-d26fae6e816f",
+				name: "Ambiente sem jaulas (cage-free)",
+			},
+			{
+				uuid: "fbf1a6aa-f7c9-4c3d-847c-9df5d4c17000",
+				name: "Hotel gerido por família",
+			},
+		],
+	},
+	{
+		uuid: "1a2b3c4d-0028-0028-0028-000000000033",
+		name: "Petsitting Miramar",
+		region: [
+			"6e3c11f3-3a28-4e2b-bf9e-6713c45b0a6a",
+			"f0d2c8a9-5f7a-4e30-b8a4-d3b9a8f7e6c5",
+		],
+		address: "4410-623 Vila Nova de Gaia",
+		location: "Vila Nova de Gaia",
+		lat: 41.071735,
+		lng: -8.657543,
+		rating: 5,
+		contact: "917073030",
+		email: "Petsittingmiramar1@gmail.com",
+		website: "",
+		facebook: "https://www.facebook.com/PetsittingMiramar/",
+		instagram: "https://www.instagram.com/petsitting_miramar/",
+		petabookPartner: true,
+		shortDescription:
+			"Estadia e creche familiar para cães em Miramar, num ambiente seguro, sem jaulas e com muito carinho, passeios diários e vídeos para matar saudades.",
+		longDescription:
+			"Esta estadia familiar, localizada numa moradia com jardim vedado em Miramar, oferece um ambiente seguro, acolhedor e cheio de carinho para cães de todas as idades. A responsável tem vários anos de experiência no cuidado de animais e partilha a casa com uma matilha equilibrada e sociável, promovendo um ambiente tranquilo e harmonioso. Os cães têm liberdade para circular pela casa e pelo jardim — aqui não há jaulas nem boxes. A liberdade é valorizada, mas acompanhada por regras e rotinas que asseguram segurança, respeito e bem-estar. As atividades diárias incluem passeios em zonas tranquilas, como junto à praia, e momentos de brincadeira e socialização. A estadia funciona com lotação limitada, garantindo acompanhamento personalizado e atenção individual a cada hóspede. Para maior tranquilidade dos tutores, são enviados vídeos diários, ajudando a aliviar a saudade.",
+		services: "Hotel canino",
+		prices: 17,
+		reservationEmail: "Petsittingmiramar1@gmail.com",
+		responsableName: null,
+		conditions: "",
+		workingHours: "",
+		checkInHours: "",
+		checkOutHours: "",
+		checkInDays: "",
+		checkOutDays: "",
+		restrictions: "",
+		images: ["/images/hoteis/petsitting-miramar/img-1.png"],
+		attributes: [
+			{
+				uuid: "e61b1532-50e0-47fa-85b5-43c2f97320b3",
+				name: "Estadia familiar",
+			},
+			{
+				uuid: "e3fbe581-1a40-4b57-bdde-9d89e6cba730",
+				name: "Quinta / Espaço rural",
+			},
+			{
+				uuid: "2bb9621d-0f9e-42ce-9f44-058b90fa11c0",
+				name: "Alojamento em casa do cuidador",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "394408e4-5f5e-49f3-bfa3-cd0b1b457bcc",
+				name: "Envio de fotografias",
+			},
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "7696cfc9-d1c9-4652-94f9-5f3b843d1ff2",
+				name: "Passeios e trilhos diários",
+			},
+			{
+				uuid: "b4c10c75-24f7-4b2c-b42c-3e2d6c73cf33",
+				name: "Zona com sombra natural",
+			},
+			{
+				uuid: "a01f9e5a-4f14-4a87-96e4-735c9d152a08",
+				name: "Espaço para corridas livres",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+			{
+				uuid: "c05d3c91-0c8e-4ab1-9b5e-d26fae6e816f",
+				name: "Ambiente sem jaulas (cage-free)",
+			},
+			{
+				uuid: "15b1368f-6b57-49a9-89cd-e4a37f774e68",
+				name: "Equipa com formação em comportamento animal",
+			},
+			{
+				uuid: "e19e989c-0875-4f90-b460-9bfb7e6f8f52",
+				name: "Ambiente familiar",
+			},
+		],
+	},
+	{
+		uuid: "1a2b3c4d-0028-0028-0028-000000000034",
+		name: "PetSpot Figueira da Foz",
+		region: ["ba9a11fa-3d9d-4d2b-90f8-6b987d0a2c34"],
+		address: "Paião",
+		location: "Figueira da Foz",
+		lat: 40.066634,
+		lng: -8.804248,
+		rating: 0,
+		contact: "918035390",
+		email: "petspotfigueiradafoz@gmail.com",
+		website: "",
+		facebook: "https://www.facebook.com/petspot.figueira.da.foz/",
+		instagram:
+			"https://www.instagram.com/petspot.figueiradafoz?fbclid=IwY2xjawJx0IRleHRuA2FlbQIxMAABHo2snhk6VFZVmUqx3DGEjIubqZL3hS8kaxKcyTzHbWKxy4eLzDdr1UcRQbsn_aem_-l0l50pKR2-SMUAUZF371g",
+		petabookPartner: true,
+		shortDescription:
+			"Na PetSpot Figueira da Foz os cães são recebidos com carinho num ambiente familiar, com opção de estadia em casa ou em boxes, e muito espaço vedado para brincadeiras ao ar livre.",
+		longDescription:
+			"A PetSpot, localizada na Figueira da Foz, oferece um serviço de estadia familiar para cães num ambiente seguro, acolhedor e flexível. Os tutores podem escolher entre alojamento dentro de casa ou em boxes, consoante as necessidades do seu patudo.O espaço conta com um pátio murado, parcialmente coberto, e um terreno vedado onde os cães podem correr e brincar em contacto com a natureza. O ambiente é calmo, familiar e pensado para garantir conforto, segurança e diversão durante a estadia.",
+		services: "Hotel canino",
+		prices: 10,
+		reservationEmail: "petspotfigueiradafoz@gmail.com",
+		responsableName: null,
+		conditions: "",
+		workingHours: "",
+		checkInHours: "",
+		checkOutHours: "",
+		checkInDays: "",
+		checkOutDays: "",
+		restrictions: "",
+		images: [
+			"/images/hoteis/pet-spot-figueira-da-foz/img-1.png",
+			"/images/hoteis/pet-spot-figueira-da-foz/img-2.png",
+		],
+		attributes: [
+			{
+				uuid: "e61b1532-50e0-47fa-85b5-43c2f97320b3",
+				name: "Estadia familiar",
+			},
+			{
+				uuid: "e19e989c-0875-4f90-b460-9bfb7e6f8f52",
+				name: "Ambiente familiar",
+			},
+			{
+				uuid: "2bb9621d-0f9e-42ce-9f44-058b90fa11c0",
+				name: "Alojamento em casa do cuidador",
+			},
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+		],
+	},
+	{
+		uuid: "1a2b3c4d-0028-0028-0028-000000000035",
+		name: "Trelas e trilhos",
+		region: ["c5d53de2-15e5-4fa8-a0f3-9c4b30b18a91"],
+		address: "Rua Mariana de Lencastre 6",
+		location: "Alges, Lisboa",
+		lat: 38.700107,
+		lng: -9.233402,
+		rating: 0,
+		contact: "912037588",
+		email: "trelas.e.trilhos1@gmail.com",
+		website: "",
+		facebook: "",
+		instagram: "https://www.instagram.com/trelas.e.trilhos/",
+		petabookPartner: true,
+		shortDescription:
+			"No Trelas e Trilhos, os cães desfrutam de verdadeiras férias no campo, com caminhadas ao ar livre, banhos na natureza e descanso dentro de casa em total liberdade. A equipa é composta por profissionais das áreas da medicina veterinária e do treino canino, com experiência no cuidado de cães de todos os tamanhos, níveis de energia e necessidades médicas, garantindo um serviço personalizado e seguro.",
+		longDescription:
+			"O Trelas e Trilhos oferece uma experiência única de alojamento canino em plena natureza, pensada para proporcionar aos cães dias de aventura e descanso enquanto os tutores aproveitam as suas férias com tranquilidade. Neste espaço, os patudos podem explorar o campo em caminhadas supervisionadas, nadar ao ar livre e, ao final do dia, relaxar confortavelmente dentro de casa — no sofá, na sua cama ou em qualquer outro canto que escolham. A liberdade oferecida aos cães é acompanhada por um ambiente familiar e acolhedor, onde são tratados com o mesmo cuidado e respeito que se espera num lar. A equipa é constituída por profissionais com formação nas áreas da medicina veterinária e do treino canino, com experiência comprovada no acompanhamento de cães de diferentes portes, níveis de energia e condições de saúde. Cada hóspede é integrado de forma personalizada, tendo em conta o seu perfil comportamental e as suas necessidades individuais. A conjugação entre espaço ao ar livre, conforto doméstico e acompanhamento técnico especializado permite garantir o bem-estar e a segurança dos animais ao longo da estadia. No Trelas e Trilhos, cada cão tem a oportunidade de viver verdadeiras férias no campo, num ambiente descontraído e supervisionado por uma equipa preparada para proporcionar uma estadia segura, saudável e feliz.",
+		services: "Hotel canino",
+		prices: 30,
+		reservationEmail: "trelas.e.trilhos1@gmail.com",
+		responsableName: null,
+		conditions: "",
+		workingHours: "",
+		checkInHours: "",
+		checkOutHours: "",
+		checkInDays: "",
+		checkOutDays: "",
+		restrictions: "",
+		images: [
+			"/images/hoteis/trelas-e-trilhos/img-1.png",
+			"/images/hoteis/trelas-e-trilhos/img-2.png",
+			"/images/hoteis/trelas-e-trilhos/img-3.png",
+			"/images/hoteis/trelas-e-trilhos/img-4.png",
+			"/images/hoteis/trelas-e-trilhos/img-5.png",
+			"/images/hoteis/trelas-e-trilhos/img-6.png",
+			"/images/hoteis/trelas-e-trilhos/img-7.png",
+			"/images/hoteis/trelas-e-trilhos/img-8.png",
+			"/images/hoteis/trelas-e-trilhos/img-9.png",
+			"/images/hoteis/trelas-e-trilhos/img-10.png",
+			"/images/hoteis/trelas-e-trilhos/img-11.png",
+			"/images/hoteis/trelas-e-trilhos/img-12.png",
+			"/images/hoteis/trelas-e-trilhos/img-13.png",
+			"/images/hoteis/trelas-e-trilhos/img-14.png",
+			"/images/hoteis/trelas-e-trilhos/img-15.png",
+		],
+		attributes: [
+			{
+				uuid: "e61b1532-50e0-47fa-85b5-43c2f97320b3",
+				name: "Estadia familiar",
+			},
+			{
+				uuid: "e19e989c-0875-4f90-b460-9bfb7e6f8f52",
+				name: "Ambiente familiar",
+			},
+			{
+				uuid: "2bb9621d-0f9e-42ce-9f44-058b90fa11c0",
+				name: "Alojamento em casa do cuidador",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "a01f9e5a-4f14-4a87-96e4-735c9d152a08",
+				name: "Espaço para corridas livres",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+			{
+				uuid: "c05d3c91-0c8e-4ab1-9b5e-d26fae6e816f",
+				name: "Ambiente sem jaulas (cage-free)",
+			},
+		],
+	},
+	{
+		uuid: "1a2b3c4d-0028-0028-0028-000000000036",
+		name: "Pet Hotel Gondomar",
+		region: [
+			"6e3c11f3-3a28-4e2b-bf9e-6713c45b0a6a",
+			"f0d2c8a9-5f7a-4e30-b8a4-d3b9a8f7e6c5",
+		],
+		address: "Travessa da Cavada ",
+		location: "Gondomar, Porto",
+		lat: 41.138986,
+		lng: -8.511984,
+		rating: 5,
+		contact: "928156722",
+		email: "pethotelgondomar@outlook.pt",
+		website: "",
+		facebook: "https://www.facebook.com/PetHotelGondomar/?locale=pt_PT",
+		instagram: "https://www.instagram.com/pet_hotelgondomar/",
+		petabookPartner: true,
+		shortDescription:
+			"O Hotel Canino da Quinta Diamante, localizado numa quinta tranquila em Gondomar, oferece um ambiente rural seguro e supervisionado onde os cães podem socializar livremente ao ar livre. Com serviços como creche, pet táxi e banhos, todos os hóspedes passam por uma avaliação comportamental no check-in, garantindo o bem-estar e a convivência saudável entre animais sociáveis. A equipa assegura cuidados individualizados e o cumprimento rigoroso dos requisitos sanitários.",
+		longDescription:
+			"O Hotel Canino – Quinta Diamante está situado numa acolhedora quinta em Gondomar, onde o contacto com a natureza, o cuidado profissional e a segurança se combinam para oferecer um serviço completo e fiável de alojamento canino. O espaço distingue-se por proporcionar aos animais um ambiente sereno e harmonioso, partilhado com outras espécies como gatos, cavalos, porcos e galinhas, promovendo uma experiência enriquecedora e equilibrada. A estrutura do hotel inclui serviços especializados como hotel canino, gatil, creche, pet táxi e banhos com tosquia. As entradas e saídas realizam-se de segunda a sábado, entre as 9h e as 12h ou das 14h às 18h, estando encerrado aos domingos e feriados para este efeito. Todos os cães são submetidos a uma avaliação comportamental no momento do check-in. Este procedimento permite garantir que cada hóspede está apto a conviver de forma segura e saudável com os demais animais. Apenas são aceites cães com vacinas em dia (Tosse do Canil, Esgana e Raiva) e com um comportamento sociável, tanto com pessoas como com outros cães. Durante o dia, os animais usufruem de liberdade em amplos espaços ao ar livre, sempre com vigilância constante. Esta abordagem permite que corram, brinquem e interajam num ambiente controlado, promovendo o bem-estar físico e emocional. A Quinta Diamante pratica preços diários de 17€ na época baixa e 19€ na época alta, sendo a alimentação fornecida pelo tutor. Para maior conveniência, disponibiliza também um serviço de Pet Táxi, assegurando o transporte com conforto e segurança. Na Quinta Diamante, cada animal é tratado com atenção individualizada e respeito, num espaço que valoriza o bem-estar, a natureza e a tranquilidade — um verdadeiro refúgio para cães em Gondomar.",
+		services: "Hotel canino",
+		prices: 17,
+		reservationEmail: "pethotelgondomar@outlook.pt",
+		responsableName: null,
+		conditions: "",
+		workingHours: "",
+		checkInHours: "",
+		checkOutHours: "",
+		checkInDays: "",
+		checkOutDays: "",
+		restrictions: "",
+		images: [
+			"/images/hoteis/pet-hotel-gondomar/img-1.png",
+			"/images/hoteis/pet-hotel-gondomar/img-2.png",
+			"/images/hoteis/pet-hotel-gondomar/img-3.png",
+			"/images/hoteis/pet-hotel-gondomar/img-4.png",
+			"/images/hoteis/pet-hotel-gondomar/img-5.png",
+			"/images/hoteis/pet-hotel-gondomar/img-6.png",
+			"/images/hoteis/pet-hotel-gondomar/img-7.png",
+			"/images/hoteis/pet-hotel-gondomar/img-8.jpeg",
+			"/images/hoteis/pet-hotel-gondomar/img-9.jpeg",
+			"/images/hoteis/pet-hotel-gondomar/img-10.jpeg",
+			"/images/hoteis/pet-hotel-gondomar/img-11.jpeg",
+			"/images/hoteis/pet-hotel-gondomar/img-12.jpeg",
+			"/images/hoteis/pet-hotel-gondomar/img-13.jpeg",
+			"/images/hoteis/pet-hotel-gondomar/img-14.jpeg",
+			"/images/hoteis/pet-hotel-gondomar/img-15.jpeg",
+			"/images/hoteis/pet-hotel-gondomar/img-16.jpeg",
+			"/images/hoteis/pet-hotel-gondomar/img-17.jpeg",
+			"/images/hoteis/pet-hotel-gondomar/img-18.jpeg",
+			"/images/hoteis/pet-hotel-gondomar/img-19.jpg",
+			"/images/hoteis/pet-hotel-gondomar/img-20.jpg",
+			"/images/hoteis/pet-hotel-gondomar/img-21.jpg",
+			"/images/hoteis/pet-hotel-gondomar/img-22.jpg",
+			"/images/hoteis/pet-hotel-gondomar/img-23.jpeg",
+			"/images/hoteis/pet-hotel-gondomar/img-24.jpg",
+			"/images/hoteis/pet-hotel-gondomar/img-25.jpeg",
+			"/images/hoteis/pet-hotel-gondomar/img-26.jpg",
+			"/images/hoteis/pet-hotel-gondomar/img-27.jpg",
+		],
+		attributes: [
+			{ uuid: "7e8823fc-2014-47fa-8e63-dca6e0c4e91d", name: "Hotel canino" },
+			{
+				uuid: "a01b5bfb-96b6-44f3-8ce5-88057b826c07",
+				name: "Boxes individuais",
+			},
+			{ uuid: "02414d3a-16c2-4b47-b33f-83a4cfb20884", name: "Suites privadas" },
+			{
+				uuid: "c0c4d430-093e-4f77-8f78-9ae35a53e2c7",
+				name: "Ventilação natural",
+			},
+			{
+				uuid: "8481d85b-bd58-44e1-a9cf-3f325c1cc47e",
+				name: "Iluminação natural",
+			},
+			{ uuid: "947b8882-978e-4ad4-bc96-712dd1c4b90b", name: "Espaços verdes" },
+			{ uuid: "7e6bbd64-267c-4010-9c2c-69d6f4a505f2", name: "Parque vedado" },
+			{
+				uuid: "3f53fcf0-c65b-49fc-8655-94dba4df7fd5",
+				name: "Zona de recreio ao ar livre",
+			},
+			{
+				uuid: "16cf2f56-9d5f-46a2-a187-0a51b324f3f1",
+				name: "CCTV / câmaras de segurança",
+			},
+			{
+				uuid: "a3c89715-f4d6-4761-846f-24961b6f0b4a",
+				name: "Presença humana permanente",
+			},
+			{
+				uuid: "df02c76f-ffed-4c21-b3c2-bf1c86aa2591",
+				name: "Socialização com outros cães",
+			},
+			{
+				uuid: "08962d7e-129e-4031-8238-b38739081635",
+				name: "Staff certificado",
+			},
 		],
 	},
 ];

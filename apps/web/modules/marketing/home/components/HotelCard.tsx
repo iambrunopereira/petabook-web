@@ -1,6 +1,6 @@
 "use client";
 import type { Hotel } from "@marketing/db/hotels";
-import { BadgeCheck, MapPin, Star } from "lucide-react";
+import { BadgeCheck, MapPin, PawPrint } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -37,6 +37,7 @@ export default function HotelCard({
 				)}
 				{images && (
 					<Image
+						// biome-ignore lint/style/noNonNullAssertion: <explanation>
 						src={images[0]!}
 						alt={name ?? ""}
 						fill
@@ -53,23 +54,21 @@ export default function HotelCard({
 				</div>
 
 				{/* Rating Stars */}
-				<div className="mt-2 flex items-center">
-					{Array.from({ length: 5 }, (_, index) => (
-						<Star
-							key={index}
+				<div className="mt-1 flex items-center gap-1 text-yellow-500">
+					{Array.from({ length: 5 }).map((_, i) => (
+						<PawPrint
+							key={i}
 							size={16}
-							className={
-								index < (rating ?? 0) ? "text-yellow-500" : "text-gray-300"
-							}
+							className={(rating ?? 0) >= i + 1 ? "fill-yellow-500" : ""}
 						/>
 					))}
 				</div>
 
 				{/* Price & Booking Button */}
 				<div
-					className={`mt-4 flex items-center ${prices != 0 ? "justify-between" : "justify-end"}`}
+					className={`mt-4 flex items-center ${prices !== 0 ? "justify-between" : "justify-end"}`}
 				>
-					{prices != 0 && (
+					{prices !== 0 && (
 						<span className="font-semibold text-blue-600 text-lg">
 							€{prices}/noite
 						</span>
