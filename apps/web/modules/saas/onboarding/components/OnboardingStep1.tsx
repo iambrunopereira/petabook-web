@@ -22,6 +22,11 @@ import { z } from "zod";
 
 const formSchema = z.object({
 	name: z.string(),
+	address: z.string().optional(),
+	country: z.string().optional(),
+	phone: z.string().optional(),
+	postalCode: z.string().optional(),
+	city: z.string().optional(),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -33,16 +38,20 @@ export function OnboardingStep1({ onCompleted }: { onCompleted: () => void }) {
 		resolver: zodResolver(formSchema),
 		defaultValues: {
 			name: user?.name ?? "",
+			address: user?.address ?? "",
+			country: user?.country ?? "",
+			phone: user?.phone ?? "",
+			postalCode: user?.postalCode ?? "",
+			city: user?.city ?? "",
 		},
 	});
 
-	const onSubmit: SubmitHandler<FormValues> = async ({ name }) => {
+	const onSubmit: SubmitHandler<FormValues> = async (data) => {
 		form.clearErrors("root");
 
 		try {
-			await authClient.updateUser({
-				name,
-			});
+			console.log("data", data);
+			await authClient.updateUser(data);
 
 			onCompleted();
 		} catch (e) {
@@ -57,7 +66,7 @@ export function OnboardingStep1({ onCompleted }: { onCompleted: () => void }) {
 		<div>
 			<Form {...form}>
 				<form
-					className="flex flex-col items-stretch gap-8"
+					className="grid grid-cols-1 gap-8 md:grid-cols-2"
 					onSubmit={form.handleSubmit(onSubmit)}
 				>
 					<FormField
@@ -73,30 +82,97 @@ export function OnboardingStep1({ onCompleted }: { onCompleted: () => void }) {
 						)}
 					/>
 
-					<FormItem className="flex items-center justify-between gap-4">
-						<div>
-							<FormLabel>{t("onboarding.account.avatar")}</FormLabel>
-
-							<FormDescription>
-								{t("onboarding.account.avatarDescription")}
-							</FormDescription>
-						</div>
-						<FormControl>
-							<UserAvatarUpload
-								onSuccess={() => {
-									return;
-								}}
-								onError={() => {
-									return;
-								}}
-							/>
-						</FormControl>
-					</FormItem>
-
-					<Button type="submit" loading={form.formState.isSubmitting}>
-						{t("onboarding.continue")}
-						<ArrowRightIcon className="ml-2 size-4" />
-					</Button>
+					<FormField
+						control={form.control}
+						name="phone"
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>{t("onboarding.account.phone")}</FormLabel>
+								<FormControl>
+									<Input {...field} />
+								</FormControl>
+							</FormItem>
+						)}
+					/>
+					<FormField
+						control={form.control}
+						name="address"
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>{t("onboarding.account.address")}</FormLabel>
+								<FormControl>
+									<Input {...field} />
+								</FormControl>
+							</FormItem>
+						)}
+					/>
+					<FormField
+						control={form.control}
+						name="postalCode"
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>{t("onboarding.account.postalCode")}</FormLabel>
+								<FormControl>
+									<Input {...field} />
+								</FormControl>
+							</FormItem>
+						)}
+					/>
+					<FormField
+						control={form.control}
+						name="city"
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>{t("onboarding.account.city")}</FormLabel>
+								<FormControl>
+									<Input {...field} />
+								</FormControl>
+							</FormItem>
+						)}
+					/>
+					<FormField
+						control={form.control}
+						name="country"
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>{t("onboarding.account.country")}</FormLabel>
+								<FormControl>
+									<Input {...field} />
+								</FormControl>
+							</FormItem>
+						)}
+					/>
+					<div className="md:col-span-2">
+						<FormItem className="flex items-center justify-between gap-4">
+							<div>
+								<FormLabel>{t("onboarding.account.avatar")}</FormLabel>
+								<FormDescription>
+									{t("onboarding.account.avatarDescription")}
+								</FormDescription>
+							</div>
+							<FormControl>
+								<UserAvatarUpload
+									onSuccess={(base64Image) => {
+										console.log("Base64 Image:", base64Image);
+										// Save the Base64 image to your form or state
+									}}
+									onError={() => {
+										console.error("Failed to process the image.");
+									}}
+								/>
+							</FormControl>
+						</FormItem>
+					</div>
+					<div className="flex items-center justify-end md:col-span-2">
+						<Button
+							variant="primary"
+							type="submit"
+							loading={form.formState.isSubmitting}
+						>
+							{t("onboarding.continue")}
+							<ArrowRightIcon className="ml-2 size-4" />
+						</Button>
+					</div>
 				</form>
 			</Form>
 		</div>

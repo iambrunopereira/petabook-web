@@ -54,39 +54,6 @@ const nearbyServices = [
 		image: "/images/assets/algarve.jpg",
 	},
 ];
-const hotels = [
-	{
-		id: 1,
-		name: "Cozy Pet Stay",
-		location: "Lisboa",
-		lat: 38.7169,
-		lng: -9.1399,
-		price: 89,
-		rating: 4,
-		isPartner: true,
-		images: [
-			"/images/assets/hotel1.jpg",
-			"/images/assets/hotel2.jpg",
-			"/images/assets/hotel3.jpg",
-		],
-		description: "A warm and cozy place for your pets to stay.",
-		longDescription: "A warm and cozy place for your pets to stay.",
-		amenities: ["Free Wi-Fi", "Pet Grooming", "Outdoor Area"],
-		services: ["Pet Sitting", "Vet Services", "Grooming", "Play Area"],
-		comments: [
-			{
-				user: "Maria Doe",
-				rating: 5,
-				comment: "Amazing place! My dog loved it.",
-			},
-			{
-				user: "Alice Smith",
-				rating: 4,
-				comment: "Great service, but a bit expensive.",
-			},
-		],
-	},
-];
 
 export default function HotelDetailsPage({
 	params,
@@ -146,7 +113,7 @@ export default function HotelDetailsPage({
 			<div className="mt-5 flex flex-col border-b pb-6 md:flex-row">
 				<div className="md:w-1/2">
 					<div className="relative overflow-hidden rounded-lg shadow-lg ">
-						{hotel.isPartner && (
+						{hotel.petabookPartner && (
 							<div className="absolute top-2 right-2 flex items-center rounded-lg bg-yellow-500 px-2 py-1 font-bold text-white text-xs">
 								<BadgeCheck size={14} className="mr-1" /> Hotel parceiro
 							</div>
@@ -162,14 +129,19 @@ export default function HotelDetailsPage({
 
 				<div className="p-5 md:w-1/2">
 					<div className="mt-1 mb-2 flex items-center gap-1 text-yellow-500">
-						{Array.from({ length: hotel.rating || 0 }).map((_, i) => (
-							<PawPrint key={i} size={16} className="fill-yellow-500" />
+						{Array.from({ length: 5 }).map((_, i) => (
+							<PawPrint
+								key={i}
+								size={16}
+								className={hotel.rating >= i + 1 ? "fill-yellow-500" : ""}
+							/>
 						))}
 					</div>
 					<div className="flex gap-2">
 						<h1 className="font-bold text-3xl">{hotel.name}</h1>
 					</div>
 					<p className="text-gray-600 text-lg">{hotel.location}</p>
+
 					<p className="mt-3 text-gray-700">{hotel.shortDescription}</p>
 					<div className="my-5">
 						{hotel.prices !== 0 && (
@@ -213,6 +185,23 @@ export default function HotelDetailsPage({
 					</div>
 				</div>
 			</div>
+			{hotel.attributes && hotel.attributes.length > 0 && (
+				<div className="mt-10 pb-6">
+					<h3 className="font-bold text-xl">Comodidades</h3>
+					<ul className="mt-3 flex flex-wrap gap-2 text-gray-700 text-sm">
+						{hotel.attributes.map((attr: { uuid: string; name: string }) => {
+							return (
+								<li
+									key={attr.uuid}
+									className="inline-flex items-center rounded-md border px-3 py-1 shadow-sm"
+								>
+									{attr.name}
+								</li>
+							);
+						})}
+					</ul>
+				</div>
+			)}
 			<div className="mt-10 border-b pb-6">
 				<h3 className="font-bold text-xl">Descrição</h3>
 				{isClient && (

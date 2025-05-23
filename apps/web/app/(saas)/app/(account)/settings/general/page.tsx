@@ -1,7 +1,9 @@
 import { config } from "@repo/config";
 import { getSession } from "@saas/auth/lib/server";
+import { ChangeAddressForm } from "@saas/settings/components/ChangeAddressForm";
 import { ChangeEmailForm } from "@saas/settings/components/ChangeEmailForm";
 import { ChangeNameForm } from "@saas/settings/components/ChangeNameForm";
+import { ChangePhoneForm } from "@saas/settings/components/ChangePhoneForm";
 import { UserAvatarForm } from "@saas/settings/components/UserAvatarForm";
 import { UserLanguageForm } from "@saas/settings/components/UserLanguageForm";
 import { SettingsList } from "@saas/shared/components/SettingsList";
@@ -28,7 +30,9 @@ export default async function AccountSettingsPage() {
 			<UserAvatarForm />
 			{config.i18n.enabled && <UserLanguageForm />}
 			<ChangeNameForm />
+			<ChangePhoneForm />
 			<ChangeEmailForm />
+			<ChangeAddressForm />
 		</SettingsList>
 	);
 }

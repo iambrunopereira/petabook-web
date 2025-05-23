@@ -57,6 +57,30 @@ export const auth = betterAuth({
 				type: "string",
 				required: false,
 			},
+			address: {
+				type: "string",
+				required: false,
+			},
+			city: {
+				type: "string",
+				required: false,
+			},
+			phone: {
+				type: "string",
+				required: false,
+			},
+			country: {
+				type: "string",
+				required: false,
+			},
+			postalCode: {
+				type: "string",
+				required: false,
+			},
+			state: {
+				type: "string",
+				required: false,
+			},
 		},
 		deleteAccount: {
 			enabled: true,

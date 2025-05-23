@@ -33,8 +33,14 @@ export default function HotelCard({ hotel }: Props) {
 				<div className="flex items-center justify-between">
 					<h3 className="mb-1 font-semibold text-xl">{hotel.name}</h3>
 					<div className="mt-1 flex items-center gap-1 text-yellow-500">
-						{Array.from({ length: hotel.rating || 0 }).map((_, i) => (
-							<PawPrint key={i} size={16} className="fill-yellow-500" />
+						{Array.from({ length: 5 }).map((_, i) => (
+							<PawPrint
+								key={i}
+								size={16}
+								className={
+									(hotel.rating ?? 0) >= i + 1 ? "fill-yellow-500" : ""
+								}
+							/>
 						))}
 					</div>
 				</div>

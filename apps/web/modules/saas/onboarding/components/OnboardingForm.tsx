@@ -6,6 +6,7 @@ import { Progress } from "@ui/components/progress";
 import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
 import { OnboardingStep1 } from "./OnboardingStep1";
+import { OnboardingStep2 } from "./OnboardingStep2";
 
 export function OnboardingForm() {
 	const t = useTranslations();
@@ -32,7 +33,10 @@ export function OnboardingForm() {
 
 	const steps = [
 		{
-			component: <OnboardingStep1 onCompleted={() => onCompleted()} />,
+			component: <OnboardingStep1 onCompleted={() => setStep(2)} />,
+		},
+		{
+			component: <OnboardingStep2 onCompleted={() => onCompleted()} />,
 		},
 	];
 

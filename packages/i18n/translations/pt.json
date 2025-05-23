@@ -313,7 +313,13 @@
 		"account": {
 			"avatar": "Avatar",
 			"avatarDescription": "Clique no círculo ou arraste uma imagem para o carregar como avatar.",
-			"name": "Nome"
+			"name": "Nome",
+			"number": "Número",
+			"address": "Endereço",
+			"country": "País",
+			"phone": "Telefone",
+			"postalCode": "Código Postal",
+			"city": "Cidade"
 		},
 		"continue": "Continuar",
 		"message": "Apenas alguns passos rápidos para começar.",
@@ -321,7 +327,33 @@
 			"accountSetupFailed": "Lamentamos, mas não conseguimos configurar a sua conta. Por favor, tente novamente mais tarde."
 		},
 		"step": "Passo {step} / {total}",
-		"title": "Configure a sua conta"
+		"title": "Configure a sua conta",
+		"dog": {
+			"title": "Pet {index}",
+			"name": "Nome",
+			"breed": "Raça",
+			"age": "Idade",
+			"gender": "Género",
+			"color": "Cor",
+			"weight": "Peso",
+			"size": "Tamanho",
+			"neutered": "Esterilizado",
+			"healthy": "Saudável",
+			"vaccinated": "Vacinado",
+			"dewormed": "Desparasitado",
+			"microchip": "Microchip",
+			"allergies": "Alergias",
+			"sociable": "Sociável",
+			"eatingHabits": "Hábitos alimentares",
+			"add": "Adicionar pet",
+			"remove": "Remover pet",
+			"sizeSmall": "Pequeno",
+			"sizeMedium": "Médio",
+			"sizeBig": "Grande",
+			"genderBoy": "Menino",
+			"genderGirl": "Menina",
+			"image": "Imagem ou Emoji"
+		}
 	},
 	"organizations": {
 		"createForm": {
@@ -554,6 +586,20 @@
 					"success": "O nome foi atualizado com sucesso."
 				},
 				"title": "O seu nome"
+			},
+			"changePhone": {
+				"notifications": {
+					"error": "Não foi possível atualizar o telefone.",
+					"success": "O telefone foi atualizado com sucesso."
+				},
+				"title": "O seu telefone"
+			},
+			"changeAddress": {
+				"notifications": {
+					"error": "Não foi possível atualizar o morada.",
+					"success": "A morada foi atualizado com sucesso."
+				},
+				"title": "A sua morada"
 			},
 			"deleteAccount": {
 				"confirmation": "Tem a certeza de que deseja eliminar a sua conta?",

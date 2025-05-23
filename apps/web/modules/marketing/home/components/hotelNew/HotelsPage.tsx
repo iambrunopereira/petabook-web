@@ -1,7 +1,6 @@
 // components/HotelsPage.tsx
 "use client";
-
-import { hotelList } from "@marketing/db/hotels";
+import { type Hotel, hotelList } from "@marketing/db/hotels";
 import { regionObj } from "@marketing/db/regions";
 import Filters from "@marketing/home/components/hotelNew/Filters";
 import HotelCard from "@marketing/home/components/hotelNew/HotelCard";
@@ -25,6 +24,7 @@ export default function HotelsPage() {
 		onlyPartners: false,
 		minPrice: 0,
 		maxPrice: 30,
+		attributes: [] as string[],
 	});
 	const [sortBy, setSortBy] = useState<"rating" | "price">("price");
 	const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
@@ -35,6 +35,7 @@ export default function HotelsPage() {
 		const onlyPartners = searchParams.get("partner") === "1";
 		const minPrice = Number.parseInt(searchParams.get("minPrice") || "0");
 		const maxPrice = Number.parseInt(searchParams.get("maxPrice") || "30");
+		const attributes = searchParams.get("attributes")?.split(",") ?? [];
 
 		const mainCenter = regionObj[regions[0]];
 		if (regions.length === 1) {
@@ -56,6 +57,7 @@ export default function HotelsPage() {
 			onlyPartners,
 			minPrice,
 			maxPrice,
+			attributes,
 		});
 	}, [searchParams]);
 
@@ -71,7 +73,9 @@ export default function HotelsPage() {
 		}
 		params.set("minPrice", newFilters.minPrice.toString());
 		params.set("maxPrice", newFilters.maxPrice.toString());
-
+		if (newFilters.attributes.length > 0) {
+			params.set("attributes", newFilters.attributes.join(","));
+		}
 		router.replace(`/search?${params.toString()}`);
 	};
 
@@ -79,7 +83,14 @@ export default function HotelsPage() {
 		setFilters(newFilters);
 		updateUrlFilters(newFilters);
 	};
-
+	const shuffleHotels = (hotels: Hotel[]): Hotel[] => {
+		const shuffled = [...hotels];
+		for (let i = shuffled.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+		}
+		return shuffled;
+	};
 	const filteredHotels = useMemo(() => {
 		const result = hotelList.filter((hotel) => {
 			const regionMatch = filters.regions.length
@@ -93,7 +104,11 @@ export default function HotelsPage() {
 				hotel.prices >= filters.minPrice &&
 				hotel.prices <= filters.maxPrice;
 
-			return regionMatch && partnerMatch && priceMatch;
+			const attributesMatch = filters.attributes.length
+				? hotel.attributes?.some((a) => filters.attributes.includes(a.uuid))
+				: true;
+
+			return regionMatch && partnerMatch && priceMatch && attributesMatch;
 		});
 
 		result.sort((a, b) => {
@@ -107,7 +122,7 @@ export default function HotelsPage() {
 				: (fieldB ?? 0) - (fieldA ?? 0);
 		});
 
-		return result;
+		return shuffleHotels(result);
 	}, [filters, sortBy, sortOrder]);
 
 	useEffect(() => {
@@ -229,6 +244,7 @@ export default function HotelsPage() {
 									onlyPartners: false,
 									minPrice: 0,
 									maxPrice: 30,
+									attributes: [],
 								});
 								setSortBy("price");
 								setSortOrder("asc");
@@ -237,6 +253,7 @@ export default function HotelsPage() {
 									onlyPartners: false,
 									minPrice: 0,
 									maxPrice: 30,
+									attributes: [],
 								});
 							}}
 							className="rounded bg-blue-600 px-4 py-2 text-white shadow"
